@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Little Routines — Visual Schedule & Habit Chart | Tyche Ventures</title>
-    <meta name="description" content="Help kids complete their daily routines with visual schedules they love using. Morning, bedtime, and after-school routines with star rewards.">
-    <meta property="og:title" content="Little Routines — Visual Schedule & Habit Chart">
-    <meta property="og:description" content="The visual routine planner kids actually love using. Morning, bedtime, and after-school routines with rewards.">
-    <!-- Cache bust: 2026-03-14-15:51 -->
+    <title>CartKind — Smart Ingredient Scanner | Tyche Ventures</title>
+    <meta name="description" content="Scan product barcodes to check ingredients against your family's dietary restrictions and preferences. Know what's in your food before you buy it.">
+    <meta property="og:title" content="CartKind — Smart Ingredient Scanner">
+    <meta property="og:description" content="Scan barcodes, check ingredients against custom rules, shop with confidence. Privacy-first ingredient checking for families.">
+    <!-- Cache bust: 2026-03-14-15:57 -->
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
@@ -43,7 +43,7 @@
         .logo {
             font-size: 1.5rem;
             font-weight: 700;
-            color: #FFB74D;
+            color: #64B5F6;
             text-decoration: none;
         }
         
@@ -61,7 +61,7 @@
         }
         
         .nav-links a:hover {
-            color: #FFB74D;
+            color: #64B5F6;
         }
         
         .back-link {
@@ -71,7 +71,7 @@
         
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #FFF4E6 0%, #FFF8F0 50%, #FFFEF9 100%);
+            background: linear-gradient(135deg, #E8F4FD 0%, #F0F8FF 50%, #FAFCFE 100%);
             padding: 140px 20px 100px;
         }
         
@@ -94,7 +94,7 @@
         
         .hero-content .subtitle {
             font-size: 1.4rem;
-            color: #FFB74D;
+            color: #64B5F6;
             font-weight: 600;
             margin-bottom: 24px;
         }
@@ -110,7 +110,7 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: linear-gradient(45deg, #FFB74D, #FFC107);
+            background: linear-gradient(45deg, #64B5F6, #81C784);
             color: white;
             padding: 16px 32px;
             border-radius: 50px;
@@ -122,7 +122,7 @@
         
         .status-badge:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(255, 183, 77, 0.3);
+            box-shadow: 0 10px 30px rgba(100, 181, 246, 0.3);
         }
         
         .hero-image {
@@ -135,9 +135,17 @@
             border-radius: 25px;
             object-fit: contain;
             box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-            transform: rotate(3deg);
+            transform: rotate(2deg);
             transition: transform 0.3s ease;
             margin: 0 auto;
+            background: linear-gradient(135deg, #E8F4FD 0%, #F0F8FF 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #4A4A4A;
+            font-size: 1.1rem;
+            text-align: center;
+            padding: 40px;
         }
         
         .app-screenshot:hover {
@@ -225,7 +233,7 @@
         .highlight-icon {
             width: 28px;
             height: 28px;
-            background: linear-gradient(45deg, #FFB74D, #FFC107);
+            background: linear-gradient(45deg, #64B5F6, #81C784);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -247,6 +255,14 @@
             box-shadow: 0 20px 40px rgba(0,0,0,0.15);
             transition: transform 0.3s ease;
             margin: 0 auto;
+            background: linear-gradient(135deg, #E8F4FD 0%, #F0F8FF 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #4A4A4A;
+            font-size: 1rem;
+            text-align: center;
+            padding: 30px;
         }
         
         .feature-screenshot:hover {
@@ -256,7 +272,7 @@
         /* CTA Section */
         .cta-section {
             padding: 100px 20px;
-            background: linear-gradient(135deg, #FFF4E6 0%, #FFFEF9 100%);
+            background: linear-gradient(135deg, #E8F4FD 0%, #FAFCFE 100%);
             text-align: center;
         }
         
@@ -283,7 +299,7 @@
             display: inline-flex;
             align-items: center;
             gap: 12px;
-            background: linear-gradient(45deg, #FFB74D, #FFC107);
+            background: linear-gradient(45deg, #64B5F6, #81C784);
             color: white;
             padding: 20px 40px;
             border-radius: 50px;
@@ -295,7 +311,7 @@
         
         .notify-cta:hover {
             transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(255, 183, 77, 0.3);
+            box-shadow: 0 15px 40px rgba(100, 181, 246, 0.3);
         }
         
         /* Footer */
@@ -326,7 +342,7 @@
         }
         
         .footer-links a:hover {
-            color: #FFB74D;
+            color: #64B5F6;
         }
         
         .footer-text {
@@ -378,7 +394,7 @@
             <div class="nav-links">
                 <a href="/" class="back-link">← Back to Home</a>
                 <a href="/kids-meal-planner.html">Kids Meal Planner</a>
-                <a href="/cartkind.html">CartKind</a>
+                <a href="/little-routines.html">Little Routines</a>
                 <a href="mailto:support@tycheventuresllc.com">Contact</a>
             </div>
         </div>
@@ -388,16 +404,18 @@
     <section class="hero">
         <div class="hero-container">
             <div class="hero-content">
-                <h1>Little Routines</h1>
-                <div class="subtitle">Visual Schedule & Habit Chart</div>
-                <p>Help kids complete their daily routines with visual schedules they actually love using. Perfect for morning, bedtime, and after-school routines with built-in rewards.</p>
+                <h1>CartKind</h1>
+                <div class="subtitle">Smart Ingredient Scanner</div>
+                <p>Scan product barcodes to check ingredients against your family's dietary restrictions and preferences. Know what's in your food before you buy it with complete privacy.</p>
                 <a href="#notify" class="status-badge">
-                    <span>⭐</span>
-                    <span>Coming Soon to App Store</span>
+                    <span>🔨</span>
+                    <span>In Active Development</span>
                 </a>
             </div>
             <div class="hero-image">
-                <img src="/images/apps/lr-kidmode.png" alt="Little Routines Kid Mode interface" class="app-screenshot">
+                <div class="app-screenshot">
+                    Scan. Check. Shop<br>with confidence! 🛒<br><br><small>Screenshots coming soon!</small>
+                </div>
             </div>
         </div>
     </section>
@@ -406,66 +424,70 @@
     <section class="features">
         <div class="features-container">
             <div class="section-header">
-                <h2>Routines Kids Actually Complete</h2>
-                <p>From morning routines to bedtime, we make it fun and visual so kids stay motivated and parents stay sane.</p>
+                <h2>Know What's in Your Food</h2>
+                <p>Powerful ingredient checking that respects your privacy. Create custom rules, get instant verdicts, and shop with confidence.</p>
             </div>
             
             <div class="features-grid">
-                <!-- Feature 1: Kid Mode -->
+                <!-- Feature 1: Scanning -->
                 <div class="feature-showcase">
                     <div class="feature-content">
-                        <h3>Kid Mode They'll Love</h3>
-                        <p>Big, colorful checkmarks and star rewards that keep kids motivated. Touch-friendly interface designed specifically for little hands, with celebration sounds and animations.</p>
+                        <h3>Instant Barcode Scanning</h3>
+                        <p>Point your camera at any barcode and get instant ingredient analysis. Our system checks against your custom rules and gives you a clear pass, caution, or fail verdict.</p>
                         <div class="feature-highlights">
                             <div class="highlight">
-                                <div class="highlight-icon">👆</div>
-                                <span>Big buttons perfect for little fingers</span>
+                                <div class="highlight-icon">📱</div>
+                                <span>Fast barcode recognition</span>
                             </div>
                             <div class="highlight">
-                                <div class="highlight-icon">⭐</div>
-                                <span>Star rewards for completed tasks</span>
+                                <div class="highlight-icon">🚦</div>
+                                <span>Clear pass/caution/fail verdicts</span>
                             </div>
                             <div class="highlight">
-                                <div class="highlight-icon">🎵</div>
-                                <span>Fun sounds and celebrations</span>
+                                <div class="highlight-icon">🏪</div>
+                                <span>Works with 2+ million products</span>
                             </div>
                             <div class="highlight">
-                                <div class="highlight-icon">🎨</div>
-                                <span>Colorful, engaging interface</span>
+                                <div class="highlight-icon">⚡</div>
+                                <span>Real-time ingredient matching</span>
                             </div>
                         </div>
                     </div>
                     <div class="feature-image">
-                        <img src="/images/apps/lr-kidmode.png" alt="Kid-friendly interface with large buttons" class="feature-screenshot">
+                        <div class="feature-screenshot">
+                            Barcode scanning<br>interface<br>coming soon! 📱
+                        </div>
                     </div>
                 </div>
 
-                <!-- Feature 2: Routines Management -->
+                <!-- Feature 2: Privacy -->
                 <div class="feature-showcase">
                     <div class="feature-content">
-                        <h3>Smart Routine Templates</h3>
-                        <p>Choose from 24 pre-built routine templates or create your own. Morning, bedtime, after-school, and even special routines like "calm down" and potty training.</p>
+                        <h3>Privacy-First Design</h3>
+                        <p>Your scan history and dietary preferences stay on your device. No accounts, no cloud storage, no tracking. Complete control over your family's dietary information.</p>
                         <div class="feature-highlights">
                             <div class="highlight">
-                                <div class="highlight-icon">🌅</div>
-                                <span>Morning routine templates</span>
+                                <div class="highlight-icon">🔒</div>
+                                <span>All data stored locally</span>
                             </div>
                             <div class="highlight">
-                                <div class="highlight-icon">🌙</div>
-                                <span>Bedtime routine templates</span>
+                                <div class="highlight-icon">🚫</div>
+                                <span>No user accounts required</span>
                             </div>
                             <div class="highlight">
-                                <div class="highlight-icon">📚</div>
-                                <span>After-school routine templates</span>
+                                <div class="highlight-icon">📊</div>
+                                <span>Complete scan history control</span>
                             </div>
                             <div class="highlight">
-                                <div class="highlight-icon">⏰</div>
-                                <span>Built-in task timers</span>
+                                <div class="highlight-icon">⚙️</div>
+                                <span>Custom ingredient triggers</span>
                             </div>
                         </div>
                     </div>
                     <div class="feature-image">
-                        <img src="/images/apps/lr-routines.png" alt="Routine management interface" class="feature-screenshot">
+                        <div class="feature-screenshot">
+                            Privacy settings<br>& custom rules<br>coming soon! 🔒
+                        </div>
                     </div>
                 </div>
             </div>
@@ -475,9 +497,9 @@
     <!-- CTA Section -->
     <section class="cta-section" id="notify">
         <div class="cta-container">
-            <h2>Ready to Make Routines Fun?</h2>
-            <p>Little Routines will be available on the App Store soon. Join the list and be the first to know when we launch.</p>
-            <a href="mailto:support@tycheventuresllc.com?subject=Notify me about Little Routines&body=Hi! Please notify me when Little Routines launches on the App Store." class="notify-cta">
+            <h2>Shop with Confidence Soon</h2>
+            <p>CartKind is currently in active development. Join our notification list to be the first to know when we launch and start shopping with complete ingredient confidence.</p>
+            <a href="mailto:support@tycheventuresllc.com?subject=Notify me about CartKind&body=Hi! Please notify me when CartKind launches on the App Store." class="notify-cta">
                 <span>📧</span>
                 <span>Notify Me at Launch</span>
             </a>
@@ -490,7 +512,7 @@
             <div class="footer-links">
                 <a href="/">Home</a>
                 <a href="/kids-meal-planner.html">Kids Meal Planner</a>
-                <a href="/cartkind.html">CartKind</a>
+                <a href="/little-routines.html">Little Routines</a>
                 <a href="/blog.html">Blog</a>
                 <a href="mailto:support@tycheventuresllc.com">Contact</a>
                 <a href="/privacy.html">Privacy</a>
