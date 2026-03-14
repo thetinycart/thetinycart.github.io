@@ -128,42 +128,19 @@
             text-align: center;
         }
         
-        .phone-mockup {
-            background: linear-gradient(145deg, #F5F5F7, #E8E8ED);
-            border-radius: 40px;
-            padding: 20px;
-            display: inline-block;
-            box-shadow: 
-                0 30px 60px rgba(0,0,0,0.12),
-                0 0 0 1px rgba(255,255,255,0.5),
-                inset 0 1px 0 rgba(255,255,255,0.6);
-            position: relative;
-            transform: rotate(3deg);
-            transition: transform 0.3s ease;
-        }
-        
-        .phone-mockup:hover {
-            transform: rotate(0deg) scale(1.02);
-        }
-        
-        .phone-mockup::before {
-            content: '';
-            position: absolute;
-            top: 15px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 4px;
-            background: #333;
-            border-radius: 2px;
-        }
-        
         .app-screenshot {
             width: 300px;
             height: 520px;
             border-radius: 25px;
             border: 1px solid rgba(0,0,0,0.05);
             object-fit: cover;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            transform: rotate(3deg);
+            transition: transform 0.3s ease;
+        }
+        
+        .app-screenshot:hover {
+            transform: rotate(0deg) scale(1.02);
         }
         
         /* Features Section */
@@ -261,25 +238,18 @@
             text-align: center;
         }
         
-        .feature-phone {
-            background: linear-gradient(145deg, #F5F5F7, #E8E8ED);
-            border-radius: 35px;
-            padding: 15px;
-            display: inline-block;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-        
-        .feature-phone:hover {
-            transform: translateY(-10px);
-        }
-        
         .feature-screenshot {
             width: 260px;
             height: 450px;
             border-radius: 20px;
             object-fit: cover;
             border: 1px solid rgba(0,0,0,0.05);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-screenshot:hover {
+            transform: translateY(-10px);
         }
         
         /* CTA Section */
@@ -425,9 +395,7 @@
                 </a>
             </div>
             <div class="hero-image">
-                <div class="phone-mockup">
-                    <img src="/images/apps/lr-kidmode.png" alt="Little Routines Kid Mode interface" class="app-screenshot">
-                </div>
+                <img src="/images/apps/lr-kidmode.png" alt="Little Routines Kid Mode interface" class="app-screenshot">
             </div>
         </div>
     </section>
@@ -466,9 +434,7 @@
                         </div>
                     </div>
                     <div class="feature-image">
-                        <div class="feature-phone">
-                            <img src="/images/apps/lr-kidmode.png" alt="Kid-friendly interface with large buttons" class="feature-screenshot">
-                        </div>
+                        <img src="/images/apps/lr-kidmode.png" alt="Kid-friendly interface with large buttons" class="feature-screenshot">
                     </div>
                 </div>
 
@@ -497,9 +463,7 @@
                         </div>
                     </div>
                     <div class="feature-image">
-                        <div class="feature-phone">
-                            <img src="/images/apps/lr-routines.png" alt="Routine management interface" class="feature-screenshot">
-                        </div>
+                        <img src="/images/apps/lr-routines.png" alt="Routine management interface" class="feature-screenshot">
                     </div>
                 </div>
             </div>
