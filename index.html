@@ -427,8 +427,9 @@
             
             .app-showcase {
                 grid-template-columns: 1fr;
-                gap: 50px;
+                gap: 40px;
                 text-align: center;
+                padding: 0 10px;
             }
             
             .app-showcase:nth-child(even) {
@@ -439,21 +440,56 @@
                 grid-template-columns: 1fr;
             }
             
-            .phone-frame {
-                padding: 15px;
+            /* Mobile screenshot fixes */
+            .carousel-container {
+                width: 220px !important;
+                height: 470px !important;
+                margin: 0 auto !important;
+                box-shadow: 0 10px 25px rgba(0,0,0,0.1) !important;
             }
             
             .screenshot {
-                width: 240px;
-                height: 420px;
+                width: 220px !important;
+                height: 470px !important;
+                object-fit: contain !important;
             }
             
+            .app-mockup {
+                margin: 0 auto;
+                max-width: 250px;
+            }
+            
+            .app-carousel {
+                text-align: center;
+                padding: 0;
+            }
+            
+            .phone-frame {
+                padding: 8px !important;
+                background: transparent !important;
+            }
+            
+            /* Mobile navigation fixes */
             .nav-links {
-                gap: 20px;
+                gap: 12px;
+                font-size: 0.9rem;
+            }
+            
+            .nav-links a {
+                padding: 8px 12px;
+                border-radius: 20px;
+                background: rgba(255,255,255,0.1);
+                backdrop-filter: blur(10px);
+            }
+            
+            /* Reduce padding on mobile */
+            .apps-section {
+                padding: 60px 10px;
             }
             
             .section-header h2 { font-size: 2.2rem; }
             .app-info h3 { font-size: 2rem; }
+            .app-info p { font-size: 1rem; padding: 0 10px; }
         }
         
         /* Smooth scrolling */
