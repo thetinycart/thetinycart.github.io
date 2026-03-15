@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kids Meal Planner — Allergy-Safe Family Meal Prep | Tyche Ventures</title>
+    <title>Kids Meal Planner — Smart Family Meal Prep | Tyche Ventures</title>
     <meta name="description" content="Plan allergy-safe meals for your kids, share with daycare and nannies, and generate grocery lists automatically. Coming soon to the App Store.">
-    <meta property="og:title" content="Kids Meal Planner — Allergy-Safe Family Meal Prep">
+    <meta property="og:title" content="Kids Meal Planner — Smart Family Meal Prep">
     <meta property="og:description" content="Plan weekly meals for your kids, share with caregivers, track allergies, and auto-generate grocery lists.">
     <!-- Cache bust: 2026-03-14-15:51 -->
     <style>
@@ -396,21 +396,49 @@
             }
             
             /* Mobile navigation */
+            nav .container {
+                padding: 0 15px;
+                height: 60px;
+            }
+            
+            .logo {
+                font-size: 1.2rem;
+            }
+            
+            .logo::after {
+                content: "";
+                display: none;
+            }
+            
             .nav-links {
-                gap: 8px;
-                font-size: 0.85rem;
-                flex-wrap: wrap;
+                gap: 6px;
+                font-size: 0.8rem;
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                scrollbar-width: none;
+                -ms-overflow-style: none;
+            }
+            
+            .nav-links::-webkit-scrollbar {
+                display: none;
             }
             
             .nav-links a {
-                padding: 6px 10px;
-                border-radius: 15px;
+                padding: 5px 8px;
+                border-radius: 12px;
                 background: rgba(76, 175, 80, 0.1);
                 white-space: nowrap;
+                flex-shrink: 0;
+                font-size: 0.75rem;
             }
             
             .back-link {
                 background: rgba(0,0,0,0.05) !important;
+            }
+            
+            /* Hide contact on mobile - too crowded */
+            .nav-links a[href^="mailto"] {
+                display: none;
             }
             
             /* Reduce spacing */
@@ -443,7 +471,7 @@
         <div class="hero-container">
             <div class="hero-content">
                 <h1>Kids Meal Planner</h1>
-                <div class="subtitle">Allergy-Safe Family Meal Prep</div>
+                <div class="subtitle">Smart Family Meal Prep</div>
                 <p>Plan weekly meals for your kids, share with daycare and nannies, and generate grocery lists automatically. Built with safety in mind for families managing food allergies.</p>
                 <a href="#notify" class="status-badge">
                     <span>📱</span>
