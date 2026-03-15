@@ -248,6 +248,23 @@
             transition: transform 0.3s ease;
             margin: 0 auto;
         }
+
+        .pdf-document {
+            width: 320px;
+            height: 400px;
+            border-radius: 15px;
+            object-fit: contain;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            margin: 0 auto;
+            background: #fff;
+            border: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .pdf-document:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
         
         .feature-screenshot:hover {
             transform: translateY(-10px);
@@ -492,7 +509,7 @@
                         </div>
                     </div>
                     <div class="feature-image">
-                        <img src="/images/apps/kmp-pdf-schedule.png" alt="PDF meal schedule example" class="feature-screenshot">
+                        <img src="/images/apps/kmp-pdf-schedule.png" alt="PDF meal schedule example" class="pdf-document">
                     </div>
                 </div>
             </div>
