@@ -129,23 +129,35 @@
             text-align: center;
         }
         
-        .app-screenshot {
+        .carousel-container {
             width: 300px;
             height: 650px;
+            position: relative;
+            overflow: hidden;
             border-radius: 25px;
-            object-fit: contain;
             box-shadow: 0 20px 40px rgba(0,0,0,0.15);
             transform: rotate(2deg);
             transition: transform 0.3s ease;
             margin: 0 auto;
-            background: linear-gradient(135deg, #E8F4FD 0%, #F0F8FF 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #4A4A4A;
-            font-size: 1.1rem;
-            text-align: center;
-            padding: 40px;
+        }
+
+        .carousel-container:hover {
+            transform: rotate(0deg) scale(1.02);
+        }
+
+        .carousel-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .carousel-image.active {
+            opacity: 1;
         }
         
         .app-screenshot:hover {
@@ -255,14 +267,6 @@
             box-shadow: 0 20px 40px rgba(0,0,0,0.15);
             transition: transform 0.3s ease;
             margin: 0 auto;
-            background: linear-gradient(135deg, #E8F4FD 0%, #F0F8FF 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #4A4A4A;
-            font-size: 1rem;
-            text-align: center;
-            padding: 30px;
         }
         
         .feature-screenshot:hover {
@@ -413,8 +417,12 @@
                 </a>
             </div>
             <div class="hero-image">
-                <div class="app-screenshot">
-                    Scan. Check. Shop<br>with confidence! 🛒<br><br><small>Screenshots coming soon!</small>
+                <div class="carousel-container">
+                    <img src="/images/apps/cartkind-hero.png" alt="CartKind Barcode Scanner" class="carousel-image active" />
+                    <img src="/images/apps/cartkind-verdict.png" alt="CartKind Clear Verdict" class="carousel-image" />
+                    <img src="/images/apps/cartkind-breakdown.png" alt="CartKind Ingredient Breakdown" class="carousel-image" />
+                    <img src="/images/apps/cartkind-rules.png" alt="CartKind Custom Rules" class="carousel-image" />
+                    <img src="/images/apps/cartkind-history.png" alt="CartKind Scan History" class="carousel-image" />
                 </div>
             </div>
         </div>
@@ -454,9 +462,7 @@
                         </div>
                     </div>
                     <div class="feature-image">
-                        <div class="feature-screenshot">
-                            Barcode scanning<br>interface<br>coming soon! 📱
-                        </div>
+                        <img src="/images/apps/cartkind-hero.png" alt="CartKind Barcode Scanning" class="feature-screenshot">
                     </div>
                 </div>
 
@@ -485,9 +491,7 @@
                         </div>
                     </div>
                     <div class="feature-image">
-                        <div class="feature-screenshot">
-                            Privacy settings<br>& custom rules<br>coming soon! 🔒
-                        </div>
+                        <img src="/images/apps/cartkind-rules.png" alt="CartKind Custom Rules" class="feature-screenshot">
                     </div>
                 </div>
             </div>
@@ -523,5 +527,22 @@
             </div>
         </div>
     </footer>
+    <script>
+        // Screenshot carousel rotation
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('.carousel-image');
+            if (images.length === 0) return;
+            
+            let currentIndex = 0;
+            
+            function showNextImage() {
+                images[currentIndex].classList.remove('active');
+                currentIndex = (currentIndex + 1) % images.length;
+                images[currentIndex].classList.add('active');
+            }
+            
+            setInterval(showNextImage, 15000); // Change every 15 seconds
+        });
+    </script>
 </body>
 </html>
