@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeKeeper — Smart Home Maintenance Tracker | Tyche Ventures</title>
+    <meta name="description" content="Track home maintenance tasks, manage assets and warranties, store important documents — all offline and private. Download free on the App Store.">
+    <meta property="og:title" content="HomeKeeper — Smart Home Maintenance Tracker">
+    <meta property="og:description" content="Track home maintenance tasks, manage assets and warranties, store important documents — all offline and private.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #FEFEFE;
+            color: #2A2A2A;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #4A6FA5;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #2A2A2A;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: #4A6FA5;
+        }
+
+        .back-link {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #E8EEF5 0%, #F0F4F9 50%, #F8FAFD 100%);
+            padding: 140px 20px 100px;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #2A2A2A;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        .hero-content .subtitle {
+            font-size: 1.4rem;
+            color: #4A6FA5;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 40px;
+        }
+
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(45deg, #4A6FA5, #5A8BC7);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            font-size: 1.1rem;
+        }
+
+        .status-badge:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(74, 111, 165, 0.3);
+        }
+
+        .hero-image {
+            text-align: center;
+        }
+
+        .app-screenshot {
+            width: 300px;
+            height: 650px;
+            border-radius: 25px;
+            object-fit: contain;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            transform: rotate(-3deg);
+            transition: transform 0.3s ease;
+            margin: 0 auto;
+        }
+
+        .app-screenshot:hover {
+            transform: rotate(0deg) scale(1.02);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 120px 20px;
+            background: #FFF;
+        }
+
+        .features-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .section-header h2 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #2A2A2A;
+            margin-bottom: 16px;
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 100px;
+        }
+
+        .feature-showcase {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .feature-showcase:nth-child(even) {
+            direction: rtl;
+        }
+
+        .feature-showcase:nth-child(even) > * {
+            direction: ltr;
+        }
+
+        .feature-content h3 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #2A2A2A;
+            margin-bottom: 20px;
+        }
+
+        .feature-content p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        .feature-highlights {
+            display: grid;
+            gap: 16px;
+        }
+
+        .highlight {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .highlight-icon {
+            width: 28px;
+            height: 28px;
+            background: linear-gradient(45deg, #4A6FA5, #5A8BC7);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .feature-image {
+            text-align: center;
+        }
+
+        .feature-screenshot {
+            width: 260px;
+            height: 563px;
+            border-radius: 20px;
+            object-fit: contain;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease;
+            margin: 0 auto;
+        }
+
+        .feature-screenshot:hover {
+            transform: translateY(-10px);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 100px 20px;
+            background: linear-gradient(135deg, #E8EEF5 0%, #F8FAFD 100%);
+            text-align: center;
+        }
+
+        .cta-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta-container h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2A2A2A;
+            margin-bottom: 24px;
+        }
+
+        .cta-container p {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 40px;
+            line-height: 1.7;
+        }
+
+        .notify-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: linear-gradient(45deg, #4A6FA5, #5A8BC7);
+            color: white;
+            padding: 20px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .notify-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(74, 111, 165, 0.3);
+        }
+
+        /* Footer */
+        footer {
+            background: #2A2A2A;
+            color: #FFF;
+            padding: 60px 20px 40px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            margin-bottom: 32px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            color: #4A6FA5;
+        }
+
+        .footer-text {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                text-align: center;
+                padding: 0 10px;
+            }
+
+            .hero-content h1 { font-size: 2.5rem; }
+
+            .feature-showcase {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                text-align: center;
+                padding: 0 10px;
+            }
+
+            .feature-showcase:nth-child(even) {
+                direction: ltr;
+            }
+
+            /* Remove tilt on mobile */
+            .app-screenshot {
+                width: 220px !important;
+                height: 470px !important;
+                transform: none !important;
+                margin: 0 auto !important;
+            }
+
+            .feature-screenshot {
+                width: 200px !important;
+                height: 430px !important;
+                margin: 0 auto !important;
+            }
+
+            /* Mobile navigation */
+            nav .container {
+                padding: 0 15px;
+                height: 60px;
+            }
+
+            .logo {
+                font-size: 1.2rem;
+            }
+
+            .logo::after {
+                content: "";
+                display: none;
+            }
+
+            .nav-links {
+                gap: 6px;
+                font-size: 0.8rem;
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                scrollbar-width: none;
+                -ms-overflow-style: none;
+            }
+
+            .nav-links::-webkit-scrollbar {
+                display: none;
+            }
+
+            .nav-links a {
+                padding: 5px 8px;
+                border-radius: 12px;
+                background: rgba(74, 111, 165, 0.1);
+                white-space: nowrap;
+                flex-shrink: 0;
+                font-size: 0.75rem;
+            }
+
+            .back-link {
+                background: rgba(0,0,0,0.05) !important;
+            }
+
+            /* Hide contact on mobile - too crowded */
+            .nav-links a[href^="mailto"] {
+                display: none;
+            }
+
+            /* Reduce spacing */
+            .hero {
+                padding: 100px 10px 60px;
+            }
+
+            .features {
+                padding: 60px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="/" class="logo">Tyche Ventures</a>
+            <div class="nav-links">
+                <a href="/" class="back-link">&larr; Back to Home</a>
+                <a href="/little-routines.html">Little Routines</a>
+                <a href="/cartkind.html">CartKind</a>
+                <a href="/kids-meal-planner.html">Kids Meal Planner</a>
+                <a href="mailto:support@tycheventuresllc.com">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>HomeKeeper</h1>
+                <div class="subtitle">Your Home, Simplified</div>
+                <p>Track maintenance tasks, manage assets, store warranties and important documents — all offline and private. Everything you need to protect and maintain your home, right in your pocket.</p>
+                <a href="#" class="status-badge">
+                    <span>📱</span>
+                    <span>Download on the App Store</span>
+                </a>
+            </div>
+            <div class="hero-image">
+                <img src="/images/apps/homekeeper-hero.png" alt="HomeKeeper app main screen" class="app-screenshot">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="features-container">
+            <div class="section-header">
+                <h2>Everything You Need to Protect Your Home</h2>
+                <p>From asset tracking to maintenance reminders — we've built the complete toolkit for responsible homeowners.</p>
+            </div>
+
+            <div class="features-grid">
+                <!-- Feature 1: Assets -->
+                <div class="feature-showcase">
+                    <div class="feature-content">
+                        <h3>Track Every Asset</h3>
+                        <p>Manage all your home appliances, systems, warranties, and serial numbers in one place. Never lose track of what you own or when it needs attention.</p>
+                        <div class="feature-highlights">
+                            <div class="highlight">
+                                <div class="highlight-icon">🏠</div>
+                                <span>Smart asset suggestions with icons</span>
+                            </div>
+                            <div class="highlight">
+                                <div class="highlight-icon">📋</div>
+                                <span>Warranty expiration tracking</span>
+                            </div>
+                            <div class="highlight">
+                                <div class="highlight-icon">💰</div>
+                                <span>Purchase dates and costs</span>
+                            </div>
+                            <div class="highlight">
+                                <div class="highlight-icon">📎</div>
+                                <span>Document attachments per asset</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feature-image">
+                        <img src="/images/apps/homekeeper-assets.png" alt="Asset tracking interface" class="feature-screenshot">
+                    </div>
+                </div>
+
+                <!-- Feature 2: Maintenance -->
+                <div class="feature-showcase">
+                    <div class="feature-content">
+                        <h3>Never Miss Maintenance</h3>
+                        <p>Set up recurring task reminders with smart scheduling so you never forget an oil change, filter replacement, or seasonal checkup again.</p>
+                        <div class="feature-highlights">
+                            <div class="highlight">
+                                <div class="highlight-icon">🔧</div>
+                                <span>Intelligent task templates</span>
+                            </div>
+                            <div class="highlight">
+                                <div class="highlight-icon">📅</div>
+                                <span>Time-grouped task views</span>
+                            </div>
+                            <div class="highlight">
+                                <div class="highlight-icon">✅</div>
+                                <span>Quick-complete with swipe</span>
+                            </div>
+                            <div class="highlight">
+                                <div class="highlight-icon">🔔</div>
+                                <span>Push notification reminders</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feature-image">
+                        <img src="/images/apps/homekeeper-tasks.png" alt="Maintenance task management" class="feature-screenshot">
+                    </div>
+                </div>
+
+                <!-- Feature 3: Documents -->
+                <div class="feature-showcase">
+                    <div class="feature-content">
+                        <h3>Store Important Documents</h3>
+                        <p>Scan and store receipts, warranties, manuals, and other important documents. Keep everything organized and accessible right on your device.</p>
+                        <div class="feature-highlights">
+                            <div class="highlight">
+                                <div class="highlight-icon">📸</div>
+                                <span>Camera scanning built in</span>
+                            </div>
+                            <div class="highlight">
+                                <div class="highlight-icon">🗂️</div>
+                                <span>Organize by asset or task</span>
+                            </div>
+                            <div class="highlight">
+                                <div class="highlight-icon">⚡</div>
+                                <span>Quick-add document types</span>
+                            </div>
+                            <div class="highlight">
+                                <div class="highlight-icon">🔒</div>
+                                <span>Secure offline storage</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feature-image">
+                        <img src="/images/apps/homekeeper-docs.png" alt="Document storage and scanning" class="feature-screenshot">
+                    </div>
+                </div>
+
+                <!-- Feature 4: History -->
+                <div class="feature-showcase">
+                    <div class="feature-content">
+                        <h3>Complete Maintenance History</h3>
+                        <p>Log every repair, track costs over time, store contractor information, and export detailed PDF reports for insurance or resale.</p>
+                        <div class="feature-highlights">
+                            <div class="highlight">
+                                <div class="highlight-icon">📝</div>
+                                <span>Detailed service logs</span>
+                            </div>
+                            <div class="highlight">
+                                <div class="highlight-icon">💵</div>
+                                <span>Cost tracking over time</span>
+                            </div>
+                            <div class="highlight">
+                                <div class="highlight-icon">👷</div>
+                                <span>Contractor information</span>
+                            </div>
+                            <div class="highlight">
+                                <div class="highlight-icon">📄</div>
+                                <span>PDF report generation</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feature-image">
+                        <img src="/images/apps/homekeeper-history.png" alt="Maintenance history and reports" class="feature-screenshot">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-container">
+            <h2>Take Control of Your Home Maintenance</h2>
+            <p>HomeKeeper helps you stay on top of every task, warranty, and repair. Download free with one property and up to five assets.</p>
+            <a href="#" class="notify-cta">
+                <span>📱</span>
+                <span>Download on the App Store</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Disclaimer -->
+    <section style="padding: 40px 20px; background: #F8F9FA; text-align: center;">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <p style="font-size: 0.9rem; color: #666; line-height: 1.6;">
+                <strong>Important:</strong> HomeKeeper is a personal organizational tool and does not provide professional home inspection, maintenance, or safety advice.
+                Always consult qualified professionals for home repairs and safety concerns.
+                The app does not guarantee recall detection or warranty compliance.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="/">Home</a>
+                <a href="/homekeeper.html">HomeKeeper</a>
+                <a href="/little-routines.html">Little Routines</a>
+                <a href="/cartkind.html">CartKind</a>
+                <a href="/kids-meal-planner.html">Kids Meal Planner</a>
+                <a href="/blog.html">Blog</a>
+                <a href="mailto:support@tycheventuresllc.com">Contact</a>
+                <a href="/homekeeper/support.html">Support</a>
+                <a href="/homekeeper/privacy-policy.html">Privacy</a>
+                <a href="/homekeeper/terms-of-use.html">Terms</a>
+            </div>
+            <div class="footer-text">
+                &copy; 2026 Tyche Ventures LLC. All rights reserved.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
