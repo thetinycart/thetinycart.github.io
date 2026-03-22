@@ -317,6 +317,10 @@ article img {
   min-width: 0;
 }
 
+.product-box.no-product-image {
+  display: block;
+}
+
 .product-box:hover {
   border-color: var(--aqua);
   box-shadow: var(--shadow-sm);
