@@ -5,7 +5,7 @@
     <link>https://tycheventuresllc.com/blog.html</link>
     <description>Backlog and new-post feed for The Tiny Cart Pinterest auto-publishing.</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 22 Mar 2026 19:44:04 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 23 Mar 2026 19:35:47 +0000</lastBuildDate>
     <generator>The Tiny Cart feed builder</generator>
     <item>
       <title>Best Lunchboxes for Toddlers (2026)</title>
@@ -16,6 +16,16 @@
       <category>Kids Lunch Gear</category>
       <enclosure url="https://tycheventuresllc.com/images/pins/best-lunchboxes-for-toddlers.png" type="image/png" />
       <media:content url="https://tycheventuresllc.com/images/pins/best-lunchboxes-for-toddlers.png" medium="image" />
+    </item>
+    <item>
+      <title>Best Baby Food Makers &amp; Blenders (2026)</title>
+      <link>https://tycheventuresllc.com/best-baby-food-makers-blenders.html</link>
+      <guid isPermaLink="true">https://tycheventuresllc.com/best-baby-food-makers-blenders.html</guid>
+      <pubDate>Mon, 23 Mar 2026 15:00:00 +0000</pubDate>
+      <description>Make fresh, healthy baby food at home. Compare steamers, blenders, and all-in-one makers for every budget.</description>
+      <category>Baby Feeding Essentials</category>
+      <enclosure url="https://tycheventuresllc.com/images/pins/best-baby-food-makers-blenders.png" type="image/png" />
+      <media:content url="https://tycheventuresllc.com/images/pins/best-baby-food-makers-blenders.png" medium="image" />
     </item>
   </channel>
 </rss>

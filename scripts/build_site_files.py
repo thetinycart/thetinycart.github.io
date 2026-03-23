@@ -15,6 +15,7 @@ def run(script_name: str) -> None:
 
 
 def main() -> None:
+    run("build_pin_images.py")
     run("build_pinterest_feed.py")
     run("build_sitemap.py")
 
