@@ -15,18 +15,21 @@ ROBOTS_PATH = ROOT / "robots.txt"
 
 def iter_site_files() -> list[Path]:
     top_level = sorted(ROOT.glob("*.html"))
-    legal_pages = []
-    for app_dir in ["cartkind", "homekeeper", "kids-meal-planner", "little-routines"]:
-        for page in sorted((ROOT / app_dir).glob("*.html")):
-            if page.name != "index.html":
-                legal_pages.append(page)
-    return top_level + legal_pages
+    nested_pages = []
+    for content_dir in ["printables", "cartkind", "homekeeper", "kids-meal-planner", "little-routines"]:
+        for page in sorted((ROOT / content_dir).glob("*.html")):
+            if content_dir != "printables" and page.name == "index.html":
+                continue
+            nested_pages.append(page)
+    return top_level + nested_pages
 
 
 def to_url_path(path: Path) -> str:
     rel = path.relative_to(ROOT)
     if rel == Path("index.html"):
         return "/"
+    if rel.name == "index.html":
+        return f"/{rel.parent.as_posix()}/"
     return f"/{rel.as_posix()}"
 
 
@@ -35,6 +38,10 @@ def priority_for(path: str) -> str:
         return "1.0"
     if path == "/blog.html":
         return "0.9"
+    if path == "/printables/":
+        return "0.9"
+    if path.startswith("/printables/"):
+        return "0.8"
     if path.startswith("/best-") or path in {
         "/easy-lunch-ideas-for-picky-eaters.html",
         "/how-to-meal-plan-for-kids.html",
@@ -48,6 +55,10 @@ def priority_for(path: str) -> str:
 def changefreq_for(path: str) -> str:
     if path == "/" or path == "/blog.html":
         return "weekly"
+    if path == "/printables/":
+        return "weekly"
+    if path.startswith("/printables/"):
+        return "monthly"
     if path.startswith("/best-") or path in {
         "/easy-lunch-ideas-for-picky-eaters.html",
         "/how-to-meal-plan-for-kids.html",
