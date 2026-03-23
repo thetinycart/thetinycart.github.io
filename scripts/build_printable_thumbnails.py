@@ -18,58 +18,53 @@ SIZE = (1200, 1500)
 PRODUCTS = [
     {
         "slug": "family-meal-planner",
-        "category": "MEAL PLANNING",
-        "title": ["Family Meals", "& Lunches"],
-        "subtitle": "calm weekly system",
+        "label": "MEAL PLANNER",
         "accent": "#cb7e62",
         "accent_soft": "#f0d8d2",
         "glow": "#dccfc3",
         "preview_main": "preview-weekly-planner.png",
         "preview_back": "preview-overview.png",
+        "layout": "right",
     },
     {
         "slug": "kids-routine-chart",
-        "category": "ROUTINES",
-        "title": ["Kids Routines", "& Responsibilities"],
-        "subtitle": "clearer daily flow",
+        "label": "ROUTINES",
         "accent": "#71816d",
         "accent_soft": "#dce5da",
         "glow": "#d8ddd2",
         "preview_main": "preview-morning-flow.png",
         "preview_back": "preview-overview.png",
+        "layout": "left",
     },
     {
         "slug": "playroom-organization-labels",
-        "category": "ORGANIZATION",
-        "title": ["Playroom Labels", "+ Rotation"],
-        "subtitle": "simpler cleanup",
+        "label": "ORGANIZE",
         "accent": "#c6a06a",
         "accent_soft": "#efe0c8",
         "glow": "#e5dbc8",
         "preview_main": "preview-category-grid.png",
         "preview_back": "preview-overview.png",
+        "layout": "center",
     },
     {
         "slug": "lunchbox-notes",
-        "category": "LUNCHBOX NOTES",
-        "title": ["Lunchbox Notes", "+ Joke Cards"],
-        "subtitle": "warmer school lunches",
+        "label": "NOTES",
         "accent": "#c77063",
         "accent_soft": "#f4ddd8",
         "glow": "#e6d7d0",
         "preview_main": "preview-encouragement-notes.png",
         "preview_back": "preview-overview.png",
+        "layout": "right",
     },
     {
         "slug": "baby-registry-planner",
-        "category": "NEW BABY",
-        "title": ["Baby Registry", "+ First Week"],
-        "subtitle": "calmer priorities",
+        "label": "NEW BABY",
         "accent": "#9a8c78",
         "accent_soft": "#ede4da",
         "glow": "#e6ddd3",
         "preview_main": "preview-priorities.png",
         "preview_back": "preview-overview.png",
+        "layout": "left",
     },
 ]
 
@@ -118,27 +113,33 @@ def draw_preview_card(canvas: Image.Image, preview: Image.Image, box: tuple[int,
 def build_thumb(config: dict[str, str]) -> None:
     folder = PRINTABLES / config["slug"]
     thumb_path = folder / "thumb.png"
-    main_preview = fit_preview(folder / config["preview_main"], (430, 560))
-    back_preview = fit_preview(folder / config["preview_back"], (320, 430))
+    main_preview = fit_preview(folder / config["preview_main"], (520, 770))
+    back_preview = fit_preview(folder / config["preview_back"], (340, 500))
 
     canvas = Image.new("RGBA", SIZE, hex_to_rgba("#f7f1ea"))
     glow = Image.new("RGBA", SIZE, (0, 0, 0, 0))
     gdraw = ImageDraw.Draw(glow)
-    gdraw.ellipse((-120, 980, 660, 1760), fill=hex_to_rgba(config["accent_soft"], 120))
-    gdraw.ellipse((730, -80, 1460, 620), fill=hex_to_rgba(config["glow"], 120))
-    gdraw.ellipse((860, 1050, 1380, 1530), fill=hex_to_rgba(config["accent"], 40))
+    if config["layout"] == "left":
+        gdraw.ellipse((-120, 140, 740, 980), fill=hex_to_rgba(config["accent_soft"], 135))
+        gdraw.ellipse((620, 900, 1380, 1650), fill=hex_to_rgba(config["glow"], 120))
+    elif config["layout"] == "right":
+        gdraw.ellipse((500, 120, 1360, 980), fill=hex_to_rgba(config["accent_soft"], 135))
+        gdraw.ellipse((-80, 960, 760, 1650), fill=hex_to_rgba(config["glow"], 120))
+    else:
+        gdraw.ellipse((-120, 980, 660, 1760), fill=hex_to_rgba(config["accent_soft"], 120))
+        gdraw.ellipse((730, -80, 1460, 620), fill=hex_to_rgba(config["glow"], 120))
+    gdraw.ellipse((820, 1120, 1380, 1570), fill=hex_to_rgba(config["accent"], 35))
     glow = glow.filter(ImageFilter.GaussianBlur(48))
     canvas = Image.alpha_composite(canvas, glow)
 
     frame = Image.new("RGBA", SIZE, (0, 0, 0, 0))
     fdraw = ImageDraw.Draw(frame)
     fdraw.rounded_rectangle((34, 34, SIZE[0] - 34, SIZE[1] - 34), radius=46, outline=(230, 221, 209, 255), width=3)
+    fdraw.rounded_rectangle((72, 72, SIZE[0] - 72, SIZE[1] - 72), radius=40, outline=(237, 230, 219, 255), width=2)
     canvas = Image.alpha_composite(canvas, frame)
 
-    serif_big = load_font(FONT_SERIF, 106)
-    serif_small = load_font(FONT_SERIF, 58)
     sans_label = load_font(FONT_SANS, 34)
-    sans_chip = load_font(FONT_SANS, 28)
+    sans_chip = load_font(FONT_SANS, 26)
 
     draw = ImageDraw.Draw(canvas)
 
@@ -149,35 +150,48 @@ def build_thumb(config: dict[str, str]) -> None:
     logo_back.alpha_composite(logo, ((96 - 72) // 2, (96 - 72) // 2))
     canvas.alpha_composite(logo_back, (86, 84))
 
-    chip_w = 250
+    chip_w = 220
     chip_h = 56
     chip_x = 196
     chip_y = 106
     draw.rounded_rectangle((chip_x, chip_y, chip_x + chip_w, chip_y + chip_h), radius=28, fill=hex_to_rgba(config["accent_soft"]), outline=hex_to_rgba(config["accent"], 45), width=2)
-    draw.text((chip_x + 26, chip_y + 10), config["category"], fill=hex_to_rgba(config["accent"]), font=sans_label)
+    draw.text((chip_x + 24, chip_y + 10), config["label"], fill=hex_to_rgba(config["accent"]), font=sans_label)
 
-    y = 218
-    for idx, line in enumerate(config["title"]):
-        font = serif_big if idx == 0 else serif_small
-        draw.text((96, y), line, fill=hex_to_rgba("#233039"), font=font)
-        y += 108 if idx == 0 else 78
+    mat_x0, mat_y0, mat_x1, mat_y1 = 86, 190, 1114, 1380
+    mat = Image.new("RGBA", SIZE, (0, 0, 0, 0))
+    mdraw = ImageDraw.Draw(mat)
+    mdraw.rounded_rectangle((mat_x0, mat_y0, mat_x1, mat_y1), radius=38, fill=(255, 252, 247, 130), outline=(235, 227, 217, 220), width=2)
+    mat = mat.filter(ImageFilter.GaussianBlur(0.5))
+    canvas = Image.alpha_composite(canvas, mat)
 
-    sub_w = 360
-    sub_h = 66
-    draw.rounded_rectangle((96, y + 8, 96 + sub_w, y + 8 + sub_h), radius=30, fill=(255, 255, 255, 220), outline=(231, 221, 209, 255), width=2)
-    draw.text((122, y + 24), config["subtitle"].upper(), fill=hex_to_rgba("#62707a"), font=sans_chip)
+    layout = config["layout"]
+    if layout == "left":
+        back_box = (560, 310, 900, 810)
+        main_box = (170, 420, 710, 1220)
+        main_rotate = -2
+        back_rotate = 8
+    elif layout == "right":
+        back_box = (290, 290, 630, 790)
+        main_box = (520, 410, 1060, 1210)
+        main_rotate = 2
+        back_rotate = -8
+    else:
+        back_box = (220, 300, 560, 800)
+        main_box = (360, 380, 900, 1180)
+        main_rotate = 0
+        back_rotate = -6
 
-    card_area = (630, 208, 1090, 1248)
-    canvas = add_shadow(canvas, (700, 300, 1070, 1240), radius=40, opacity=55)
-    canvas = add_shadow(canvas, (610, 218, 920, 650), radius=36, opacity=35)
-    draw_preview_card(canvas, back_preview, (620, 238, 930, 650), radius=34, rotate=-7)
-    draw_preview_card(canvas, main_preview, (700, 308, 1088, 1240), radius=40)
+    canvas = add_shadow(canvas, (back_box[0], back_box[1], back_box[2], back_box[3]), radius=34, opacity=28)
+    canvas = add_shadow(canvas, (main_box[0], main_box[1], main_box[2], main_box[3]), radius=38, opacity=44)
+    draw_preview_card(canvas, back_preview, back_box, radius=32, rotate=back_rotate)
+    draw_preview_card(canvas, main_preview, main_box, radius=38, rotate=main_rotate)
 
-    footer_y = 1328
-    footer_w = 318
-    footer_h = 74
-    draw.rounded_rectangle((96, footer_y, 96 + footer_w, footer_y + footer_h), radius=34, fill=hex_to_rgba(config["accent"]), outline=None)
-    draw.text((126, footer_y + 20), "8 PAGES  •  DIGITAL PDF", fill=(255, 255, 255, 245), font=sans_chip)
+    footer_y = 1308
+    footer_w = 168
+    footer_h = 62
+    footer_x = SIZE[0] - 86 - footer_w
+    draw.rounded_rectangle((footer_x, footer_y, footer_x + footer_w, footer_y + footer_h), radius=28, fill=(255, 255, 255, 220), outline=(231, 221, 209, 255), width=2)
+    draw.text((footer_x + 28, footer_y + 18), "DIGITAL PDF", fill=hex_to_rgba("#5b6972"), font=sans_chip)
 
     thumb_path.parent.mkdir(parents=True, exist_ok=True)
     canvas.convert("RGB").save(thumb_path, quality=95)
