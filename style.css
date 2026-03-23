@@ -624,6 +624,18 @@ article table td,
   object-fit: cover;
 }
 
+.feature-spotlight-media img.printable-cover,
+.story-card-media img.printable-cover,
+.preview-card img.printable-preview,
+.compact-story-card img.printable-cover,
+.printable-hero-media img {
+  aspect-ratio: 5 / 4;
+  object-fit: contain;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(248, 242, 234, 0.92));
+  padding: 18px;
+}
+
 .feature-spotlight-body {
   padding: 24px;
 }
@@ -916,8 +928,6 @@ article table td,
 .printable-hero-media img {
   margin: 0;
   width: 100%;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
   border-radius: 24px;
 }
 
