@@ -110,6 +110,11 @@ def draw_preview_card(canvas: Image.Image, preview: Image.Image, box: tuple[int,
     canvas.alpha_composite(card, (ox, oy))
 
 
+def text_size(draw: ImageDraw.ImageDraw, text: str, font: ImageFont.FreeTypeFont) -> tuple[int, int]:
+    left, top, right, bottom = draw.textbbox((0, 0), text, font=font)
+    return right - left, bottom - top
+
+
 def build_thumb(config: dict[str, str]) -> None:
     folder = PRINTABLES / config["slug"]
     thumb_path = folder / "thumb.png"
@@ -150,12 +155,16 @@ def build_thumb(config: dict[str, str]) -> None:
     logo_back.alpha_composite(logo, ((96 - 72) // 2, (96 - 72) // 2))
     canvas.alpha_composite(logo_back, (86, 84))
 
-    chip_w = 220
+    label_text = config["label"]
+    label_w, label_h = text_size(draw, label_text, sans_label)
+    chip_w = max(150, label_w + 52)
     chip_h = 56
     chip_x = 196
     chip_y = 106
     draw.rounded_rectangle((chip_x, chip_y, chip_x + chip_w, chip_y + chip_h), radius=28, fill=hex_to_rgba(config["accent_soft"]), outline=hex_to_rgba(config["accent"], 45), width=2)
-    draw.text((chip_x + 24, chip_y + 10), config["label"], fill=hex_to_rgba(config["accent"]), font=sans_label)
+    text_x = chip_x + (chip_w - label_w) // 2
+    text_y = chip_y + (chip_h - label_h) // 2 - 2
+    draw.text((text_x, text_y), label_text, fill=hex_to_rgba(config["accent"]), font=sans_label)
 
     mat_x0, mat_y0, mat_x1, mat_y1 = 86, 190, 1114, 1380
     mat = Image.new("RGBA", SIZE, (0, 0, 0, 0))
