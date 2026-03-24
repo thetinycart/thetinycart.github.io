@@ -5,7 +5,7 @@
     <link>https://tycheventuresllc.com/blog.html</link>
     <description>Backlog and new-post feed for The Tiny Cart Pinterest auto-publishing.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 23 Mar 2026 19:35:47 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 24 Mar 2026 20:13:46 +0000</lastBuildDate>
     <generator>The Tiny Cart feed builder</generator>
     <item>
       <title>Best Lunchboxes for Toddlers (2026)</title>
@@ -26,6 +26,16 @@
       <category>Baby Feeding Essentials</category>
       <enclosure url="https://tycheventuresllc.com/images/pins/best-baby-food-makers-blenders.png" type="image/png" />
       <media:content url="https://tycheventuresllc.com/images/pins/best-baby-food-makers-blenders.png" medium="image" />
+    </item>
+    <item>
+      <title>How to Meal Plan for Kids</title>
+      <link>https://tycheventuresllc.com/how-to-meal-plan-for-kids.html</link>
+      <guid isPermaLink="true">https://tycheventuresllc.com/how-to-meal-plan-for-kids.html</guid>
+      <pubDate>Tue, 24 Mar 2026 15:00:00 +0000</pubDate>
+      <description>Simple strategies to plan nutritious meals kids actually eat. Templates, shopping tips, and real-world advice from busy parents.</description>
+      <category>Meal Planning</category>
+      <enclosure url="https://tycheventuresllc.com/images/pins/how-to-meal-plan-for-kids.png" type="image/png" />
+      <media:content url="https://tycheventuresllc.com/images/pins/how-to-meal-plan-for-kids.png" medium="image" />
     </item>
   </channel>
 </rss>
