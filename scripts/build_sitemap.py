@@ -42,10 +42,11 @@ def priority_for(path: str) -> str:
         return "0.9"
     if path.startswith("/printables/"):
         return "0.8"
-    if path.startswith("/best-") or path in {
-        "/easy-lunch-ideas-for-picky-eaters.html",
-        "/how-to-meal-plan-for-kids.html",
-    }:
+    if (
+        path.startswith("/best-")
+        or path.startswith("/how-to-")
+        or path.startswith("/easy-")
+    ):
         return "0.9"
     if path.endswith(".html") and path.count("/") == 1:
         return "0.8"
@@ -59,10 +60,11 @@ def changefreq_for(path: str) -> str:
         return "weekly"
     if path.startswith("/printables/"):
         return "monthly"
-    if path.startswith("/best-") or path in {
-        "/easy-lunch-ideas-for-picky-eaters.html",
-        "/how-to-meal-plan-for-kids.html",
-    }:
+    if (
+        path.startswith("/best-")
+        or path.startswith("/how-to-")
+        or path.startswith("/easy-")
+    ):
         return "monthly"
     return "yearly"
 

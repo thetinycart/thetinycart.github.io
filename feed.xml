@@ -5,7 +5,7 @@
     <link>https://tycheventuresllc.com/blog.html</link>
     <description>Backlog and new-post feed for The Tiny Cart Pinterest auto-publishing.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 24 Mar 2026 20:13:46 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 25 Mar 2026 13:47:55 +0000</lastBuildDate>
     <generator>The Tiny Cart feed builder</generator>
     <item>
       <title>Best Lunchboxes for Toddlers (2026)</title>
@@ -36,6 +36,16 @@
       <category>Meal Planning</category>
       <enclosure url="https://tycheventuresllc.com/images/pins/how-to-meal-plan-for-kids.png" type="image/png" />
       <media:content url="https://tycheventuresllc.com/images/pins/how-to-meal-plan-for-kids.png" medium="image" />
+    </item>
+    <item>
+      <title>Easy Lunch Ideas for Picky Eaters</title>
+      <link>https://tycheventuresllc.com/easy-lunch-ideas-for-picky-eaters.html</link>
+      <guid isPermaLink="true">https://tycheventuresllc.com/easy-lunch-ideas-for-picky-eaters.html</guid>
+      <pubDate>Wed, 25 Mar 2026 15:00:00 +0000</pubDate>
+      <description>Creative, nutritious lunch ideas that even the pickiest eaters will enjoy. No more lunch box battles.</description>
+      <category>Lunch Ideas</category>
+      <enclosure url="https://tycheventuresllc.com/images/pins/easy-lunch-ideas-for-picky-eaters.png" type="image/png" />
+      <media:content url="https://tycheventuresllc.com/images/pins/easy-lunch-ideas-for-picky-eaters.png" medium="image" />
     </item>
   </channel>
 </rss>
