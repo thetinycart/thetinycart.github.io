@@ -7,45 +7,45 @@
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #FAF9F6;
-            color: #2D2D2D;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: #faf9f6;
+            color: #2d2d2d;
             line-height: 1.7;
         }
-        .container { max-width: 720px; margin: 0 auto; padding: 40px 20px; }
-        h1 { font-size: 1.8rem; margin-bottom: 4px; }
-        .subtitle { font-size: 0.95rem; color: #777; margin-bottom: 32px; }
-        h2 { font-size: 1.2rem; margin: 24px 0 8px; color: #2D2D2D; }
-        p, li { font-size: 0.95rem; color: #444; margin-bottom: 12px; }
+        .container { max-width: 760px; margin: 0 auto; padding: 40px 20px 56px; }
+        h1 { font-size: 1.9rem; margin-bottom: 6px; }
+        .subtitle { color: #777; margin-bottom: 28px; }
+        h2 { font-size: 1.1rem; margin: 24px 0 8px; }
+        p, li { color: #444; font-size: 0.96rem; margin-bottom: 12px; }
         ul { padding-left: 20px; }
-        a { color: #6B8F71; }
+        a { color: #6b8f71; }
         .email-box {
             background: #fff;
-            border: 1.5px solid #6B8F71;
-            border-radius: 10px;
+            border: 1.5px solid #6b8f71;
+            border-radius: 12px;
             padding: 20px;
             text-align: center;
-            margin: 24px 0;
+            margin: 24px 0 28px;
         }
-        .email-box a { font-size: 1.1rem; font-weight: 600; text-decoration: none; }
-        footer { margin-top: 40px; font-size: 0.85rem; color: #999; }
+        .email-box a { font-size: 1.08rem; font-weight: 700; text-decoration: none; }
+        footer { margin-top: 40px; font-size: 0.86rem; color: #888; }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Support</h1>
         <p class="subtitle">We're here to help. Reach out anytime.</p>
-        <p class="subtitle" style="margin-top: -20px; margin-bottom: 28px;">Updated: March 19, 2026</p>
 
         <div class="email-box">
-            <p>📧 Email us at</p>
+            <p>Email us at</p>
             <a href="mailto:support@tycheventuresllc.com">support@tycheventuresllc.com</a>
         </div>
 
-        <h2>Frequently Asked Questions</h2>
-
         <h2>How does CartKind work?</h2>
-        <p>Scan a barcode and CartKind automatically looks up the product's ingredients, checks them against your personal rules, and shows a clear verdict: pass, caution, or fail. If a barcode lookup is not available, you can still enter ingredients manually.</p>
+        <p>Scan a barcode and CartKind looks up the product's ingredients, checks them against your personal rules, and shows a clear pass, caution, or fail result.</p>
+
+        <h2>What if I can't scan the barcode?</h2>
+        <p>You can enter a barcode manually. If lookup still cannot produce a usable result, CartKind also supports manual ingredient entry.</p>
 
         <h2>Where does the ingredient data come from?</h2>
         <p>CartKind checks Open Food Facts first and can fall back to USDA FoodData Central when needed. These are helpful reference sources, but product data can still be incomplete or outdated, so always verify by reading the physical label.</p>
@@ -55,24 +55,28 @@
 
         <h2>What does Premium include?</h2>
         <ul>
-            <li>Premium insights with trends, repeat offenders, and clean staples</li>
+            <li>Insights with trends, repeat offenders, and clean staples</li>
             <li>Custom ingredient triggers</li>
             <li>Custom ingredient categories</li>
+            <li>Custom rules applied during new evaluations</li>
         </ul>
-        <p>Scan history remains available in the free app.</p>
+        <p>Saved scan history remains available in the free app.</p>
 
         <h2>How do I manage or cancel my subscription?</h2>
-        <p>Go to your device's Settings → Apple ID → Subscriptions → CartKind. You can change or cancel your plan from there. Apple handles all billing.</p>
+        <p>Go to your device's Settings &rarr; Apple ID &rarr; Subscriptions &rarr; CartKind. Apple handles billing, plan changes, and cancellation.</p>
 
         <h2>Is my data private?</h2>
-        <p>Yes. All your rules, preferences, and scan history are stored locally on your device. We have no analytics, no tracking, and no server-side storage. See our <a href="privacy-policy.html">Privacy Policy</a> for details.</p>
+        <p>Yes. Rules and saved scan history are stored locally on your device. We do not use analytics or ad-tracking SDKs, and CartKind does not run its own cloud backend or server-side user storage. Apple-managed device backups may still apply depending on the user's settings. See the <a href="privacy-policy.html">Privacy Policy</a> for full details.</p>
 
-        <h2>A product scanned incorrectly — what should I do?</h2>
-        <p>Product data comes from third-party sources and may occasionally be incomplete or outdated. Always verify the physical label. If the product came from Open Food Facts, you can contribute corrections directly at <a href="https://world.openfoodfacts.org" target="_blank">openfoodfacts.org</a>, and CartKind can pick up updated data on a later scan.</p>
+        <h2>Why do some results open external links?</h2>
+        <p>CartKind can open source-reference links and optional shopping links in your browser. Some shopping links may be affiliate links, which means CartKind may earn a commission at no extra cost to you.</p>
+
+        <h2>A product scanned incorrectly. What should I do?</h2>
+        <p>Product data comes from third-party sources and may occasionally be incomplete or outdated. Always verify the physical label. If the product came from Open Food Facts, you can contribute corrections at <a href="https://world.openfoodfacts.org" target="_blank" rel="noreferrer">openfoodfacts.org</a>, and CartKind can pick up updated data on a later scan.</p>
 
         <footer>
             <p>&copy; 2026 Tyche Ventures LLC. All rights reserved.</p>
-            <p><a href="index.html">← Back to CartKind</a></p>
+            <p><a href="index.html">&larr; Back to CartKind</a></p>
         </footer>
     </div>
 </body>
