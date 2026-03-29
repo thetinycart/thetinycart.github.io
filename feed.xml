@@ -5,7 +5,7 @@
     <link>https://tycheventuresllc.com/blog.html</link>
     <description>Backlog and new-post feed for The Tiny Cart Pinterest auto-publishing.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 25 Mar 2026 13:47:55 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 29 Mar 2026 14:11:43 +0000</lastBuildDate>
     <generator>The Tiny Cart feed builder</generator>
     <item>
       <title>Best Lunchboxes for Toddlers (2026)</title>
@@ -46,6 +46,46 @@
       <category>Lunch Ideas</category>
       <enclosure url="https://tycheventuresllc.com/images/pins/easy-lunch-ideas-for-picky-eaters.png" type="image/png" />
       <media:content url="https://tycheventuresllc.com/images/pins/easy-lunch-ideas-for-picky-eaters.png" medium="image" />
+    </item>
+    <item>
+      <title>Best Kids Cooking Sets (2026)</title>
+      <link>https://tycheventuresllc.com/best-kids-cooking-sets.html</link>
+      <guid isPermaLink="true">https://tycheventuresllc.com/best-kids-cooking-sets.html</guid>
+      <pubDate>Thu, 26 Mar 2026 15:00:00 +0000</pubDate>
+      <description>Safe, age-appropriate cooking tools to get kids involved in the kitchen. Build confidence and life skills through cooking.</description>
+      <category>Kids Activities</category>
+      <enclosure url="https://tycheventuresllc.com/images/pins/best-kids-cooking-sets.png" type="image/png" />
+      <media:content url="https://tycheventuresllc.com/images/pins/best-kids-cooking-sets.png" medium="image" />
+    </item>
+    <item>
+      <title>Best High Chairs for Small Spaces (2026)</title>
+      <link>https://tycheventuresllc.com/best-high-chairs-small-spaces.html</link>
+      <guid isPermaLink="true">https://tycheventuresllc.com/best-high-chairs-small-spaces.html</guid>
+      <pubDate>Fri, 27 Mar 2026 15:00:00 +0000</pubDate>
+      <description>Compact, foldable, and space-saving high chairs perfect for apartments and small kitchens. Safety meets functionality.</description>
+      <category>Baby Feeding Essentials</category>
+      <enclosure url="https://tycheventuresllc.com/images/pins/best-high-chairs-small-spaces.png" type="image/png" />
+      <media:content url="https://tycheventuresllc.com/images/pins/best-high-chairs-small-spaces.png" medium="image" />
+    </item>
+    <item>
+      <title>Best Kids Plates and Utensils (2026)</title>
+      <link>https://tycheventuresllc.com/best-kids-plates-and-utensils.html</link>
+      <guid isPermaLink="true">https://tycheventuresllc.com/best-kids-plates-and-utensils.html</guid>
+      <pubDate>Sat, 28 Mar 2026 15:00:00 +0000</pubDate>
+      <description>Durable, safe dinnerware that makes mealtimes easier. Suction plates, toddler forks, and spill-proof options.</description>
+      <category>Kids Dinnerware</category>
+      <enclosure url="https://tycheventuresllc.com/images/pins/best-kids-plates-and-utensils.png" type="image/png" />
+      <media:content url="https://tycheventuresllc.com/images/pins/best-kids-plates-and-utensils.png" medium="image" />
+    </item>
+    <item>
+      <title>Best Sippy Cups &amp; Water Bottles for Toddlers (2026)</title>
+      <link>https://tycheventuresllc.com/best-sippy-cups-water-bottles-toddlers.html</link>
+      <guid isPermaLink="true">https://tycheventuresllc.com/best-sippy-cups-water-bottles-toddlers.html</guid>
+      <pubDate>Sun, 29 Mar 2026 15:00:00 +0000</pubDate>
+      <description>Leak-proof, easy-to-clean cups that help toddlers transition from bottles to big kid drinking.</description>
+      <category>Kids Lunch Gear</category>
+      <enclosure url="https://tycheventuresllc.com/images/pins/best-sippy-cups-water-bottles-toddlers.png" type="image/png" />
+      <media:content url="https://tycheventuresllc.com/images/pins/best-sippy-cups-water-bottles-toddlers.png" medium="image" />
     </item>
   </channel>
 </rss>
