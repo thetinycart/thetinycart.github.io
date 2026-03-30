@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RefillCabinet — Medication Organizer & Refill Tracker</title>
+    <meta name="description" content="Organize medications, track doses, and never miss a refill. All data stays on your device — private and secure. Download free on the App Store.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #FEFEFE;
+            color: #2A2A2A;
+            line-height: 1.6;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #E8F5F0 0%, #F0FAF6 50%, #F8FDFA 100%);
+            padding: 80px 20px 60px;
+            text-align: center;
+        }
+        .hero-container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #2A2A2A;
+            margin-bottom: 8px;
+        }
+        .hero .tagline {
+            font-size: 1.3rem;
+            color: #2D8B6F;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+        .hero p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 32px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(45deg, #2D8B6F, #3AAF8C);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            font-size: 1.1rem;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(45, 139, 111, 0.3);
+        }
+
+        /* Features */
+        .features {
+            padding: 60px 20px;
+            background: #fff;
+        }
+        .features-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .features h2 {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 40px;
+            color: #2A2A2A;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+        .feature-card {
+            background: #F8FDFA;
+            border-radius: 12px;
+            padding: 24px;
+        }
+        .feature-card .icon {
+            font-size: 1.8rem;
+            margin-bottom: 8px;
+        }
+        .feature-card h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: #2A2A2A;
+        }
+        .feature-card p {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        /* Privacy banner */
+        .privacy-banner {
+            padding: 40px 20px;
+            background: #F0F7F4;
+            text-align: center;
+        }
+        .privacy-banner p {
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 0.95rem;
+            color: #555;
+            line-height: 1.6;
+        }
+        .privacy-banner strong { color: #2D8B6F; }
+
+        /* Disclaimer */
+        .disclaimer {
+            padding: 30px 20px;
+            background: #FFF9E6;
+            text-align: center;
+        }
+        .disclaimer p {
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 0.85rem;
+            color: #7A6520;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            background: #2A2A2A;
+            color: #FFF;
+            padding: 40px 20px 30px;
+            text-align: center;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        .footer-links a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
+        }
+        .footer-links a:hover { color: #3AAF8C; }
+        .footer-text {
+            color: rgba(255,255,255,0.5);
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 2.2rem; }
+            .features-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-container">
+            <h1>💊 RefillCabinet</h1>
+            <div class="tagline">Your Medications, Organized</div>
+            <p>Track medications, schedule doses, log what you take, and never run out of refills. Manage your entire household's medications in one simple, private app.</p>
+            <a href="#" class="cta-button">
+                <span>📱</span>
+                <span>Download on the App Store</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <div class="features-container">
+            <h2>Everything You Need</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="icon">👥</div>
+                    <h3>Household Profiles</h3>
+                    <p>Create profiles for yourself, family members, or people you care for. Each profile has its own medication list and schedule.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">⏰</div>
+                    <h3>Dose Reminders</h3>
+                    <p>Set daily, weekly, interval, or as-needed schedules. Get local notifications when it's time to take a dose.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">✅</div>
+                    <h3>Dose Logging</h3>
+                    <p>Log doses as taken, skipped, snoozed, or missed. Keep a complete history of medication adherence.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">📦</div>
+                    <h3>Refill Tracking</h3>
+                    <p>Track supply on hand and set refill thresholds. Get alerted before you run out so you never miss a refill.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">📄</div>
+                    <h3>PDF Export</h3>
+                    <p>Export your medication list as a clean PDF to share with healthcare providers or keep as a backup.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🔒</div>
+                    <h3>100% Private</h3>
+                    <p>All data stays on your device. No accounts, no cloud, no tracking. Your medication info is yours alone.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Privacy banner -->
+    <section class="privacy-banner">
+        <p><strong>Your privacy is absolute.</strong> RefillCabinet stores everything locally on your device. We have zero servers, collect zero data, and have zero access to your medication information. Not now, not ever.</p>
+    </section>
+
+    <!-- Disclaimer -->
+    <section class="disclaimer">
+        <p><strong>Important:</strong> RefillCabinet is a personal organizational tool only. It does not provide medical advice, verify dosages, check drug interactions, or replace professional healthcare guidance. Always consult your healthcare provider for medical decisions. In case of emergency, call 911.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="support.html">Support</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms-of-use.html">Terms of Use</a>
+            <a href="mailto:support@tycheventuresllc.com">Contact</a>
+        </div>
+        <div class="footer-text">
+            &copy; 2026 Tyche Ventures LLC. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
