@@ -5,28 +5,8 @@
     <link>https://tycheventuresllc.com/blog.html</link>
     <description>Backlog and new-post feed for The Tiny Cart Pinterest auto-publishing.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 02 Apr 2026 16:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 03 Apr 2026 13:46:01 +0000</lastBuildDate>
     <generator>The Tiny Cart feed builder</generator>
-    <item>
-      <title>We Built a Visual Routine App for Kids — Here's How It Works</title>
-      <link>https://tycheventuresllc.com/little-routines-app-launch.html</link>
-      <guid isPermaLink="true">https://tycheventuresllc.com/little-routines-app-launch.html</guid>
-      <pubDate>Thu, 02 Apr 2026 15:00:00 +0000</pubDate>
-      <description>A parent-first walkthrough of Little Routines: visual schedules, star rewards, built-in timers, and templates for morning, bedtime, and after-school routines. Free on the App Store.</description>
-      <category>Kids Routine App</category>
-      <enclosure url="https://tycheventuresllc.com/images/apps/lr-kidmode.png" type="image/png" />
-      <media:content url="https://tycheventuresllc.com/images/apps/lr-kidmode.png" medium="image" />
-    </item>
-    <item>
-      <title>We Built an App to Solve Kids' Meal Planning — Here's What It Does</title>
-      <link>https://tycheventuresllc.com/kids-meal-planner-app-launch.html</link>
-      <guid isPermaLink="true">https://tycheventuresllc.com/kids-meal-planner-app-launch.html</guid>
-      <pubDate>Wed, 01 Apr 2026 15:00:00 +0000</pubDate>
-      <description>A parent-first walkthrough of Kids Meal Planner: weekly planning, pantry tracking, grocery automation, caregiver sharing, and privacy-first design. Free on the App Store.</description>
-      <category>Meal Planning App</category>
-      <enclosure url="https://tycheventuresllc.com/images/pins/how-to-meal-plan-for-kids.png" type="image/png" />
-      <media:content url="https://tycheventuresllc.com/images/pins/how-to-meal-plan-for-kids.png" medium="image" />
-    </item>
     <item>
       <title>Best Lunchboxes for Toddlers (2026)</title>
       <link>https://tycheventuresllc.com/best-lunchboxes-for-toddlers.html</link>
@@ -126,6 +106,26 @@
       <category>Meal Planning</category>
       <enclosure url="https://tycheventuresllc.com/images/pins/best-meal-prep-containers-for-families.png" type="image/png" />
       <media:content url="https://tycheventuresllc.com/images/pins/best-meal-prep-containers-for-families.png" medium="image" />
+    </item>
+    <item>
+      <title>How to Organize a Kids Snack Station That Actually Works</title>
+      <link>https://tycheventuresllc.com/how-to-organize-a-kids-snack-station.html</link>
+      <guid isPermaLink="true">https://tycheventuresllc.com/how-to-organize-a-kids-snack-station.html</guid>
+      <pubDate>Wed, 01 Apr 2026 15:00:00 +0000</pubDate>
+      <description>A simple family snack-station system for easier grab-and-go snacks, smoother lunch packing, and less kitchen clutter.</description>
+      <category>Family Organization Systems</category>
+      <enclosure url="https://tycheventuresllc.com/images/pins/how-to-organize-a-kids-snack-station.png" type="image/png" />
+      <media:content url="https://tycheventuresllc.com/images/pins/how-to-organize-a-kids-snack-station.png" medium="image" />
+    </item>
+    <item>
+      <title>Best Playroom Storage Bins for Easier Toy Rotation (2026)</title>
+      <link>https://tycheventuresllc.com/best-playroom-storage-bins.html</link>
+      <guid isPermaLink="true">https://tycheventuresllc.com/best-playroom-storage-bins.html</guid>
+      <pubDate>Fri, 03 Apr 2026 15:00:00 +0000</pubDate>
+      <description>Playroom storage bins for toy rotation, cube shelves, and easier cleanup, with smart picks for active shelves and clear backstock.</description>
+      <category>Playroom Organization</category>
+      <enclosure url="https://tycheventuresllc.com/images/pins/best-playroom-storage-bins.png" type="image/png" />
+      <media:content url="https://tycheventuresllc.com/images/pins/best-playroom-storage-bins.png" medium="image" />
     </item>
   </channel>
 </rss>
