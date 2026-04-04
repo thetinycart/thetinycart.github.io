@@ -5,7 +5,7 @@
     <link>https://tycheventuresllc.com/blog.html</link>
     <description>Backlog and new-post feed for The Tiny Cart Pinterest auto-publishing.</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 04 Apr 2026 14:11:57 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 04 Apr 2026 19:19:54 +0000</lastBuildDate>
     <generator>The Tiny Cart feed builder</generator>
     <item>
       <title>Best Lunchboxes for Toddlers (2026)</title>
@@ -118,6 +118,16 @@
       <media:content url="https://tycheventuresllc.com/images/pins/how-to-organize-a-kids-snack-station.png" medium="image" />
     </item>
     <item>
+      <title>We Built Kids Meal Planner for Real Family Life</title>
+      <link>https://tycheventuresllc.com/kids-meal-planner-app-launch.html</link>
+      <guid isPermaLink="true">https://tycheventuresllc.com/kids-meal-planner-app-launch.html</guid>
+      <pubDate>Thu, 02 Apr 2026 15:00:00 +0000</pubDate>
+      <description>A parent-first walkthrough of Kids Meal Planner: weekly planning, pantry tracking, grocery automation, caregiver sharing, and privacy-first design.</description>
+      <category>Meal Planning App</category>
+      <enclosure url="https://tycheventuresllc.com/images/pins/kids-meal-planner-app-launch.png" type="image/png" />
+      <media:content url="https://tycheventuresllc.com/images/pins/kids-meal-planner-app-launch.png" medium="image" />
+    </item>
+    <item>
       <title>Best Playroom Storage Bins for Easier Toy Rotation (2026)</title>
       <link>https://tycheventuresllc.com/best-playroom-storage-bins.html</link>
       <guid isPermaLink="true">https://tycheventuresllc.com/best-playroom-storage-bins.html</guid>
@@ -126,6 +136,26 @@
       <category>Playroom Organization</category>
       <enclosure url="https://tycheventuresllc.com/images/pins/best-playroom-storage-bins.png" type="image/png" />
       <media:content url="https://tycheventuresllc.com/images/pins/best-playroom-storage-bins.png" medium="image" />
+    </item>
+    <item>
+      <title>We Built Little Routines to Make Daily Routines Easier</title>
+      <link>https://tycheventuresllc.com/little-routines-app-launch.html</link>
+      <guid isPermaLink="true">https://tycheventuresllc.com/little-routines-app-launch.html</guid>
+      <pubDate>Fri, 03 Apr 2026 15:00:00 +0000</pubDate>
+      <description>A parent-first walkthrough of Little Routines: visual schedules, star rewards, built-in timers, and age-appropriate templates for morning, bedtime, and after-school routines.</description>
+      <category>Kids Routine App</category>
+      <enclosure url="https://tycheventuresllc.com/images/pins/little-routines-app-launch.png" type="image/png" />
+      <media:content url="https://tycheventuresllc.com/images/pins/little-routines-app-launch.png" medium="image" />
+    </item>
+    <item>
+      <title>We Built CartKind for Smarter Ingredient Scanning</title>
+      <link>https://tycheventuresllc.com/cartkind-app-launch.html</link>
+      <guid isPermaLink="true">https://tycheventuresllc.com/cartkind-app-launch.html</guid>
+      <pubDate>Sat, 04 Apr 2026 15:00:00 +0000</pubDate>
+      <description>A parent-first walkthrough of CartKind: barcode scanning, custom dietary rules, clear pass/caution/fail verdicts, and complete privacy.</description>
+      <category>Ingredient Scanner App</category>
+      <enclosure url="https://tycheventuresllc.com/images/pins/cartkind-app-launch.png" type="image/png" />
+      <media:content url="https://tycheventuresllc.com/images/pins/cartkind-app-launch.png" medium="image" />
     </item>
   </channel>
 </rss>

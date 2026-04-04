@@ -110,6 +110,16 @@
     "board_hint": "Family Organization Systems"
   },
   {
+    "release_date": "2026-04-02",
+    "path": "/kids-meal-planner-app-launch.html",
+    "title": "We Built Kids Meal Planner for Real Family Life",
+    "pin_title": "Kids Meal Planner App",
+    "description": "A parent-first walkthrough of Kids Meal Planner: weekly planning, pantry tracking, grocery automation, caregiver sharing, and privacy-first design.",
+    "source_image": "/images/apps/kmp-hero.png",
+    "image": "/images/pins/kids-meal-planner-app-launch.png",
+    "board_hint": "Meal Planning App"
+  },
+  {
     "release_date": "2026-04-03",
     "path": "/best-playroom-storage-bins.html",
     "title": "Best Playroom Storage Bins for Easier Toy Rotation (2026)",
@@ -118,5 +128,25 @@
     "source_image": "/images/pins/source/best-playroom-storage-bins.png",
     "image": "/images/pins/best-playroom-storage-bins.png",
     "board_hint": "Playroom Organization"
+  },
+  {
+    "release_date": "2026-04-03",
+    "path": "/little-routines-app-launch.html",
+    "title": "We Built Little Routines to Make Daily Routines Easier",
+    "pin_title": "Little Routines App",
+    "description": "A parent-first walkthrough of Little Routines: visual schedules, star rewards, built-in timers, and age-appropriate templates for morning, bedtime, and after-school routines.",
+    "source_image": "/images/apps/lr-kidmode.png",
+    "image": "/images/pins/little-routines-app-launch.png",
+    "board_hint": "Kids Routine App"
+  },
+  {
+    "release_date": "2026-04-04",
+    "path": "/cartkind-app-launch.html",
+    "title": "We Built CartKind for Smarter Ingredient Scanning",
+    "pin_title": "CartKind Ingredient Scanner",
+    "description": "A parent-first walkthrough of CartKind: barcode scanning, custom dietary rules, clear pass/caution/fail verdicts, and complete privacy.",
+    "source_image": "/images/apps/cartkind-hero.png",
+    "image": "/images/pins/cartkind-app-launch.png",
+    "board_hint": "Ingredient Scanner App"
   }
 ]
