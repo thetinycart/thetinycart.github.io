@@ -148,5 +148,55 @@
     "source_image": "/images/apps/cartkind-hero.png",
     "image": "/images/pins/cartkind-app-launch.png",
     "board_hint": "Ingredient Scanner App"
+  },
+  {
+    "release_date": "2026-04-06",
+    "path": "/how-to-build-a-school-snack-system-for-ingredient-conscious-families.html",
+    "title": "How to Build a School Snack System for Ingredient-Conscious Families",
+    "pin_title": "School Snack System",
+    "description": "A practical school snack setup for families who want easier lunch packing, clearer ingredient checks, and less pantry chaos on busy mornings.",
+    "source_image": "/images/pins/source/how-to-build-a-school-snack-system-for-ingredient-conscious-families.png",
+    "image": "/images/pins/how-to-build-a-school-snack-system-for-ingredient-conscious-families.png",
+    "board_hint": "School Snack Systems"
+  },
+  {
+    "release_date": "2026-04-07",
+    "path": "/best-dry-erase-calendars-family-command-centers.html",
+    "title": "Best Dry Erase Calendars and Wall Organizers for Family Command Centers (2026)",
+    "pin_title": "Command Center Picks",
+    "description": "Dry erase calendars, wall files, and paper-flow tools that make family command centers easier to use and easier to reset.",
+    "source_image": "/images/pins/source/best-dry-erase-calendars-family-command-centers.png",
+    "image": "/images/pins/best-dry-erase-calendars-family-command-centers.png",
+    "board_hint": "Family Command Center"
+  },
+  {
+    "release_date": "2026-04-08",
+    "path": "/best-kids-desk-organizers-homework-stations.html",
+    "title": "Best Kids Desk Organizers for Homework Stations (2026)",
+    "pin_title": "Homework Desk Picks",
+    "description": "Kids desk organizers, paper sorters, caddies, and reset tools that help homework stations stay usable after school.",
+    "source_image": "/images/pins/source/best-kids-desk-organizers-homework-stations.png",
+    "image": "/images/pins/best-kids-desk-organizers-homework-stations.png",
+    "board_hint": "Homework Station Ideas"
+  },
+  {
+    "release_date": "2026-04-09",
+    "path": "/best-backseat-organizers-family-road-trips-kids.html",
+    "title": "Best Backseat Organizers for Family Road Trips with Kids (2026)",
+    "pin_title": "Road Trip Organizers",
+    "description": "Seatback organizers, travel trays, snack caddies, and cleanup helpers that make family road trips with kids feel less chaotic.",
+    "source_image": "/images/pins/source/best-backseat-organizers-family-road-trips-kids.png",
+    "image": "/images/pins/best-backseat-organizers-family-road-trips-kids.png",
+    "board_hint": "Family Road Trip"
+  },
+  {
+    "release_date": "2026-04-10",
+    "path": "/best-nursery-storage-baskets-drawer-organizers.html",
+    "title": "Best Nursery Storage Baskets and Drawer Organizers (2026)",
+    "pin_title": "Nursery Storage Picks",
+    "description": "Nursery baskets, drawer dividers, diaper caddies, and shelf bins that make baby-room storage easier to set up and easier to keep tidy.",
+    "source_image": "/images/pins/source/best-nursery-storage-baskets-drawer-organizers.png",
+    "image": "/images/pins/best-nursery-storage-baskets-drawer-organizers.png",
+    "board_hint": "Nursery Organization"
   }
 ]
