@@ -5,7 +5,7 @@
     <link>https://tycheventuresllc.com/blog.html</link>
     <description>Backlog and new-post feed for The Tiny Cart Pinterest auto-publishing.</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 05 Apr 2026 20:32:43 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 06 Apr 2026 13:45:27 +0000</lastBuildDate>
     <generator>The Tiny Cart feed builder</generator>
     <item>
       <title>Best Lunchboxes for Toddlers (2026)</title>
@@ -156,6 +156,16 @@
       <category>Ingredient Scanner App</category>
       <enclosure url="https://tycheventuresllc.com/images/pins/cartkind-app-launch.png" type="image/png" />
       <media:content url="https://tycheventuresllc.com/images/pins/cartkind-app-launch.png" medium="image" />
+    </item>
+    <item>
+      <title>How to Build a School Snack System for Ingredient-Conscious Families</title>
+      <link>https://tycheventuresllc.com/how-to-build-a-school-snack-system-for-ingredient-conscious-families.html</link>
+      <guid isPermaLink="true">https://tycheventuresllc.com/how-to-build-a-school-snack-system-for-ingredient-conscious-families.html</guid>
+      <pubDate>Mon, 06 Apr 2026 15:00:00 +0000</pubDate>
+      <description>A practical school snack setup for families who want easier lunch packing, clearer ingredient checks, and less pantry chaos on busy mornings.</description>
+      <category>School Snack Systems</category>
+      <enclosure url="https://tycheventuresllc.com/images/pins/how-to-build-a-school-snack-system-for-ingredient-conscious-families.png" type="image/png" />
+      <media:content url="https://tycheventuresllc.com/images/pins/how-to-build-a-school-snack-system-for-ingredient-conscious-families.png" medium="image" />
     </item>
   </channel>
 </rss>
