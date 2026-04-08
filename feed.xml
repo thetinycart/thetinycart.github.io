@@ -5,7 +5,7 @@
     <link>https://tycheventuresllc.com/blog.html</link>
     <description>Backlog and new-post feed for The Tiny Cart Pinterest auto-publishing.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 06 Apr 2026 13:45:27 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 08 Apr 2026 13:47:32 +0000</lastBuildDate>
     <generator>The Tiny Cart feed builder</generator>
     <item>
       <title>Best Lunchboxes for Toddlers (2026)</title>
@@ -166,6 +166,26 @@
       <category>School Snack Systems</category>
       <enclosure url="https://tycheventuresllc.com/images/pins/how-to-build-a-school-snack-system-for-ingredient-conscious-families.png" type="image/png" />
       <media:content url="https://tycheventuresllc.com/images/pins/how-to-build-a-school-snack-system-for-ingredient-conscious-families.png" medium="image" />
+    </item>
+    <item>
+      <title>Best Dry Erase Calendars and Wall Organizers for Family Command Centers (2026)</title>
+      <link>https://tycheventuresllc.com/best-dry-erase-calendars-family-command-centers.html</link>
+      <guid isPermaLink="true">https://tycheventuresllc.com/best-dry-erase-calendars-family-command-centers.html</guid>
+      <pubDate>Tue, 07 Apr 2026 15:00:00 +0000</pubDate>
+      <description>Dry erase calendars, wall files, and paper-flow tools that make family command centers easier to use and easier to reset.</description>
+      <category>Family Command Center</category>
+      <enclosure url="https://tycheventuresllc.com/images/pins/best-dry-erase-calendars-family-command-centers.png" type="image/png" />
+      <media:content url="https://tycheventuresllc.com/images/pins/best-dry-erase-calendars-family-command-centers.png" medium="image" />
+    </item>
+    <item>
+      <title>Best Kids Desk Organizers for Homework Stations (2026)</title>
+      <link>https://tycheventuresllc.com/best-kids-desk-organizers-homework-stations.html</link>
+      <guid isPermaLink="true">https://tycheventuresllc.com/best-kids-desk-organizers-homework-stations.html</guid>
+      <pubDate>Wed, 08 Apr 2026 15:00:00 +0000</pubDate>
+      <description>Kids desk organizers, paper sorters, caddies, and reset tools that help homework stations stay usable after school.</description>
+      <category>Homework Station Ideas</category>
+      <enclosure url="https://tycheventuresllc.com/images/pins/best-kids-desk-organizers-homework-stations.png" type="image/png" />
+      <media:content url="https://tycheventuresllc.com/images/pins/best-kids-desk-organizers-homework-stations.png" medium="image" />
     </item>
   </channel>
 </rss>
