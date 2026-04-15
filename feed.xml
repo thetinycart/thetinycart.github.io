@@ -5,7 +5,7 @@
     <link>https://tycheventuresllc.com/blog.html</link>
     <description>Backlog and new-post feed for The Tiny Cart Pinterest auto-publishing.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 13 Apr 2026 13:55:36 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 15 Apr 2026 13:52:47 +0000</lastBuildDate>
     <generator>The Tiny Cart feed builder</generator>
     <item>
       <title>Best Lunchboxes for Toddlers (2026)</title>
@@ -236,6 +236,26 @@
       <category>Back-to-School Organization</category>
       <enclosure url="https://tycheventuresllc.com/images/pins/best-entryway-organizers-kids-backpacks-school-gear.png" type="image/png" />
       <media:content url="https://tycheventuresllc.com/images/pins/best-entryway-organizers-kids-backpacks-school-gear.png" medium="image" />
+    </item>
+    <item>
+      <title>How to Build a Summer Meal Planning System for Kids at Home</title>
+      <link>https://tycheventuresllc.com/how-to-build-a-summer-meal-planning-system-for-kids.html</link>
+      <guid isPermaLink="true">https://tycheventuresllc.com/how-to-build-a-summer-meal-planning-system-for-kids.html</guid>
+      <pubDate>Tue, 14 Apr 2026 15:00:00 +0000</pubDate>
+      <description>A practical summer food-planning workflow for families juggling more meals at home, more snack requests, and less appetite for daily decision fatigue.</description>
+      <category>Summer Meal Planning</category>
+      <enclosure url="https://tycheventuresllc.com/images/pins/how-to-build-a-summer-meal-planning-system-for-kids.png" type="image/png" />
+      <media:content url="https://tycheventuresllc.com/images/pins/how-to-build-a-summer-meal-planning-system-for-kids.png" medium="image" />
+    </item>
+    <item>
+      <title>Best Visual Timers for Kids Morning Routines (2026)</title>
+      <link>https://tycheventuresllc.com/best-visual-timers-kids-morning-routines.html</link>
+      <guid isPermaLink="true">https://tycheventuresllc.com/best-visual-timers-kids-morning-routines.html</guid>
+      <pubDate>Wed, 15 Apr 2026 15:00:00 +0000</pubDate>
+      <description>A practical guide to the countdown timers, routine clocks, and time cues that help kids move through mornings with fewer reminders.</description>
+      <category>Morning Routine Ideas</category>
+      <enclosure url="https://tycheventuresllc.com/images/pins/best-visual-timers-kids-morning-routines.png" type="image/png" />
+      <media:content url="https://tycheventuresllc.com/images/pins/best-visual-timers-kids-morning-routines.png" medium="image" />
     </item>
   </channel>
 </rss>
