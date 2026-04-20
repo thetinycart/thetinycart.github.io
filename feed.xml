@@ -5,7 +5,7 @@
     <link>https://tycheventuresllc.com/blog.html</link>
     <description>Backlog and new-post feed for The Tiny Cart Pinterest auto-publishing.</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 19 Apr 2026 00:36:28 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 20 Apr 2026 13:51:18 +0000</lastBuildDate>
     <generator>The Tiny Cart feed builder</generator>
     <item>
       <title>Best Lunchboxes for Toddlers (2026)</title>
@@ -286,6 +286,26 @@
       <category>Back-to-School Organization</category>
       <enclosure url="https://tycheventuresllc.com/images/pins/best-label-makers-name-labels-kids-school-supplies.png" type="image/png" />
       <media:content url="https://tycheventuresllc.com/images/pins/best-label-makers-name-labels-kids-school-supplies.png" medium="image" />
+    </item>
+    <item>
+      <title>Best Lunchbox Ice Packs for Kids (2026)</title>
+      <link>https://tycheventuresllc.com/best-lunchbox-ice-packs-kids.html</link>
+      <guid isPermaLink="true">https://tycheventuresllc.com/best-lunchbox-ice-packs-kids.html</guid>
+      <pubDate>Sun, 19 Apr 2026 15:00:00 +0000</pubDate>
+      <description>Slim, reusable lunchbox ice packs that fit real kid lunch gear, stay cold long enough for school days, and do not steal half the lunch space.</description>
+      <category>School Lunch Gear</category>
+      <enclosure url="https://tycheventuresllc.com/images/pins/best-lunchbox-ice-packs-kids.png" type="image/png" />
+      <media:content url="https://tycheventuresllc.com/images/pins/best-lunchbox-ice-packs-kids.png" medium="image" />
+    </item>
+    <item>
+      <title>Best Art Supply Organizers for Kids Craft and Homework Stations (2026)</title>
+      <link>https://tycheventuresllc.com/best-art-supply-organizers-kids-craft-homework-stations.html</link>
+      <guid isPermaLink="true">https://tycheventuresllc.com/best-art-supply-organizers-kids-craft-homework-stations.html</guid>
+      <pubDate>Mon, 20 Apr 2026 15:00:00 +0000</pubDate>
+      <description>Smart art and homework organizers for markers, paper, scissors, and portable supply setups that help family tables reset faster.</description>
+      <category>Kids Craft Organization</category>
+      <enclosure url="https://tycheventuresllc.com/images/pins/best-art-supply-organizers-kids-craft-homework-stations.png" type="image/png" />
+      <media:content url="https://tycheventuresllc.com/images/pins/best-art-supply-organizers-kids-craft-homework-stations.png" medium="image" />
     </item>
   </channel>
 </rss>
