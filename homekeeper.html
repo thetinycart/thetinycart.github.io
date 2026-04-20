@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HomeKeeper — Smart Home Maintenance Tracker | Tyche Ventures</title>
-    <meta name="description" content="Track home maintenance tasks, manage assets and warranties, store important documents — all offline and private. Download free on the App Store.">
-    <meta property="og:title" content="HomeKeeper — Smart Home Maintenance Tracker">
-    <meta property="og:description" content="Track home maintenance tasks, manage assets and warranties, store important documents — all offline and private.">
+    <title>HomeKeeper — Property Maintenance & Recalls | Tyche Ventures</title>
+    <meta name="description" content="Track properties, assets, warranties, maintenance tasks, and documents in one private app. CPSC recall checks included. App Store release coming soon.">
+    <meta property="og:title" content="HomeKeeper — Property Maintenance & Recalls">
+    <meta property="og:description" content="Track properties, assets, warranties, maintenance tasks, and documents in one private app. CPSC recall checks included.">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -122,6 +122,19 @@
         .status-badge:hover {
             transform: translateY(-2px);
             box-shadow: 0 10px 30px rgba(74, 111, 165, 0.3);
+        }
+
+        .status-badge.is-disabled,
+        .notify-cta.is-disabled {
+            background: linear-gradient(45deg, #7A8FAE, #9BB0C9);
+            cursor: default;
+            box-shadow: none;
+        }
+
+        .status-badge.is-disabled:hover,
+        .notify-cta.is-disabled:hover {
+            transform: none;
+            box-shadow: none;
         }
 
         .hero-image {
@@ -446,12 +459,12 @@
         <div class="hero-container">
             <div class="hero-content">
                 <h1>HomeKeeper</h1>
-                <div class="subtitle">Your Home, Protected</div>
-                <p>The only home maintenance app that <strong>automatically checks your appliances against the CPSC safety recall database</strong>. Track assets, manage maintenance, monitor warranties, and get notified if something in your home has been recalled — all offline and private.</p>
-                <a href="#" class="status-badge">
-                    <span>📱</span>
-                    <span>Download on the App Store</span>
-                </a>
+                <div class="subtitle">Property Maintenance &amp; Recalls</div>
+                <p>Track properties, assets, warranties, maintenance tasks, and important documents in one private app. HomeKeeper checks saved assets against the CPSC recall database and keeps your records organized on your device.</p>
+                <div class="status-badge is-disabled">
+                    <span>⏳</span>
+                    <span>App Store release coming soon</span>
+                </div>
             </div>
             <div class="hero-image">
                 <img src="/images/apps/homekeeper-hero.png" alt="HomeKeeper app main screen" class="app-screenshot">
@@ -463,24 +476,24 @@
     <section class="features">
         <div class="features-container">
             <div class="section-header">
-                <h2>Everything You Need to Protect Your Home</h2>
-                <p>From asset tracking to maintenance reminders — we've built the complete toolkit for responsible homeowners.</p>
+                <h2>Everything You Need to Organize Your Home</h2>
+                <p>From asset records to maintenance reminders, HomeKeeper keeps home details, warranties, documents, and recall checks in one place.</p>
             </div>
 
             <div class="features-grid">
-                <!-- Feature 1: CPSC Safety Recall Monitoring -->
+                <!-- Feature 1: CPSC Recall Checks -->
                 <div class="feature-showcase">
                     <div class="feature-content">
-                        <h3>CPSC Safety Recall Monitoring</h3>
-                        <p>HomeKeeper automatically checks your assets against the CPSC recall database so you know immediately if something in your home has been recalled. Stay safe without lifting a finger.</p>
+                        <h3>CPSC Recall Checks</h3>
+                        <p>HomeKeeper checks saved assets against the CPSC recall database so you can review possible matches inside the app. Add a brand and model for better matching, then verify any recall directly at cpsc.gov.</p>
                         <div class="feature-highlights">
                             <div class="highlight">
                                 <div class="highlight-icon">🛡️</div>
-                                <span>Automatic CPSC database checking</span>
+                                <span>Check saved assets against the CPSC database</span>
                             </div>
                             <div class="highlight">
-                                <div class="highlight-icon">🔔</div>
-                                <span>Push notifications for new recalls</span>
+                                <div class="highlight-icon">🏷️</div>
+                                <span>Add brand and model for better matching</span>
                             </div>
                             <div class="highlight">
                                 <div class="highlight-icon">🎯</div>
@@ -559,11 +572,11 @@
                 <div class="feature-showcase">
                     <div class="feature-content">
                         <h3>Maintenance History PDF Reports</h3>
-                        <p>Generate professional PDF reports of your complete maintenance history. Perfect for insurance claims, home sales, or simply keeping a permanent record of every repair and service.</p>
+                        <p>Generate PDF reports of your maintenance history to keep personal records organized, review completed work, or share service history when needed.</p>
                         <div class="feature-highlights">
                             <div class="highlight">
                                 <div class="highlight-icon">📝</div>
-                                <span>Professional report generation</span>
+                                <span>Clear maintenance report generation</span>
                             </div>
                             <div class="highlight">
                                 <div class="highlight-icon">📤</div>
@@ -677,12 +690,12 @@
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="cta-container">
-            <h2>Take Control of Your Home Maintenance</h2>
-            <p>HomeKeeper helps you stay on top of every task, warranty, and repair. Download free with one property and up to five assets.</p>
-            <a href="#" class="notify-cta">
-                <span>📱</span>
-                <span>Download on the App Store</span>
-            </a>
+            <h2>Home Maintenance, Records, and Recalls in One Place</h2>
+            <p>HomeKeeper helps you stay on top of properties, assets, warranties, tasks, and documents in one private app. The launch build includes one property and up to five assets free.</p>
+            <div class="notify-cta is-disabled">
+                <span>⏳</span>
+                <span>App Store release coming soon</span>
+            </div>
         </div>
     </section>
 
@@ -690,9 +703,8 @@
     <section style="padding: 40px 20px; background: #F8F9FA; text-align: center;">
         <div style="max-width: 800px; margin: 0 auto;">
             <p style="font-size: 0.9rem; color: #666; line-height: 1.6;">
-                <strong>Important:</strong> HomeKeeper is a personal organizational tool and does not provide professional home inspection, maintenance, or safety advice.
-                Always consult qualified professionals for home repairs and safety concerns.
-                The app does not guarantee recall detection or warranty compliance.
+                <strong>Important:</strong> HomeKeeper is a personal organizational tool. Recall results are informational only and depend on the asset details you provide.
+                Always verify recalls at cpsc.gov, consult qualified professionals for repairs and safety concerns, and do not rely on the app as a guarantee of recall detection or warranty compliance.
             </p>
         </div>
     </section>
