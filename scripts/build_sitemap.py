@@ -16,7 +16,7 @@ ROBOTS_PATH = ROOT / "robots.txt"
 def iter_site_files() -> list[Path]:
     top_level = sorted(ROOT.glob("*.html"))
     nested_pages = []
-    for content_dir in ["printables", "cartkind", "homekeeper", "kids-meal-planner", "little-routines"]:
+    for content_dir in ["printables", "cartkind", "homerecall", "kids-meal-planner", "little-routines"]:
         for page in sorted((ROOT / content_dir).glob("*.html")):
             if content_dir != "printables" and page.name == "index.html":
                 continue
