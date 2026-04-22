@@ -5,7 +5,7 @@
     <link>https://tycheventuresllc.com/blog.html</link>
     <description>Backlog and new-post feed for The Tiny Cart Pinterest auto-publishing.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 21 Apr 2026 14:13:58 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 22 Apr 2026 13:51:42 +0000</lastBuildDate>
     <generator>The Tiny Cart feed builder</generator>
     <item>
       <title>Best Lunchboxes for Toddlers (2026)</title>
@@ -316,6 +316,16 @@
       <category>Summer Camp Gear</category>
       <enclosure url="https://tycheventuresllc.com/images/pins/best-kids-lunch-bags-summer-camp-day-trips.png" type="image/png" />
       <media:content url="https://tycheventuresllc.com/images/pins/best-kids-lunch-bags-summer-camp-day-trips.png" medium="image" />
+    </item>
+    <item>
+      <title>How to Plan Summer Lunches for Kids Without Repeating the Same Three Meals</title>
+      <link>https://tycheventuresllc.com/how-to-plan-summer-lunches-for-kids.html</link>
+      <guid isPermaLink="true">https://tycheventuresllc.com/how-to-plan-summer-lunches-for-kids.html</guid>
+      <pubDate>Wed, 22 Apr 2026 15:00:00 +0000</pubDate>
+      <description>A better summer lunch workflow for parents juggling camp, pool days, home lunches, and grocery lists without reinventing midday food every morning.</description>
+      <category>Summer Lunch Ideas</category>
+      <enclosure url="https://tycheventuresllc.com/images/pins/how-to-plan-summer-lunches-for-kids.png" type="image/png" />
+      <media:content url="https://tycheventuresllc.com/images/pins/how-to-plan-summer-lunches-for-kids.png" medium="image" />
     </item>
   </channel>
 </rss>
