@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/images/favicon.png">
     <title>Tyche Ventures — Beautiful Apps for Families</title>
     <meta name="description" content="We build simple, privacy-first iOS apps that make life easier. Meal planning, kids routines, ingredient scanning, home maintenance, and more.">
     <meta name="p:domain_verify" content="c0101e6a0f84abef38bbef27c8bb68c5"/>
@@ -55,7 +56,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(22, 32, 45, 0.52);
             backdrop-filter: blur(1px);
         }
         
@@ -78,7 +79,7 @@
         
         .hero p {
             font-size: 1.4rem;
-            color: rgba(255, 255, 255, 0.95);
+            color: #FFF;
             margin-bottom: 40px;
             max-width: 600px;
             margin-left: auto;
@@ -132,7 +133,7 @@
         
         .hero-app .status {
             font-size: 0.7rem;
-            color: #FF8A65;
+            color: #A33E22;
             font-weight: 500;
         }
         
@@ -161,8 +162,10 @@
         .logo {
             font-size: 1.5rem;
             font-weight: 700;
-            color: #FF8A65;
+            color: #A33E22;
             text-decoration: none;
+            flex-shrink: 0;
+            white-space: nowrap;
         }
         
         .nav-links {
@@ -179,7 +182,7 @@
         }
         
         .nav-links a:hover {
-            color: #FF8A65;
+            color: #A33E22;
         }
         
         /* Apps Section */
@@ -242,7 +245,7 @@
         
         .app-info .subtitle {
             font-size: 1.2rem;
-            color: #FF8A65;
+            color: #A33E22;
             font-weight: 600;
             margin-bottom: 24px;
         }
@@ -272,7 +275,7 @@
         .feature-icon {
             width: 24px;
             height: 24px;
-            background: linear-gradient(45deg, #FF8A65, #FFB74D);
+            background: linear-gradient(45deg, #A33E22, #8A4B00);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -286,7 +289,7 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: linear-gradient(45deg, #FF8A65, #FFB74D);
+            background: linear-gradient(45deg, #A33E22, #8A4B00);
             color: white;
             padding: 12px 24px;
             border-radius: 30px;
@@ -301,7 +304,7 @@
         }
         
         .app-status.coming-soon {
-            background: linear-gradient(45deg, #81C784, #64B5F6);
+            background: linear-gradient(45deg, #2E6B3E, #245D78);
         }
         
         .app-status.coming-soon:hover {
@@ -332,6 +335,33 @@
             width: 500%;
             height: 100%;
             animation: carousel-rotate 15s infinite;
+        }
+
+        .app-carousel.is-paused .carousel-slides {
+            animation-play-state: paused;
+        }
+
+        .carousel-toggle {
+            display: block;
+            min-height: 44px;
+            margin: 14px auto 0;
+            padding: 9px 16px;
+            border: 2px solid #A33E22;
+            border-radius: 22px;
+            background: #FFF;
+            color: #8C321D;
+            font: inherit;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .carousel-toggle:hover {
+            background: #FFF3EF;
+        }
+
+        .carousel-toggle:focus-visible {
+            outline: 3px solid #245D78;
+            outline-offset: 3px;
         }
         
         .carousel-slide {
@@ -386,7 +416,7 @@
             align-items: center;
             gap: 12px;
             background: #FFF;
-            color: #FF8A65;
+            color: #A33E22;
             padding: 18px 36px;
             border-radius: 50px;
             text-decoration: none;
@@ -430,7 +460,7 @@
             font-weight: 700;
             letter-spacing: 0.06em;
             text-transform: uppercase;
-            color: #FF8A65;
+            color: #A33E22;
             margin-bottom: 12px;
         }
 
@@ -487,7 +517,7 @@
         }
         
         .footer-links a:hover {
-            color: #FF8A65;
+            color: #FFB39F;
         }
         
         .footer-text {
@@ -548,16 +578,36 @@
             }
             
             /* Mobile navigation fixes */
+            nav .container {
+                height: 60px;
+                padding: 0 10px;
+                gap: 8px;
+            }
+
+            .logo {
+                font-size: 1rem;
+            }
+
             .nav-links {
-                gap: 12px;
-                font-size: 0.9rem;
+                flex: 1;
+                min-width: 0;
+                justify-content: flex-start;
+                gap: 6px;
+                font-size: 0.8rem;
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                overscroll-behavior-inline: contain;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: thin;
             }
             
             .nav-links a {
                 padding: 8px 12px;
                 border-radius: 20px;
-                background: rgba(255,255,255,0.1);
+                background: rgba(163, 62, 34, 0.08);
                 backdrop-filter: blur(10px);
+                white-space: nowrap;
+                flex-shrink: 0;
             }
             
             /* Reduce padding on mobile */
@@ -575,23 +625,37 @@
             scroll-behavior: smooth;
         }
         
-        /* Floating animation for hero apps */
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+
+            .carousel-slides {
+                animation: none !important;
+                transform: none !important;
+            }
+
+            .carousel-toggle { display: none; }
+
+            .hero-app,
+            .app-status,
+            .blog-cta,
+            .blog-feature-card {
+                transition: none;
+            }
+
+            .hero-app:hover,
+            .app-status:hover,
+            .blog-cta:hover,
+            .blog-feature-card:hover {
+                transform: none;
+            }
         }
-        
-        .hero-app:nth-child(1) { animation: float 6s ease-in-out infinite; }
-        .hero-app:nth-child(2) { animation: float 6s ease-in-out infinite 2s; }
-        .hero-app:nth-child(3) { animation: float 6s ease-in-out infinite 4s; }
-        .hero-app:nth-child(4) { animation: float 6s ease-in-out infinite 1s; }
     </style>
 </head>
 <body>
     <!-- Navigation -->
-    <nav>
+    <nav aria-label="Primary">
         <div class="container">
-            <a href="#" class="logo">Tyche Ventures</a>
+            <a href="/" class="logo">Tyche Ventures</a>
             <div class="nav-links">
                 <a href="#apps">Apps</a>
                 <a href="#blog">Blog</a>
@@ -611,17 +675,17 @@
                 <a href="/kids-meal-planner.html" class="hero-app">
                     <img src="/images/apps/kmp-icon.png" alt="Kids Meal Planner" class="app-icon">
                     <h3>Kids Meal Planner</h3>
-                    <div class="status" style="background: #4CAF50; color: white;">Available Now</div>
+                    <div class="status" style="background: #2E6B3E; color: white;">Available Now</div>
                 </a>
                 <a href="/little-routines.html" class="hero-app">
                     <img src="/images/apps/lr-icon.png" alt="Little Routines" class="app-icon">
                     <h3>Little Routines</h3>
-                    <div class="status" style="background: #4CAF50; color: white;">Available Now</div>
+                    <div class="status" style="background: #2E6B3E; color: white;">Available Now</div>
                 </a>
                 <a href="/cartkind.html" class="hero-app">
                     <img src="/images/apps/cartkind-icon.png" alt="CartKind" class="app-icon">
                     <h3>CartKind</h3>
-                    <div class="status" style="background: #4CAF50; color: white;">Available Now</div>
+                    <div class="status" style="background: #2E6B3E; color: white;">Available Now</div>
                 </a>
                 <a href="/homerecall.html" class="hero-app">
                     <img src="/images/apps/homerecall-icon.png" alt="HomeRecall" class="app-icon">
@@ -655,7 +719,7 @@
                             </div>
                             <div class="feature">
                                 <div class="feature-icon">👶</div>
-                                <span>Kid profiles & preferences</span>
+                                <span>Kid profiles &amp; preferences</span>
                             </div>
                             <div class="feature">
                                 <div class="feature-icon">👨‍👩‍👧</div>
@@ -668,7 +732,7 @@
                         </div>
                         
                         <a href="/kids-meal-planner.html" class="app-status">Learn More</a>
-                        <a href="https://apps.apple.com/app/kids-meal-planner/id6760732499" class="app-status" style="background: #4CAF50; color: white; margin-left: 10px; text-decoration: none;">Download</a>
+                        <a href="https://apps.apple.com/app/kids-meal-planner/id6760732499" class="app-status" style="background: #2E6B3E; color: white; margin-left: 10px; text-decoration: none;">Download</a>
                     </div>
                     <div class="app-mockup">
                         <div class="app-carousel">
@@ -691,6 +755,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <button type="button" class="carousel-toggle" data-app="Kids Meal Planner" aria-label="Pause Kids Meal Planner screenshot rotation">Pause screenshots</button>
                         </div>
                     </div>
                 </div>
@@ -699,7 +764,7 @@
                 <div class="app-showcase">
                     <div class="app-info">
                         <h3>Little Routines</h3>
-                        <div class="subtitle">Visual Schedule & Habit Chart</div>
+                        <div class="subtitle">Visual Schedule &amp; Habit Chart</div>
                         <p>Help kids complete their daily routines with visual schedules they can actually follow. Perfect for morning, bedtime, and after-school routines.</p>
                         
                         <div class="app-features">
@@ -722,7 +787,7 @@
                         </div>
                         
                         <a href="/little-routines.html" class="app-status">Learn More</a>
-                        <a href="https://apps.apple.com/app/little-routines/id6761321011" class="app-status" style="background: #4CAF50; color: white; margin-left: 10px; text-decoration: none;">Download</a>
+                        <a href="https://apps.apple.com/app/little-routines/id6761321011" class="app-status" style="background: #2E6B3E; color: white; margin-left: 10px; text-decoration: none;">Download</a>
                     </div>
                     <div class="app-mockup">
                         <div class="app-carousel">
@@ -745,6 +810,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <button type="button" class="carousel-toggle" data-app="Little Routines" aria-label="Pause Little Routines screenshot rotation">Pause screenshots</button>
                         </div>
                     </div>
                 </div>
@@ -776,7 +842,7 @@
                         </div>
                         
                         <a href="/cartkind.html" class="app-status">Learn More</a>
-                        <a href="https://apps.apple.com/app/cartkind/id6761304996" class="app-status" style="background: #4CAF50; color: white; margin-left: 10px; text-decoration: none;">Download</a>
+                        <a href="https://apps.apple.com/app/cartkind/id6761304996" class="app-status" style="background: #2E6B3E; color: white; margin-left: 10px; text-decoration: none;">Download</a>
                     </div>
                     <div class="app-mockup">
                         <div class="app-carousel">
@@ -799,6 +865,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <button type="button" class="carousel-toggle" data-app="CartKind" aria-label="Pause CartKind screenshot rotation">Pause screenshots</button>
                         </div>
                     </div>
                 </div>
@@ -807,13 +874,13 @@
                 <div class="app-showcase">
                     <div class="app-info">
                         <h3>HomeRecall</h3>
-                        <div class="subtitle">Home Safety Recalls &amp; Maintenance Tracker</div>
-                        <p>The only home app that <strong>automatically checks your appliances against the CPSC safety recall database</strong>. Track properties, manage assets, monitor warranty expirations, and generate professional PDF maintenance reports. Get notified instantly if something in your home has been recalled.</p>
+                        <div class="subtitle">Maintenance &amp; Warranty Tracker</div>
+                        <p>Organize properties, appliances, warranties, maintenance reminders, documents, and possible CPSC recall matches in one local-first app. No account is required, and recall results link back to official CPSC information for verification.</p>
 
                         <div class="app-features">
                             <div class="feature">
                                 <div class="feature-icon">🛡️</div>
-                                <span>CPSC recall monitoring</span>
+                                <span>CPSC recall checks</span>
                             </div>
                             <div class="feature">
                                 <div class="feature-icon">📊</div>
@@ -825,7 +892,7 @@
                             </div>
                             <div class="feature">
                                 <div class="feature-icon">🔧</div>
-                                <span>Asset & task management</span>
+                                <span>Asset &amp; task records</span>
                             </div>
                         </div>
 
@@ -836,7 +903,7 @@
                             <div class="carousel-container">
                                 <div class="carousel-slides" style="width: 100%; animation: none;">
                                     <div class="carousel-slide" style="width: 100%;">
-                                        <div class="screenshot" style="display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #F0F4FA, #E8EDF5); font-size: 72px;">🏠</div>
+                                        <img src="/images/apps/homerecall-home.png" alt="HomeRecall property overview" class="screenshot" loading="lazy">
                                     </div>
                                 </div>
                             </div>
@@ -936,5 +1003,16 @@
             </div>
         </div>
     </footer>
+    <script>
+        document.querySelectorAll('.carousel-toggle').forEach((button) => {
+            button.addEventListener('click', () => {
+                const carousel = button.closest('.app-carousel');
+                const isPaused = carousel.classList.toggle('is-paused');
+                const appName = button.dataset.app;
+                button.textContent = isPaused ? 'Resume screenshots' : 'Pause screenshots';
+                button.setAttribute('aria-label', `${isPaused ? 'Resume' : 'Pause'} ${appName} screenshot rotation`);
+            });
+        });
+    </script>
 </body>
 </html>
