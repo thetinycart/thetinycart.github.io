@@ -2,21 +2,25 @@
 
 from __future__ import annotations
 
-from datetime import datetime, timezone
+from datetime import datetime
 from pathlib import Path
 from xml.sax.saxutils import escape
+from zoneinfo import ZoneInfo
 
 
 SITE_URL = "https://tycheventuresllc.com"
+SITE_TIMEZONE = ZoneInfo("America/Los_Angeles")
 ROOT = Path(__file__).resolve().parents[1]
 SITEMAP_PATH = ROOT / "sitemap.xml"
 ROBOTS_PATH = ROOT / "robots.txt"
 
 
 def iter_site_files() -> list[Path]:
-    top_level = sorted(ROOT.glob("*.html"))
+    top_level = sorted(
+        page for page in ROOT.glob("*.html") if page.name != "homerecall.html"
+    )
     nested_pages = []
-    for content_dir in ["printables", "cartkind", "homerecall", "kids-meal-planner", "little-routines"]:
+    for content_dir in ["printables", "cartkind", "dwelllore", "kids-meal-planner", "little-routines"]:
         for page in sorted((ROOT / content_dir).glob("*.html")):
             if content_dir != "printables" and page.name == "index.html":
                 continue
@@ -77,7 +81,7 @@ def build_sitemap() -> str:
 
     for page in iter_site_files():
         url_path = to_url_path(page)
-        lastmod = datetime.fromtimestamp(page.stat().st_mtime, tz=timezone.utc).date()
+        lastmod = datetime.fromtimestamp(page.stat().st_mtime, tz=SITE_TIMEZONE).date()
         lines.extend(
             [
                 "  <url>",
