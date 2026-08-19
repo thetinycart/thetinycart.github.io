@@ -175,16 +175,16 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://tycheventuresllc.com/dwelllore.html</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://tycheventuresllc.com/easy-lunch-ideas-for-picky-eaters.html</loc>
     <lastmod>2026-04-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://tycheventuresllc.com/homerecall.html</loc>
-    <lastmod>2026-08-08</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tycheventuresllc.com/how-to-build-a-school-snack-system-for-ingredient-conscious-families.html</loc>
@@ -242,7 +242,7 @@
   </url>
   <url>
     <loc>https://tycheventuresllc.com/</loc>
-    <lastmod>2026-08-08</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -284,7 +284,7 @@
   </url>
   <url>
     <loc>https://tycheventuresllc.com/privacy.html</loc>
-    <lastmod>2026-04-21</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -373,20 +373,20 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://tycheventuresllc.com/homerecall/privacy-policy.html</loc>
-    <lastmod>2026-08-08</lastmod>
+    <loc>https://tycheventuresllc.com/dwelllore/privacy-policy.html</loc>
+    <lastmod>2026-08-18</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://tycheventuresllc.com/homerecall/support.html</loc>
-    <lastmod>2026-08-08</lastmod>
+    <loc>https://tycheventuresllc.com/dwelllore/support.html</loc>
+    <lastmod>2026-08-18</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://tycheventuresllc.com/homerecall/terms-of-use.html</loc>
-    <lastmod>2026-08-08</lastmod>
+    <loc>https://tycheventuresllc.com/dwelllore/terms-of-use.html</loc>
+    <lastmod>2026-08-18</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
