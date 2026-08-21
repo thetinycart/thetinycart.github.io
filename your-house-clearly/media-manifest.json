@@ -1,9 +1,9 @@
 {
   "schemaVersion": 2,
-  "status": "build6-device-framed-website-media-published-app-store-submission-held",
-  "reconciledAt": "2026-08-21T06:01:54Z",
+  "status": "build6-device-framed-website-media-published-submitted-for-review",
+  "reconciledAt": "2026-08-21T22:39:00Z",
   "landingPage": "/your-house-clearly/",
-  "publicLaunchStatus": "coming-soon",
+  "publicLaunchStatus": "submitted-awaiting-apple-review",
   "websitePublished": true,
   "websitePublication": {
     "status": "verified-live-device-framed-responsive",
@@ -28,8 +28,8 @@
     "iphone69": "device-framed screenshots 01-08 ordered and persisted after reload",
     "iphonePreview": "exactly one accepted MP4 persisted after reload; no MOV or duplicate; processed playback advances",
     "ipad13": "ordered screenshots 01-08 persisted after reload; no preview",
-    "addedForReview": false,
-    "submittedForReview": false
+    "addedForReview": true,
+    "submittedForReview": true
   },
   "rightsStatus": "owner-approved-public-use-counsel-review-not-claimed",
   "rightsApproval": {

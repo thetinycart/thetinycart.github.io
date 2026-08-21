@@ -1,608 +1,284 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CartKind — Smart Ingredient Scanner | Tyche Ventures</title>
-    <meta name="description" content="Scan product barcodes to check ingredients against your family's dietary restrictions and preferences. Know what's in your food before you buy it.">
-    <meta property="og:title" content="CartKind — Smart Ingredient Scanner">
-    <meta property="og:description" content="Scan barcodes, check ingredients against custom rules, shop with confidence. Free on the App Store. Privacy-first ingredient checking for families.">
-    <!-- Cache bust: 2026-03-14-15:57 -->
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #FEFEFE;
-            color: #2A2A2A;
-            line-height: 1.6;
-        }
-        
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px);
-            z-index: 1000;
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-        }
-        
-        nav .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            height: 70px;
-        }
-        
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #64B5F6;
-            text-decoration: none;
-        }
-        
-        .nav-links {
-            display: flex;
-            gap: 32px;
-            align-items: center;
-        }
-        
-        .nav-links a {
-            color: #2A2A2A;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.2s ease;
-        }
-        
-        .nav-links a:hover {
-            color: #64B5F6;
-        }
-        
-        .back-link {
-            color: #666;
-            font-size: 0.9rem;
-        }
-        
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #E8F4FD 0%, #F0F8FF 50%, #FAFCFE 100%);
-            padding: 140px 20px 100px;
-        }
-        
-        .hero-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: center;
-        }
-        
-        .hero-content h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            color: #2A2A2A;
-            margin-bottom: 20px;
-            line-height: 1.1;
-        }
-        
-        .hero-content .subtitle {
-            font-size: 1.4rem;
-            color: #64B5F6;
-            font-weight: 600;
-            margin-bottom: 24px;
-        }
-        
-        .hero-content p {
-            font-size: 1.2rem;
-            color: #555;
-            line-height: 1.7;
-            margin-bottom: 40px;
-        }
-        
-        .status-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: linear-gradient(45deg, #64B5F6, #81C784);
-            color: white;
-            padding: 16px 32px;
-            border-radius: 50px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            font-size: 1.1rem;
-        }
-        
-        .status-badge:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(100, 181, 246, 0.3);
-        }
-        
-        .hero-image {
-            text-align: center;
-        }
-        
-        .carousel-container {
-            width: 300px;
-            height: 650px;
-            position: relative;
-            overflow: hidden;
-            border-radius: 25px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-            transform: rotate(2deg);
-            transition: transform 0.3s ease;
-            margin: 0 auto;
-        }
-
-        .carousel-container:hover {
-            transform: rotate(0deg) scale(1.02);
-        }
-
-        .carousel-image {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-        }
-
-        .carousel-image.active {
-            opacity: 1;
-        }
-        
-        .app-screenshot:hover {
-            transform: rotate(0deg) scale(1.02);
-        }
-        
-        /* Features Section */
-        .features {
-            padding: 120px 20px;
-            background: #FFF;
-        }
-        
-        .features-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .section-header {
-            text-align: center;
-            margin-bottom: 80px;
-        }
-        
-        .section-header h2 {
-            font-size: 2.8rem;
-            font-weight: 700;
-            color: #2A2A2A;
-            margin-bottom: 16px;
-        }
-        
-        .section-header p {
-            font-size: 1.2rem;
-            color: #666;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        .features-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 100px;
-        }
-        
-        .feature-showcase {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: center;
-        }
-        
-        .feature-showcase:nth-child(even) {
-            direction: rtl;
-        }
-        
-        .feature-showcase:nth-child(even) > * {
-            direction: ltr;
-        }
-        
-        .feature-content h3 {
-            font-size: 2.2rem;
-            font-weight: 700;
-            color: #2A2A2A;
-            margin-bottom: 20px;
-        }
-        
-        .feature-content p {
-            font-size: 1.1rem;
-            color: #555;
-            line-height: 1.7;
-            margin-bottom: 30px;
-        }
-        
-        .feature-highlights {
-            display: grid;
-            gap: 16px;
-        }
-        
-        .highlight {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-size: 1rem;
-            color: #666;
-        }
-        
-        .highlight-icon {
-            width: 28px;
-            height: 28px;
-            background: linear-gradient(45deg, #64B5F6, #81C784);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: bold;
-            flex-shrink: 0;
-        }
-        
-        .feature-image {
-            text-align: center;
-        }
-        
-        .feature-screenshot {
-            width: 260px;
-            height: 563px;
-            border-radius: 20px;
-            object-fit: contain;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-            transition: transform 0.3s ease;
-            margin: 0 auto;
-        }
-        
-        .feature-screenshot:hover {
-            transform: translateY(-10px);
-        }
-        
-        /* CTA Section */
-        .cta-section {
-            padding: 100px 20px;
-            background: linear-gradient(135deg, #E8F4FD 0%, #FAFCFE 100%);
-            text-align: center;
-        }
-        
-        .cta-container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .cta-container h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #2A2A2A;
-            margin-bottom: 24px;
-        }
-        
-        .cta-container p {
-            font-size: 1.2rem;
-            color: #555;
-            margin-bottom: 40px;
-            line-height: 1.7;
-        }
-        
-        .notify-cta {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background: linear-gradient(45deg, #64B5F6, #81C784);
-            color: white;
-            padding: 20px 40px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-        
-        .notify-cta:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(100, 181, 246, 0.3);
-        }
-        
-        /* Footer */
-        footer {
-            background: #2A2A2A;
-            color: #FFF;
-            padding: 60px 20px 40px;
-            text-align: center;
-        }
-        
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 32px;
-            margin-bottom: 32px;
-            flex-wrap: wrap;
-        }
-        
-        .footer-links a {
-            color: rgba(255, 255, 255, 0.8);
-            text-decoration: none;
-            transition: color 0.2s ease;
-        }
-        
-        .footer-links a:hover {
-            color: #64B5F6;
-        }
-        
-        .footer-text {
-            color: rgba(255, 255, 255, 0.6);
-            font-size: 0.9rem;
-        }
-        
-        /* Mobile Responsiveness */
-        @media (max-width: 768px) {
-            .hero-container {
-                grid-template-columns: 1fr;
-                gap: 40px;
-                text-align: center;
-                padding: 0 10px;
-            }
-            
-            .hero-content h1 { font-size: 2.5rem; }
-            
-            .feature-showcase {
-                grid-template-columns: 1fr;
-                gap: 40px;
-                text-align: center;
-                padding: 0 10px;
-            }
-            
-            .feature-showcase:nth-child(even) {
-                direction: ltr;
-            }
-            
-            /* Remove tilt on mobile */
-            .carousel-container {
-                width: 220px !important;
-                height: 470px !important;
-                transform: none !important;
-                margin: 0 auto !important;
-            }
-            
-            .app-screenshot {
-                width: 220px !important;
-                height: 470px !important;
-                transform: none !important;
-                margin: 0 auto !important;
-            }
-            
-            .feature-screenshot {
-                width: 200px !important;
-                height: 430px !important;
-                margin: 0 auto !important;
-            }
-            
-            /* Mobile navigation */
-            nav .container {
-                padding: 0 15px;
-                height: 60px;
-            }
-            
-            .logo {
-                font-size: 1.2rem;
-            }
-            
-            .nav-links {
-                gap: 6px;
-                font-size: 0.8rem;
-                flex-wrap: nowrap;
-                overflow-x: auto;
-                scrollbar-width: none;
-                -ms-overflow-style: none;
-            }
-            
-            .nav-links::-webkit-scrollbar {
-                display: none;
-            }
-            
-            .nav-links a {
-                padding: 5px 8px;
-                border-radius: 12px;
-                background: rgba(100, 181, 246, 0.1);
-                white-space: nowrap;
-                flex-shrink: 0;
-                font-size: 0.75rem;
-            }
-            
-            .back-link {
-                background: rgba(0,0,0,0.05) !important;
-            }
-            
-            /* Hide contact on mobile - too crowded */
-            .nav-links a[href^="mailto"] {
-                display: none;
-            }
-            
-            /* Reduce spacing */
-            .hero {
-                padding: 100px 10px 60px;
-            }
-            
-            .features {
-                padding: 60px 10px;
-            }
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CartKind — Ingredient Scanner With Your Rules</title>
+  <meta name="description" content="Compare available ingredient data with rules you choose, review the matches behind each result, and keep a local history. Always verify the physical label.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#1f3f2c">
+  <meta name="apple-itunes-app" content="app-id=6761304996">
+  <link rel="canonical" href="https://tycheventuresllc.com/cartkind.html">
+  <link rel="icon" href="/images/favicon.png">
+  <link rel="stylesheet" href="/assets/app-showcase.css?v=20260821">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Tyche Ventures LLC">
+  <meta property="og:title" content="CartKind — Your Rules for Every Barcode">
+  <meta property="og:description" content="See what available ingredient data matches the rules you choose. No account required; always verify the physical label.">
+  <meta property="og:url" content="https://tycheventuresllc.com/cartkind.html">
+  <meta property="og:image" content="https://tycheventuresllc.com/images/apps/cartkind/screenshots-ipad/01-scan.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "CartKind: Ingredient Scanner",
+    "operatingSystem": "iOS 17 or later",
+    "applicationCategory": "HealthApplication",
+    "url": "https://tycheventuresllc.com/cartkind.html",
+    "downloadUrl": "https://apps.apple.com/us/app/cartkind/id6761304996",
+    "description": "CartKind applies ingredient rules chosen by the user to available product data and explains the matches behind each result.",
+    "author": {"@type": "Organization", "name": "Tyche Ventures LLC", "url": "https://tycheventuresllc.com/"}
+  }
+  </script>
 </head>
-<body>
-    <!-- Navigation -->
-    <nav>
-        <div class="container">
-            <a href="/" class="logo">Tyche Ventures</a>
-            <div class="nav-links">
-                <a href="/" class="back-link">← Back to Home</a>
-                <a href="/kids-meal-planner.html">Kids Meal Planner</a>
-                <a href="/little-routines.html">Little Routines</a>
-                <a href="mailto:support@tycheventuresllc.com">Contact</a>
-            </div>
-        </div>
+<body class="theme-cartkind">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="site-nav container" aria-label="Primary navigation">
+      <div class="brand-group">
+        <a class="company-home" href="/">Tyche Ventures</a>
+        <span class="brand-divider" aria-hidden="true"></span>
+        <a class="app-home" href="/cartkind.html" aria-label="CartKind home">
+          <img src="/images/apps/cartkind-icon.png" width="34" height="34" alt="">
+          <span>CartKind</span>
+        </a>
+      </div>
+      <ul class="site-nav__links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#preview">Preview</a></li>
+        <li><a href="#plans">Plans</a></li>
+        <li><a href="/cartkind/support.html">Support</a></li>
+      </ul>
     </nav>
+  </header>
 
-    <!-- Hero Section -->
+  <main id="main">
     <section class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1>CartKind</h1>
-                <div class="subtitle">Smart Ingredient Scanner</div>
-                <p>Scan product barcodes to check ingredients against your family's dietary restrictions and preferences. Know what's in your food before you buy it with complete privacy.</p>
-                <a href="https://apps.apple.com/app/cartkind/id6761304996" class="status-badge" style="text-decoration: none;">
-                    <span>📲</span>
-                    <span>Download on the App Store</span>
-                </a>
-            </div>
-            <div class="hero-image">
-                <div class="carousel-container">
-                    <img src="/images/apps/cartkind-hero.png" alt="CartKind Barcode Scanner" class="carousel-image active" />
-                    <img src="/images/apps/cartkind-verdict.png" alt="CartKind Clear Verdict" class="carousel-image" />
-                    <img src="/images/apps/cartkind-breakdown.png" alt="CartKind Ingredient Breakdown" class="carousel-image" />
-                    <img src="/images/apps/cartkind-rules.png" alt="CartKind Custom Rules" class="carousel-image" />
-                    <img src="/images/apps/cartkind-history.png" alt="CartKind Scan History" class="carousel-image" />
-                </div>
-            </div>
+      <div class="hero__inner container">
+        <div>
+          <p class="eyebrow">iPhone &amp; iPad · Available on the App Store</p>
+          <h1>CartKind</h1>
+          <p class="hero__tagline">Your rules for every barcode.</p>
+          <p class="hero__summary">Scan a barcode, enter one manually, or paste an ingredient list. CartKind compares the available ingredient text with the rules you chose and keeps the reasons visible.</p>
+          <div class="hero__actions">
+            <a class="button button--light" href="https://apps.apple.com/us/app/cartkind/id6761304996">View on the App Store</a>
+            <a class="button button--ghost" href="#preview">See the real app</a>
+          </div>
+          <ul class="hero__proof" aria-label="Key facts">
+            <li>No account required</li>
+            <li>Local rules and history</li>
+            <li>Physical label always controls</li>
+          </ul>
         </div>
+        <div class="hero__visual" aria-hidden="true">
+          <img class="hero__icon" src="/images/apps/cartkind-icon.png" width="104" height="104" alt="">
+          <div class="hero__screenshot">
+            <img src="/images/apps/cartkind/screenshots/02-matched-result.png" width="660" height="1434" alt="">
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="features">
-        <div class="features-container">
-            <div class="section-header">
-                <h2>Know What's in Your Food</h2>
-                <p>Powerful ingredient checking that respects your privacy. Create custom rules, get instant verdicts, and shop with confidence.</p>
-            </div>
-            
-            <div class="features-grid">
-                <!-- Feature 1: Scanning -->
-                <div class="feature-showcase">
-                    <div class="feature-content">
-                        <h3>Instant Barcode Scanning</h3>
-                        <p>Point your camera at any barcode and get instant ingredient analysis. Our system checks against your custom rules and gives you a clear pass, caution, or fail verdict.</p>
-                        <div class="feature-highlights">
-                            <div class="highlight">
-                                <div class="highlight-icon">📱</div>
-                                <span>Fast barcode recognition</span>
-                            </div>
-                            <div class="highlight">
-                                <div class="highlight-icon">🚦</div>
-                                <span>Clear pass/caution/fail verdicts</span>
-                            </div>
-                            <div class="highlight">
-                                <div class="highlight-icon">🏪</div>
-                                <span>Works with 2+ million products</span>
-                            </div>
-                            <div class="highlight">
-                                <div class="highlight-icon">⚡</div>
-                                <span>Real-time ingredient matching</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="feature-image">
-                        <img src="/images/apps/cartkind-hero.png" alt="CartKind Barcode Scanning" class="feature-screenshot">
-                    </div>
-                </div>
+    <div class="quick-facts" aria-label="CartKind at a glance">
+      <div class="quick-facts__grid container">
+        <div class="quick-fact"><strong>Scan or type</strong><span>Barcode and manual entry</span></div>
+        <div class="quick-fact"><strong>Your rules</strong><span>Ignore · Warn me · Avoid</span></div>
+        <div class="quick-fact"><strong>Visible reasons</strong><span>Matches and source shown</span></div>
+        <div class="quick-fact"><strong>Free + Premium</strong><span>Optional monthly or yearly plan</span></div>
+      </div>
+    </div>
 
-                <!-- Feature 2: Privacy -->
-                <div class="feature-showcase">
-                    <div class="feature-content">
-                        <h3>Privacy-First Design</h3>
-                        <p>Your scan history and dietary preferences stay on your device. No accounts, no cloud storage, no tracking. Complete control over your family's dietary information.</p>
-                        <div class="feature-highlights">
-                            <div class="highlight">
-                                <div class="highlight-icon">🔒</div>
-                                <span>All data stored locally</span>
-                            </div>
-                            <div class="highlight">
-                                <div class="highlight-icon">🚫</div>
-                                <span>No user accounts required</span>
-                            </div>
-                            <div class="highlight">
-                                <div class="highlight-icon">📊</div>
-                                <span>Complete scan history control</span>
-                            </div>
-                            <div class="highlight">
-                                <div class="highlight-icon">⚙️</div>
-                                <span>Custom ingredient triggers</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="feature-image">
-                        <img src="/images/apps/cartkind-rules.png" alt="CartKind Custom Rules" class="feature-screenshot">
-                    </div>
-                </div>
-            </div>
+    <section class="section section--white" id="features">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">A transparent shopping reference</p>
+          <h2>See what matched. Keep the decision yours.</h2>
+          <p>CartKind does not assign a universal health score. It applies the settings you choose to the ingredient data that is available and explains the result.</p>
         </div>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <span class="feature-card__number">01</span>
+            <h3>Start with the data available</h3>
+            <p>Scan or enter a barcode. If catalog data is unavailable, enter an ingredient list manually and evaluate that text instead.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-card__number">02</span>
+            <h3>Choose how rules respond</h3>
+            <p>Set built-in categories to Ignore, Warn me, or Avoid. Premium adds custom categories, triggers, and rules for new evaluations.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-card__number">03</span>
+            <h3>Reopen what was recorded</h3>
+            <p>Saved evaluations remain on your device. Premium Insights summarizes patterns across the local history you choose to keep.</p>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section" id="download">
-        <div class="cta-container">
-            <h2>Shop with Confidence — Today</h2>
-            <p>CartKind is live on the App Store. Download it free, set up your family's dietary rules in seconds, and start scanning with confidence on your next grocery trip.</p>
-            <a href="https://apps.apple.com/app/cartkind/id6761304996" class="notify-cta" style="text-decoration: none;">
-                <span>📲</span>
-                <span>Download CartKind Free</span>
-            </a>
+    <section class="section section--soft" id="screens">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Real app screens</p>
+          <h2>Six steps, one explainable result.</h2>
+          <p>The gallery uses iPhone images on smaller screens and the matching iPad views on wider screens. It advances only while visible; pause or move it at any time.</p>
         </div>
+        <div class="gallery-block">
+          <div class="gallery-toolbar">
+            <div>
+              <h3>Product walkthrough</h3>
+              <p>Swipe, use the buttons, or let the visible gallery advance.</p>
+            </div>
+            <div class="gallery-actions" aria-label="Screenshot controls">
+              <button class="gallery-button" type="button" data-gallery-previous="cartkind" aria-label="Previous CartKind screenshot">←</button>
+              <output class="gallery-position" data-gallery-position="cartkind" aria-live="polite">1 of 6</output>
+              <button class="gallery-button" type="button" data-gallery-next="cartkind" aria-label="Next CartKind screenshot">→</button>
+              <button class="gallery-button gallery-button--wide" type="button" data-gallery-autoplay="cartkind" aria-pressed="true">Pause auto-scroll</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-track gallery-track--responsive" data-gallery="cartkind" data-auto-advance="true" role="region" aria-roledescription="carousel" aria-label="CartKind screenshot gallery" tabindex="0">
+        <figure class="gallery-card">
+          <picture><source media="(min-width: 900px)" srcset="/images/apps/cartkind/screenshots-ipad/01-scan.png" width="1376" height="1834"><img src="/images/apps/cartkind/screenshots/01-scan.png" width="660" height="1434" alt="CartKind scan screen with camera and manual barcode entry options" fetchpriority="high"></picture>
+          <figcaption>Scan a barcode—or enter it manually.</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <picture><source media="(min-width: 900px)" srcset="/images/apps/cartkind/screenshots-ipad/02-matched-result.png" width="1376" height="1834"><img src="/images/apps/cartkind/screenshots/02-matched-result.png" width="660" height="1434" alt="CartKind result showing rule matches and an explanation" loading="lazy" decoding="async"></picture>
+          <figcaption>Review matches with reasons.</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <picture><source media="(min-width: 900px)" srcset="/images/apps/cartkind/screenshots-ipad/03-ingredient-details.png" width="1376" height="1834"><img src="/images/apps/cartkind/screenshots/03-ingredient-details.png" width="660" height="1434" alt="CartKind ingredient details showing the product text that was reviewed" loading="lazy" decoding="async"></picture>
+          <figcaption>See the ingredient text reviewed.</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <picture><source media="(min-width: 900px)" srcset="/images/apps/cartkind/screenshots-ipad/04-rules.png" width="1376" height="1834"><img src="/images/apps/cartkind/screenshots/04-rules.png" width="660" height="1434" alt="CartKind rules screen with Ignore, Warn me, and Avoid choices" loading="lazy" decoding="async"></picture>
+          <figcaption>Choose how each rule responds.</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <picture><source media="(min-width: 900px)" srcset="/images/apps/cartkind/screenshots-ipad/05-history.png" width="1376" height="1834"><img src="/images/apps/cartkind/screenshots/05-history.png" width="660" height="1434" alt="CartKind saved history with prior evaluations" loading="lazy" decoding="async"></picture>
+          <figcaption>Keep prior results in view.</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <picture><source media="(min-width: 900px)" srcset="/images/apps/cartkind/screenshots-ipad/06-insights.png" width="1376" height="1834"><img src="/images/apps/cartkind/screenshots/06-insights.png" width="660" height="1434" alt="CartKind Premium Insights dashboard summarizing local scan patterns" loading="lazy" decoding="async"></picture>
+          <figcaption>Premium: spot patterns over time.</figcaption>
+        </figure>
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-links">
-                <a href="/">Home</a>
-                <a href="/kids-meal-planner.html">Kids Meal Planner</a>
-                <a href="/little-routines.html">Little Routines</a>
-                <a href="/blog.html">Blog</a>
-                <a href="mailto:support@tycheventuresllc.com">Contact</a>
-                <a href="/cartkind/support.html">Support</a>
-                <a href="/cartkind/privacy-policy.html">Privacy</a>
-                <a href="/cartkind/terms-of-use.html">Terms</a>
-            </div>
-            <div class="footer-text">
-                © 2026 Tyche Ventures LLC. All rights reserved.
-            </div>
+    <section class="section section--dark" id="preview">
+      <div class="container video-layout">
+        <div class="video-copy">
+          <p class="eyebrow">22-second app preview</p>
+          <h2>From scan to explanation.</h2>
+          <p>Watch the real 1.0.2 workflow move through scanning, results, rules, history, and Premium Insights.</p>
+          <p class="video-note">The preview plays automatically without sound while it is in view. Use the controls for the upbeat soundtrack. Reduced-motion and Save-Data preferences are respected.</p>
         </div>
-    </footer>
-    <script>
-        // Screenshot carousel rotation
-        document.addEventListener('DOMContentLoaded', function() {
-            const images = document.querySelectorAll('.carousel-image');
-            if (images.length === 0) return;
-            
-            let currentIndex = 0;
-            
-            function showNextImage() {
-                images[currentIndex].classList.remove('active');
-                currentIndex = (currentIndex + 1) % images.length;
-                images[currentIndex].classList.add('active');
-            }
-            
-            setInterval(showNextImage, 15000); // Change every 15 seconds
-        });
-    </script>
+        <div class="video-frame">
+          <video controls muted playsinline preload="metadata" data-play-when-visible poster="/images/apps/cartkind/screenshots/01-scan.png" aria-label="CartKind app preview">
+            <source src="/media/cartkind/cartkind-app-preview.m4v" type="video/mp4">
+            <track kind="captions" srclang="en" label="English" src="/media/cartkind/cartkind-app-preview.en-US.vtt" default>
+            Your browser does not support the CartKind app preview.
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--white" id="plans">
+      <div class="container">
+        <div class="section-heading section-heading--center">
+          <p class="eyebrow">Start free</p>
+          <h2>Core checks first. More control when you want it.</h2>
+          <p>StoreKit shows the current price, renewal terms, and any introductory offer for which your Apple Account is eligible before purchase.</p>
+        </div>
+        <div class="plan-grid">
+          <article class="plan-card">
+            <span class="plan-label">Free</span>
+            <h3>Core ingredient reference</h3>
+            <p>Use the full basic workflow without creating an account.</p>
+            <ul>
+              <li>Barcode scanning and manual barcode entry</li>
+              <li>Manual ingredient-list entry</li>
+              <li>Built-in category controls</li>
+              <li>Detailed explanations and source links</li>
+              <li>Saved local history</li>
+            </ul>
+          </article>
+          <article class="plan-card plan-card--featured">
+            <span class="plan-label">Optional Premium</span>
+            <h3>Custom rules and Insights</h3>
+            <p>Monthly and yearly subscriptions are available through Apple.</p>
+            <ul>
+              <li>Custom categories</li>
+              <li>Custom ingredient triggers</li>
+              <li>Custom rules in new evaluations</li>
+              <li>Insights dashboard</li>
+              <li>Restore Purchases in the app</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" aria-labelledby="trust-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Privacy and limits</p>
+          <h2 id="trust-title">Local-first, with the network flow spelled out.</h2>
+          <p>Rules and saved history stay on your device. Barcode lookup uses third-party product catalogs, so the source and limitations matter.</p>
+        </div>
+        <div class="trust-grid">
+          <article class="trust-card">
+            <h3>No CartKind account</h3>
+            <p>Rules, custom settings, and saved evaluations are stored locally. Apple-managed backups can include app data depending on your device settings.</p>
+          </article>
+          <article class="trust-card">
+            <h3>Open Food Facts first</h3>
+            <p>A barcode lookup sends the barcode and standard network metadata to Open Food Facts. Its returned data may be incomplete or inaccurate.</p>
+          </article>
+          <article class="trust-card">
+            <h3>USDA after a catalog miss</h3>
+            <p>Only after Open Food Facts reports no match, a Tyche Ventures relay requests USDA FoodData Central results. The relay may retain limited security logs for up to seven days.</p>
+          </article>
+          <article class="trust-card">
+            <h3>Sources stay visible</h3>
+            <p>Open Food Facts and USDA references can be opened when you choose. <a href="/cartkind/privacy-policy.html">Read the full privacy policy</a>.</p>
+          </article>
+        </div>
+        <aside class="safety-callout">
+          <h3>Important: this is not an allergy or food-safety check.</h3>
+          <p>CartKind is an informational shopping reference—not medical, allergy, nutrition, or food-safety advice. It does not identify allergens or determine whether a product is safe. Product information can be incomplete, outdated, or wrong. Always read the physical label and consult a qualified professional for medical or allergy decisions.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container">
+        <h2>Make ingredient matches easier to review.</h2>
+        <p>Set your rules, inspect the available data, and keep the explanation with the result.</p>
+        <a class="button button--light" href="https://apps.apple.com/us/app/cartkind/id6761304996">View CartKind on the App Store</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid container">
+      <div>
+        <div class="footer-brand">CartKind by Tyche Ventures LLC</div>
+        <p class="footer-note">CartKind is an informational shopping reference. It does not identify allergens, determine product safety, or replace a physical label or qualified professional advice.</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="/">Tyche Home</a>
+        <a href="/#apps">All Apps</a>
+        <a href="/cartkind/support.html">Support</a>
+        <a href="/cartkind/privacy-policy.html">Privacy</a>
+        <a href="/cartkind/terms-of-use.html">Terms</a>
+        <a href="mailto:support@tycheventuresllc.com">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="/assets/app-showcase.js?v=20260821b" defer></script>
 </body>
 </html>

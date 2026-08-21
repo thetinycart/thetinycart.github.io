@@ -1,593 +1,247 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Little Routines — Visual Schedule &amp; Star Rewards | Tyche Ventures</title>
-    <meta name="description" content="Create calmer mornings, bedtimes, and transitions with visual routines, one-task-at-a-time guidance, timers, progress tracking, and star rewards.">
-    <link rel="canonical" href="https://tycheventuresllc.com/little-routines.html">
-    <meta name="apple-itunes-app" content="app-id=6761321011">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Little Routines — Visual Schedule &amp; Star Rewards">
-    <meta property="og:description" content="A caregiver-friendly visual routine planner for calmer mornings, bedtimes, chores, and transitions.">
-    <meta property="og:url" content="https://tycheventuresllc.com/little-routines.html">
-    <meta property="og:image" content="https://tycheventuresllc.com/images/apps/lr-icon.png">
-    <meta property="og:image:alt" content="Little Routines app icon">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Little Routines — Visual Schedule &amp; Star Rewards">
-    <meta name="twitter:description" content="A caregiver-friendly visual routine planner for calmer mornings, bedtimes, chores, and transitions.">
-    <meta name="twitter:image" content="https://tycheventuresllc.com/images/apps/lr-icon.png">
-    <meta name="twitter:image:alt" content="Little Routines app icon">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Little Routines",
-      "operatingSystem": "iOS",
-      "applicationCategory": "EducationalApplication",
-      "description": "A caregiver-friendly visual schedule with one-task-at-a-time guidance, timers, progress tracking, and star rewards.",
-      "url": "https://tycheventuresllc.com/little-routines.html",
-      "downloadUrl": "https://apps.apple.com/app/little-routines/id6761321011",
-      "image": "https://tycheventuresllc.com/images/apps/lr-icon.png",
-      "publisher": {
-        "@type": "Organization",
-        "name": "Tyche Ventures LLC",
-        "url": "https://tycheventuresllc.com/"
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    }
-    </script>
-    <!-- Cache bust: 2026-08-21 -->
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #FEFEFE;
-            color: #2A2A2A;
-            line-height: 1.6;
-        }
-        
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px);
-            z-index: 1000;
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-        }
-        
-        nav .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            height: 70px;
-        }
-        
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #9B5500;
-            text-decoration: none;
-        }
-        
-        .nav-links {
-            display: flex;
-            gap: 32px;
-            align-items: center;
-        }
-        
-        .nav-links a {
-            color: #2A2A2A;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.2s ease;
-        }
-        
-        .nav-links a:hover {
-            color: #9B5500;
-        }
-        
-        .back-link {
-            color: #666;
-            font-size: 0.9rem;
-        }
-        
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #FFF4E6 0%, #FFF8F0 50%, #FFFEF9 100%);
-            padding: 140px 20px 100px;
-        }
-        
-        .hero-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: center;
-        }
-        
-        .hero-content h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            color: #2A2A2A;
-            margin-bottom: 20px;
-            line-height: 1.1;
-        }
-        
-        .hero-content .subtitle {
-            font-size: 1.4rem;
-            color: #9B5500;
-            font-weight: 600;
-            margin-bottom: 24px;
-        }
-        
-        .hero-content p {
-            font-size: 1.2rem;
-            color: #555;
-            line-height: 1.7;
-            margin-bottom: 40px;
-        }
-        
-        .status-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: #1D6F3A;
-            color: white;
-            padding: 16px 32px;
-            border-radius: 50px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            font-size: 1.1rem;
-        }
-        
-        .status-badge:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(29, 111, 58, 0.28);
-        }
-        
-        .hero-image {
-            text-align: center;
-        }
-        
-        .app-screenshot {
-            width: 300px;
-            height: 650px;
-            border-radius: 25px;
-            object-fit: contain;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-            transform: rotate(3deg);
-            transition: transform 0.3s ease;
-            margin: 0 auto;
-        }
-        
-        .app-screenshot:hover {
-            transform: rotate(0deg) scale(1.02);
-        }
-        
-        /* Features Section */
-        .features {
-            padding: 120px 20px;
-            background: #FFF;
-        }
-        
-        .features-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .section-header {
-            text-align: center;
-            margin-bottom: 80px;
-        }
-        
-        .section-header h2 {
-            font-size: 2.8rem;
-            font-weight: 700;
-            color: #2A2A2A;
-            margin-bottom: 16px;
-        }
-        
-        .section-header p {
-            font-size: 1.2rem;
-            color: #666;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        .features-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 100px;
-        }
-        
-        .feature-showcase {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: center;
-        }
-        
-        .feature-showcase:nth-child(even) {
-            direction: rtl;
-        }
-        
-        .feature-showcase:nth-child(even) > * {
-            direction: ltr;
-        }
-        
-        .feature-content h3 {
-            font-size: 2.2rem;
-            font-weight: 700;
-            color: #2A2A2A;
-            margin-bottom: 20px;
-        }
-        
-        .feature-content p {
-            font-size: 1.1rem;
-            color: #555;
-            line-height: 1.7;
-            margin-bottom: 30px;
-        }
-        
-        .feature-highlights {
-            display: grid;
-            gap: 16px;
-        }
-        
-        .highlight {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-size: 1rem;
-            color: #666;
-        }
-        
-        .highlight-icon {
-            width: 28px;
-            height: 28px;
-            background: #1D6F3A;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: bold;
-            flex-shrink: 0;
-        }
-        
-        .feature-image {
-            text-align: center;
-        }
-        
-        .feature-screenshot {
-            width: 260px;
-            height: 563px;
-            border-radius: 20px;
-            object-fit: contain;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-            transition: transform 0.3s ease;
-            margin: 0 auto;
-        }
-        
-        .feature-screenshot:hover {
-            transform: translateY(-10px);
-        }
-        
-        /* CTA Section */
-        .cta-section {
-            padding: 100px 20px;
-            background: linear-gradient(135deg, #FFF4E6 0%, #FFFEF9 100%);
-            text-align: center;
-        }
-        
-        .cta-container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .cta-container h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #2A2A2A;
-            margin-bottom: 24px;
-        }
-        
-        .cta-container p {
-            font-size: 1.2rem;
-            color: #555;
-            margin-bottom: 40px;
-            line-height: 1.7;
-        }
-        
-        .notify-cta {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background: linear-gradient(45deg, #FFB74D, #FFC107);
-            color: white;
-            padding: 20px 40px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-        
-        .notify-cta:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(29, 111, 58, 0.28);
-        }
-        
-        /* Footer */
-        footer {
-            background: #2A2A2A;
-            color: #FFF;
-            padding: 60px 20px 40px;
-            text-align: center;
-        }
-        
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 32px;
-            margin-bottom: 32px;
-            flex-wrap: wrap;
-        }
-        
-        .footer-links a {
-            color: rgba(255, 255, 255, 0.8);
-            text-decoration: none;
-            transition: color 0.2s ease;
-        }
-        
-        .footer-links a:hover {
-            color: #FFD180;
-        }
-        
-        .footer-text {
-            color: rgba(255, 255, 255, 0.6);
-            font-size: 0.9rem;
-        }
-        
-        /* Mobile Responsiveness */
-        @media (max-width: 768px) {
-            .hero-container {
-                grid-template-columns: 1fr;
-                gap: 40px;
-                text-align: center;
-                padding: 0 10px;
-            }
-            
-            .hero-content h1 { font-size: 2.5rem; }
-            
-            .feature-showcase {
-                grid-template-columns: 1fr;
-                gap: 40px;
-                text-align: center;
-                padding: 0 10px;
-            }
-            
-            .feature-showcase:nth-child(even) {
-                direction: ltr;
-            }
-            
-            /* Remove tilt on mobile */
-            .app-screenshot {
-                width: 220px !important;
-                height: 470px !important;
-                transform: none !important;
-                margin: 0 auto !important;
-            }
-            
-            .feature-screenshot {
-                width: 200px !important;
-                height: 430px !important;
-                margin: 0 auto !important;
-            }
-            
-            /* Mobile navigation */
-            nav .container {
-                padding: 8px 15px;
-                height: auto;
-                min-height: 60px;
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 4px;
-            }
-            
-            .logo {
-                font-size: 1.2rem;
-            }
-            
-            .nav-links {
-                width: 100%;
-                gap: 6px;
-                font-size: 0.8rem;
-                flex-wrap: wrap;
-                justify-content: center;
-                overflow: visible;
-            }
-            
-            .nav-links a {
-                padding: 5px 8px;
-                border-radius: 12px;
-                background: rgba(255, 138, 101, 0.1);
-                white-space: nowrap;
-                flex-shrink: 0;
-                font-size: 0.75rem;
-            }
-            
-            .back-link {
-                background: rgba(0,0,0,0.05) !important;
-            }
-            
-            /* Hide contact on mobile - too crowded */
-            .nav-links a[href^="mailto"] {
-                display: none;
-            }
-            
-            /* Reduce spacing */
-            .hero {
-                padding: 150px 10px 60px;
-            }
-            
-            .features {
-                padding: 60px 10px;
-            }
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Little Routines — Visual Schedules &amp; Star Rewards</title>
+  <meta name="description" content="Build visual routines with one-task guidance, stars, rewards, timers, progress views, and separate profiles for each family member.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#5f211a">
+  <meta name="apple-itunes-app" content="app-id=6761321011">
+  <link rel="canonical" href="https://tycheventuresllc.com/little-routines.html">
+  <link rel="icon" href="/images/favicon.png">
+  <link rel="stylesheet" href="/assets/app-showcase.css?v=20260821">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Tyche Ventures LLC">
+  <meta property="og:title" content="Little Routines — Calmer Routines, Less Reminding">
+  <meta property="og:description" content="Visual schedules, one-task guidance, stars, rewards, timers, progress, and separate profiles.">
+  <meta property="og:url" content="https://tycheventuresllc.com/little-routines.html">
+  <meta property="og:image" content="https://tycheventuresllc.com/images/apps/little-routines/screenshots/01-less-reminding.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Little Routines",
+    "operatingSystem": "iOS 17 or later",
+    "applicationCategory": "EducationApplication",
+    "url": "https://tycheventuresllc.com/little-routines.html",
+    "downloadUrl": "https://apps.apple.com/us/app/little-routines/id6761321011",
+    "description": "A visual routine planner with one-task guidance, stars, rewards, timers, and progress views.",
+    "author": {"@type": "Organization", "name": "Tyche Ventures LLC", "url": "https://tycheventuresllc.com/"}
+  }
+  </script>
 </head>
-<body>
-    <!-- Navigation -->
-    <nav>
-        <div class="container">
-            <a href="/" class="logo">Tyche Ventures</a>
-            <div class="nav-links">
-                <a href="/" class="back-link" aria-label="Back to Tyche Ventures home">Home</a>
-                <a href="/kids-meal-planner.html">Kids Meal Planner</a>
-                <a href="/cartkind.html">CartKind</a>
-                <a href="mailto:support@tycheventuresllc.com">Contact</a>
-            </div>
-        </div>
+<body class="theme-routines">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="site-nav container" aria-label="Primary navigation">
+      <div class="brand-group">
+        <a class="company-home" href="/">Tyche Ventures</a>
+        <span class="brand-divider" aria-hidden="true"></span>
+        <a class="app-home" href="/little-routines.html" aria-label="Little Routines home">
+          <img src="/images/apps/lr-icon.png" width="34" height="34" alt="">
+          <span>Little Routines</span>
+        </a>
+      </div>
+      <ul class="site-nav__links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#preview">Preview</a></li>
+        <li><a href="#plans">Plans</a></li>
+        <li><a href="/little-routines/support.html">Support</a></li>
+      </ul>
     </nav>
+  </header>
 
-    <!-- Hero Section -->
+  <main id="main">
     <section class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1>Little Routines</h1>
-                <div class="subtitle">Visual Schedule &amp; Star Rewards</div>
-                <p>Create calmer mornings, bedtimes, chores, and transitions with visual checklists, one-task-at-a-time guidance, timers, and customizable rewards.</p>
-                <a href="https://apps.apple.com/app/little-routines/id6761321011" class="status-badge">
-                    <span>📱</span>
-                    <span>Download on the App Store</span>
-                </a>
-            </div>
-            <div class="hero-image">
-                <img src="/images/apps/lr-kidmode.png" alt="Little Routines Kid Mode interface" class="app-screenshot">
-            </div>
+      <div class="hero__inner container">
+        <div>
+          <p class="eyebrow">iPhone &amp; iPad · Available on the App Store</p>
+          <h1>Little Routines</h1>
+          <p class="hero__tagline">Calmer routines. Less reminding.</p>
+          <p class="hero__summary">Create clear visual checklists for mornings, bedtimes, chores, and transitions. One-task guidance, stars, timers, and progress views help everyone see what comes next.</p>
+          <div class="hero__actions">
+            <a class="button button--light" href="https://apps.apple.com/us/app/little-routines/id6761321011">View on the App Store</a>
+            <a class="button button--ghost" href="#preview">Watch the app preview</a>
+          </div>
+          <ul class="hero__proof" aria-label="Key facts">
+            <li>No Tyche account required</li>
+            <li>No ads or third-party analytics</li>
+            <li>Works without an internet connection</li>
+          </ul>
         </div>
+        <div class="hero__visual" aria-hidden="true">
+          <img class="hero__icon" src="/images/apps/lr-icon.png" width="104" height="104" alt="">
+          <div class="hero__screenshot">
+            <img src="/images/apps/little-routines/screenshots/01-less-reminding.png" width="645" height="1398" alt="">
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="features">
-        <div class="features-container">
-            <div class="section-header">
-                <h2>Calmer Routines. Less Reminding.</h2>
-                <p>Give each family member a clear, visual path through mornings, bedtimes, after-school transitions, chores, and more.</p>
-            </div>
-            
-            <div class="features-grid">
-                <!-- Feature 1: Guided routine mode -->
-                <div class="feature-showcase">
-                    <div class="feature-content">
-                        <h3>One Clear Task at a Time</h3>
-                        <p>The guided routine view gives a child one large, clear task at a time while a parent or caregiver stays in control. Large tap targets, star rewards, haptic feedback, and cheerful animations make progress visible.</p>
-                        <div class="feature-highlights">
-                            <div class="highlight">
-                                <div class="highlight-icon">👆</div>
-                                <span>Large, easy-to-tap controls</span>
-                            </div>
-                            <div class="highlight">
-                                <div class="highlight-icon">⭐</div>
-                                <span>Star rewards for completed tasks</span>
-                            </div>
-                            <div class="highlight">
-                                <div class="highlight-icon">✨</div>
-                                <span>Haptic feedback and celebrations</span>
-                            </div>
-                            <div class="highlight">
-                                <div class="highlight-icon">🎨</div>
-                                <span>Colorful, engaging interface</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="feature-image">
-                        <img src="/images/apps/lr-kidmode.png" alt="One-task-at-a-time guided routine interface with large controls" class="feature-screenshot">
-                    </div>
-                </div>
+    <div class="quick-facts" aria-label="Little Routines at a glance">
+      <div class="quick-facts__grid container">
+        <div class="quick-fact"><strong>34 templates</strong><span>Six included in Free</span></div>
+        <div class="quick-fact"><strong>One task at a time</strong><span>Large, focused controls</span></div>
+        <div class="quick-fact"><strong>Stars and rewards</strong><span>Visible progress</span></div>
+        <div class="quick-fact"><strong>Separate profiles</strong><span>Personalized routines</span></div>
+      </div>
+    </div>
 
-                <!-- Feature 2: Routines Management -->
-                <div class="feature-showcase">
-                    <div class="feature-content">
-                        <h3>Smart Routine Templates</h3>
-                        <p>Choose from 34 pre-built routine templates or create your own. Morning, bedtime, after-school, and even special routines like "calm down" and potty training.</p>
-                        <div class="feature-highlights">
-                            <div class="highlight">
-                                <div class="highlight-icon">🌅</div>
-                                <span>Morning routine templates</span>
-                            </div>
-                            <div class="highlight">
-                                <div class="highlight-icon">🌙</div>
-                                <span>Bedtime routine templates</span>
-                            </div>
-                            <div class="highlight">
-                                <div class="highlight-icon">📚</div>
-                                <span>After-school routine templates</span>
-                            </div>
-                            <div class="highlight">
-                                <div class="highlight-icon">⏰</div>
-                                <span>Built-in task timers</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="feature-image">
-                        <img src="/images/apps/lr-routines.png" alt="Routine management interface" class="feature-screenshot">
-                    </div>
-                </div>
-            </div>
+    <section class="section section--white" id="features">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">A routine everyone can follow</p>
+          <h2>Turn the next step into something visible.</h2>
+          <p>Build the routine once, then use a focused completion view when it is time to move through the steps.</p>
         </div>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <span class="feature-card__number">01</span>
+            <h3>One clear task</h3>
+            <p>Guided mode keeps the current task prominent with large controls, an optional timer, and a clear way to mark it complete.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-card__number">02</span>
+            <h3>Progress that is easy to see</h3>
+            <p>Stars, streaks, completion history, and customizable rewards make the routine’s progress visible without turning it into a score about the person.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-card__number">03</span>
+            <h3>Templates and profiles</h3>
+            <p>Start with ready-made morning, bedtime, after-school, chore, and transition ideas, then personalize each profile and routine.</p>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section" id="download">
-        <div class="cta-container">
-            <h2>Download Little Routines</h2>
-            <p>Free includes up to 2 profiles, 2 routines per profile, 6 templates, guided Kid Mode, stars and rewards, and progress tracking. Premium adds unlimited profiles and routines, all 34 templates, and full starter packs.</p>
-            <p><strong>Private by design:</strong> no ads, no tracking, and routine data stays on your device.</p>
-            <a href="https://apps.apple.com/app/little-routines/id6761321011" class="notify-cta">
-                <span>📱</span>
-                <span>Download on the App Store</span>
-            </a>
+    <section class="section section--soft" id="screens">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Current 1.0.2 screens</p>
+          <h2>Seven views of the real app.</h2>
+          <p>Each image uses the same framed iPhone presentation prepared for the App Store. Swipe, use the controls, or pause the gallery.</p>
         </div>
+        <div class="gallery-toolbar">
+          <div>
+            <h3>Little Routines walkthrough</h3>
+            <p>The gallery advances only while it is visible.</p>
+          </div>
+          <div class="gallery-actions" aria-label="Screenshot controls">
+            <button class="gallery-button" type="button" data-gallery-previous="routines" aria-label="Previous Little Routines screenshot">←</button>
+            <output class="gallery-position" data-gallery-position="routines" aria-live="polite">1 of 7</output>
+            <button class="gallery-button" type="button" data-gallery-next="routines" aria-label="Next Little Routines screenshot">→</button>
+            <button class="gallery-button gallery-button--wide" type="button" data-gallery-autoplay="routines" aria-pressed="true">Pause auto-scroll</button>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-track" data-gallery="routines" data-auto-advance="true" role="region" aria-roledescription="carousel" aria-label="Little Routines screenshot gallery" tabindex="0">
+        <figure class="gallery-card"><img src="/images/apps/little-routines/screenshots/01-less-reminding.png" width="645" height="1398" alt="Little Routines routine list with separate profiles and morning and bedtime routines" fetchpriority="high"><figcaption>Less reminding. Calmer routines.</figcaption></figure>
+        <figure class="gallery-card"><img src="/images/apps/little-routines/screenshots/02-one-clear-task.png" width="645" height="1398" alt="Little Routines guided mode showing one clear task with a timer" loading="lazy" decoding="async"><figcaption>One clear task at a time.</figcaption></figure>
+        <figure class="gallery-card"><img src="/images/apps/little-routines/screenshots/03-stars-to-rewards.png" width="645" height="1398" alt="Little Routines rewards screen showing stars earned toward a reward" loading="lazy" decoding="async"><figcaption>Stars turn progress into rewards.</figcaption></figure>
+        <figure class="gallery-card"><img src="/images/apps/little-routines/screenshots/04-34-templates.png" width="645" height="1398" alt="Little Routines template library with 34 routine templates" loading="lazy" decoding="async"><figcaption>Start fast with 34 ready-made templates.</figcaption></figure>
+        <figure class="gallery-card"><img src="/images/apps/little-routines/screenshots/05-progress-at-a-glance.png" width="645" height="1398" alt="Little Routines progress dashboard with routine completion, stars, and streaks" loading="lazy" decoding="async"><figcaption>Progress at a glance.</figcaption></figure>
+        <figure class="gallery-card"><img src="/images/apps/little-routines/screenshots/06-profiles-organized.png" width="645" height="1398" alt="Little Routines profiles screen organizing routines for multiple family members" loading="lazy" decoding="async"><figcaption>Every profile organized.</figcaption></figure>
+        <figure class="gallery-card"><img src="/images/apps/little-routines/screenshots/07-personalize-profiles.png" width="645" height="1398" alt="Little Routines profile editor with color and photo personalization" loading="lazy" decoding="async"><figcaption>Personalize each profile.</figcaption></figure>
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-links">
-                <a href="/">Home</a>
-                <a href="/kids-meal-planner.html">Kids Meal Planner</a>
-                <a href="/cartkind.html">CartKind</a>
-                <a href="/blog.html">Blog</a>
-                <a href="mailto:support@tycheventuresllc.com">Contact</a>
-                <a href="/little-routines/support.html">Support</a>
-                <a href="/little-routines/privacy-policy.html">Privacy</a>
-                <a href="/little-routines/terms-of-use.html">Terms</a>
-            </div>
-            <div class="footer-text">
-                © 2026 Tyche Ventures LLC. All rights reserved.
-            </div>
+    <section class="section section--dark" id="preview">
+      <div class="container video-layout">
+        <div class="video-copy">
+          <p class="eyebrow">22-second app preview</p>
+          <h2>See a routine move.</h2>
+          <p>The current preview follows the real app through profiles, routines, focused task completion, rewards, and progress.</p>
+          <p class="video-note">It plays automatically without sound while visible. Use the controls for the upbeat soundtrack. Reduced-motion and Save-Data preferences are respected.</p>
         </div>
-    </footer>
+        <div class="video-frame">
+          <video controls muted playsinline preload="metadata" data-play-when-visible poster="/images/apps/little-routines/screenshots/02-one-clear-task.png" aria-label="Little Routines app preview">
+            <source src="/media/little-routines/little-routines-app-preview.m4v" type="video/mp4">
+            <track kind="captions" srclang="en" label="English" src="/media/little-routines/little-routines-app-preview.en-US.vtt" default>
+            Your browser does not support the Little Routines app preview.
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--white" id="plans">
+      <div class="container">
+        <div class="section-heading section-heading--center">
+          <p class="eyebrow">Start free</p>
+          <h2>A useful free plan, with room to grow.</h2>
+          <p>StoreKit shows current prices, renewal terms, and any introductory offer for which your Apple Account is eligible before purchase.</p>
+        </div>
+        <div class="plan-grid">
+          <article class="plan-card">
+            <span class="plan-label">Free</span>
+            <h3>Core routine tools</h3>
+            <p>A complete starting point for a smaller setup.</p>
+            <ul>
+              <li>Up to two profiles</li>
+              <li>Two routines per profile</li>
+              <li>Six templates</li>
+              <li>Guided mode, stars, rewards, and progress</li>
+            </ul>
+          </article>
+          <article class="plan-card plan-card--featured">
+            <span class="plan-label">Optional Premium</span>
+            <h3>Unlimited household setup</h3>
+            <p>Monthly and yearly subscriptions are available through Apple.</p>
+            <ul>
+              <li>Unlimited profiles</li>
+              <li>Unlimited routines</li>
+              <li>All 34 templates</li>
+              <li>Full starter packs</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" aria-labelledby="privacy-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Private by design</p>
+          <h2 id="privacy-title">Your routine content is not sent to Tyche.</h2>
+          <p>Profiles, routines, progress, rewards, and optional photos you select stay in the app’s local storage. No Tyche Ventures account is required.</p>
+        </div>
+        <div class="trust-grid">
+          <article class="trust-card"><h3>Local app content</h3><p>Routine and profile content is stored on your device. Apple-managed backups may include app data depending on your backup settings.</p></article>
+          <article class="trust-card"><h3>Photos are optional</h3><p>You choose any profile or task photo through Apple’s system photo picker. Little Routines does not receive your photo library.</p></article>
+          <article class="trust-card"><h3>Apple handles purchases</h3><p>StoreKit communicates with Apple for subscriptions, eligibility, purchase verification, and restoration. Tyche does not receive your full payment information.</p></article>
+          <article class="trust-card"><h3>No ads or analytics SDK</h3><p>The app contains no advertising network or third-party behavioral analytics SDK. <a href="/little-routines/privacy-policy.html">Read the privacy policy</a>.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container">
+        <h2>Make the next step easier to see.</h2>
+        <p>Build a visual routine, try the focused mode, and decide whether the free setup is enough for your household.</p>
+        <a class="button button--light" href="https://apps.apple.com/us/app/little-routines/id6761321011">View Little Routines on the App Store</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid container">
+      <div>
+        <div class="footer-brand">Little Routines by Tyche Ventures LLC</div>
+        <p class="footer-note">Little Routines is an organizational tool. Its templates are starting points that should be adapted to the person, setting, and caregiver’s judgment.</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="/">Tyche Home</a>
+        <a href="/#apps">All Apps</a>
+        <a href="/little-routines/support.html">Support</a>
+        <a href="/little-routines/privacy-policy.html">Privacy</a>
+        <a href="/little-routines/terms-of-use.html">Terms</a>
+        <a href="mailto:support@tycheventuresllc.com">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="/assets/app-showcase.js?v=20260821b" defer></script>
 </body>
 </html>

@@ -1,1073 +1,180 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="/images/favicon.png">
-    <title>Tyche Ventures — Beautiful Apps for Families</title>
-    <meta name="description" content="We build simple, privacy-first iOS apps that make life easier. Meal planning, kids routines, ingredient scanning, home maintenance, and more.">
-    <meta name="p:domain_verify" content="c0101e6a0f84abef38bbef27c8bb68c5">
-    <meta name="robots" content="max-image-preview:large">
-    <link rel="canonical" href="https://tycheventuresllc.com/">
-    <meta property="og:title" content="Tyche Ventures — Beautiful Apps for Families">
-    <meta property="og:description" content="Simple, privacy-first iOS apps for busy parents. Kids routines, meal planning, ingredient scanning, and more.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://tycheventuresllc.com">
-    <meta property="og:image" content="https://tycheventuresllc.com/images/logo.png">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Tyche Ventures LLC",
-      "url": "https://tycheventuresllc.com/",
-      "logo": "https://tycheventuresllc.com/images/logo.png",
-      "sameAs": [],
-      "brand": {
-        "@type": "Brand",
-        "name": "The Tiny Cart"
-      }
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tyche Ventures — Thoughtful Apps for Everyday Life</title>
+  <meta name="description" content="Tyche Ventures builds clear, privacy-minded iPhone and iPad apps for home records, family routines, meal planning, and ingredient review.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#102f43">
+  <link rel="canonical" href="https://tycheventuresllc.com/">
+  <link rel="icon" href="/images/favicon.png">
+  <link rel="stylesheet" href="/assets/app-showcase.css?v=20260821">
+  <link rel="stylesheet" href="/assets/home.css?v=20260821">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Tyche Ventures LLC">
+  <meta property="og:title" content="Tyche Ventures — Useful Apps. Clearer Days.">
+  <meta property="og:description" content="Four thoughtful apps for home records, family routines, meal planning, and ingredient review.">
+  <meta property="og:url" content="https://tycheventuresllc.com/">
+  <meta property="og:image" content="https://tycheventuresllc.com/images/logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Tyche Ventures LLC",
+    "url": "https://tycheventuresllc.com/",
+    "logo": "https://tycheventuresllc.com/images/logo.png",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Tyche Ventures apps",
+      "itemListElement": [
+        {"@type": "SoftwareApplication", "name": "Your House, Clearly", "url": "https://tycheventuresllc.com/your-house-clearly/"},
+        {"@type": "SoftwareApplication", "name": "Little Routines", "url": "https://tycheventuresllc.com/little-routines.html"},
+        {"@type": "SoftwareApplication", "name": "Kids Meal Planner", "url": "https://tycheventuresllc.com/kids-meal-planner.html"},
+        {"@type": "SoftwareApplication", "name": "CartKind", "url": "https://tycheventuresllc.com/cartkind.html"}
+      ]
     }
-    </script>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            background: #FEFEFE;
-            color: #2A2A2A;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-        
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #FF8A65 0%, #FFAB91 25%, #FFB74D 50%, #81C784 75%, #64B5F6 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(22, 32, 45, 0.52);
-            backdrop-filter: blur(1px);
-        }
-        
-        .hero-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 80px 20px;
-            text-align: center;
-            position: relative;
-            z-index: 2;
-        }
-        
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            color: #FFF;
-            margin-bottom: 24px;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        
-        .hero p {
-            font-size: 1.4rem;
-            color: #FFF;
-            margin-bottom: 40px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            text-shadow: 0 1px 5px rgba(0,0,0,0.1);
-        }
-        
-        .hero-apps {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 60px;
-            flex-wrap: wrap;
-        }
-        
-        .hero-app {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 20px;
-            text-align: center;
-            width: 140px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            text-decoration: none;
-            color: inherit;
-            display: block;
-        }
-        
-        .hero-app:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-        }
-        
-        .hero-app .app-icon {
-            width: 60px;
-            height: 60px;
-            margin-bottom: 12px;
-            margin-left: auto;
-            margin-right: auto;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-        
-        .hero-app__name {
-            display: block;
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: #2A2A2A;
-            margin-bottom: 4px;
-        }
-        
-        .hero-app .status {
-            font-size: 0.7rem;
-            color: #A33E22;
-            font-weight: 500;
-        }
-        
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px);
-            z-index: 1000;
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-        }
-        
-        nav .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            height: 70px;
-        }
-        
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #A33E22;
-            text-decoration: none;
-            flex-shrink: 0;
-            white-space: nowrap;
-        }
-        
-        .nav-links {
-            display: flex;
-            gap: 32px;
-            align-items: center;
-        }
-        
-        .nav-links a {
-            color: #2A2A2A;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.2s ease;
-        }
-        
-        .nav-links a:hover {
-            color: #A33E22;
-        }
-        
-        /* Apps Section */
-        .apps-section {
-            padding: 120px 20px;
-            background: #FEFEFE;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .section-header {
-            text-align: center;
-            margin-bottom: 80px;
-        }
-        
-        .section-header h2 {
-            font-size: 3rem;
-            font-weight: 700;
-            color: #2A2A2A;
-            margin-bottom: 20px;
-        }
-        
-        .section-header p {
-            font-size: 1.2rem;
-            color: #666;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        .apps-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 120px;
-        }
-        
-        .app-showcase {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: center;
-        }
-        
-        .app-showcase:nth-child(even) {
-            direction: rtl;
-        }
-        
-        .app-showcase:nth-child(even) > * {
-            direction: ltr;
-        }
-        
-        .app-info h3 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #2A2A2A;
-            margin-bottom: 20px;
-        }
-        
-        .app-info .subtitle {
-            font-size: 1.2rem;
-            color: #A33E22;
-            font-weight: 600;
-            margin-bottom: 24px;
-        }
-        
-        .app-info p {
-            font-size: 1.1rem;
-            color: #555;
-            line-height: 1.7;
-            margin-bottom: 32px;
-        }
-        
-        .app-features {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            margin-bottom: 40px;
-        }
-        
-        .feature {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-size: 0.95rem;
-            color: #666;
-        }
-        
-        .feature-icon {
-            width: 24px;
-            height: 24px;
-            background: linear-gradient(45deg, #A33E22, #8A4B00);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 0.8rem;
-            font-weight: bold;
-        }
-        
-        .app-status {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: linear-gradient(45deg, #A33E22, #8A4B00);
-            color: white;
-            padding: 12px 24px;
-            border-radius: 30px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-        
-        .app-status:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(255, 138, 101, 0.3);
-        }
-        
-        .app-status.coming-soon {
-            background: linear-gradient(45deg, #2E6B3E, #245D78);
-        }
-        
-        .app-status.coming-soon:hover {
-            box-shadow: 0 8px 25px rgba(129, 199, 132, 0.3);
-        }
-        
-        .app-mockup {
-            text-align: center;
-            position: relative;
-        }
-        
-        .app-carousel {
-            position: relative;
-            display: inline-block;
-        }
-        
-        .carousel-container {
-            width: 280px;
-            height: 607px;
-            position: relative;
-            overflow: hidden;
-            border-radius: 25px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-        }
-        
-        .carousel-slides {
-            display: flex;
-            width: 500%;
-            height: 100%;
-            animation: carousel-rotate 15s infinite;
-        }
-
-        .app-carousel.is-paused .carousel-slides {
-            animation-play-state: paused;
-        }
-
-        .carousel-toggle {
-            display: block;
-            min-height: 44px;
-            margin: 14px auto 0;
-            padding: 9px 16px;
-            border: 2px solid #A33E22;
-            border-radius: 22px;
-            background: #FFF;
-            color: #8C321D;
-            font: inherit;
-            font-weight: 600;
-            cursor: pointer;
-        }
-
-        .carousel-toggle:hover {
-            background: #FFF3EF;
-        }
-
-        .carousel-toggle:focus-visible {
-            outline: 3px solid #245D78;
-            outline-offset: 3px;
-        }
-        
-        .carousel-slide {
-            width: 20%;
-            height: 100%;
-            flex-shrink: 0;
-        }
-        
-        .screenshot {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            border-radius: 25px;
-            background: #f8f9fa;
-        }
-
-        .your-house-clearly-preview {
-            width: 280px;
-            min-height: 440px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto;
-            border: 1px solid rgba(255,255,255,0.18);
-            border-radius: 30px;
-            background: radial-gradient(circle at 75% 15%, rgba(67, 138, 159, 0.34), transparent 38%), linear-gradient(145deg, #0B1628, #173A50);
-            color: white;
-            padding: 34px 24px;
-            box-shadow: 0 20px 40px rgba(5, 20, 38, 0.22);
-        }
-
-        .your-house-clearly-preview img {
-            width: 112px;
-            height: 112px;
-            margin-bottom: 24px;
-            border-radius: 27%;
-            box-shadow: 0 18px 36px rgba(0,0,0,0.3);
-        }
-
-        .your-house-clearly-preview__label {
-            color: #F0C9A8;
-            font-size: 0.72rem;
-            font-weight: 800;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-        }
-
-        .your-house-clearly-preview strong {
-            display: block;
-            margin: 10px 0 8px;
-            font-size: 1.18rem;
-            line-height: 1.3;
-        }
-
-        .your-house-clearly-preview p {
-            margin: 0;
-            color: #C8D6DF;
-            font-size: 0.86rem;
-            line-height: 1.55;
-        }
-        
-        @keyframes carousel-rotate {
-            0%, 18% { transform: translateX(0%); }
-            20%, 38% { transform: translateX(-20%); }
-            40%, 58% { transform: translateX(-40%); }
-            60%, 78% { transform: translateX(-60%); }
-            80%, 100% { transform: translateX(-80%); }
-        }
-        
-        /* Blog Section */
-        .blog-section {
-            padding: 120px 20px;
-            background: linear-gradient(135deg, #F8F9FA 0%, #FFF5F5 50%, #F0F8FF 100%);
-        }
-        
-        .blog-content {
-            text-align: center;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        .blog-content h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #2A2A2A;
-            margin-bottom: 20px;
-        }
-        
-        .blog-content p {
-            font-size: 1.2rem;
-            color: #666;
-            margin-bottom: 40px;
-        }
-        
-        .blog-cta {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background: #FFF;
-            color: #A33E22;
-            padding: 18px 36px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            box-shadow: 0 10px 30px rgba(255, 138, 101, 0.15);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-        
-        .blog-cta:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(255, 138, 101, 0.25);
-        }
-
-        .blog-feature-grid {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 20px;
-            margin-top: 44px;
-            text-align: left;
-        }
-
-        .blog-feature-card {
-            background: rgba(255,255,255,0.95);
-            border: 1px solid rgba(255, 138, 101, 0.12);
-            border-radius: 24px;
-            padding: 24px;
-            box-shadow: 0 12px 30px rgba(42,42,42,0.06);
-            text-decoration: none;
-            color: inherit;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .blog-feature-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 20px 44px rgba(42,42,42,0.1);
-        }
-
-        .blog-feature-tag {
-            display: inline-block;
-            font-size: 0.75rem;
-            font-weight: 700;
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
-            color: #A33E22;
-            margin-bottom: 12px;
-        }
-
-        .blog-feature-card h3 {
-            font-size: 1.15rem;
-            line-height: 1.35;
-            color: #2A2A2A;
-            margin-bottom: 10px;
-        }
-
-        .blog-feature-card p {
-            font-size: 0.95rem;
-            color: #666;
-            margin-bottom: 0;
-        }
-
-        .blog-cta-row {
-            display: flex;
-            justify-content: center;
-            gap: 16px;
-            flex-wrap: wrap;
-        }
-
-        .printables-section {
-            padding: 120px 20px;
-            background: linear-gradient(135deg, #FFF8F2 0%, #F5F0E7 50%, #EEF6ED 100%);
-        }
-        
-        /* Footer */
-        footer {
-            background: #2A2A2A;
-            color: #FFF;
-            padding: 60px 20px 40px;
-            text-align: center;
-        }
-        
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 32px;
-            margin-bottom: 32px;
-            flex-wrap: wrap;
-        }
-        
-        .footer-links a {
-            color: rgba(255, 255, 255, 0.8);
-            text-decoration: none;
-            transition: color 0.2s ease;
-        }
-        
-        .footer-links a:hover {
-            color: #FFB39F;
-        }
-        
-        .footer-text {
-            color: rgba(255, 255, 255, 0.6);
-            font-size: 0.9rem;
-        }
-        
-        /* Mobile Responsiveness */
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5rem; }
-            .hero p { font-size: 1.1rem; }
-            .hero-apps { gap: 15px; }
-            .hero-app { width: 120px; }
-            .blog-feature-grid { grid-template-columns: 1fr; }
-            
-            .app-showcase {
-                grid-template-columns: 1fr;
-                gap: 40px;
-                text-align: center;
-                padding: 0 10px;
-            }
-            
-            .app-showcase:nth-child(even) {
-                direction: ltr;
-            }
-            
-            .app-features {
-                grid-template-columns: 1fr;
-            }
-            
-            /* Mobile screenshot fixes */
-            .carousel-container {
-                width: 220px !important;
-                height: 470px !important;
-                margin: 0 auto !important;
-                box-shadow: 0 10px 25px rgba(0,0,0,0.1) !important;
-            }
-            
-            .screenshot {
-                width: 220px !important;
-                height: 470px !important;
-                object-fit: contain !important;
-            }
-            
-            .app-mockup {
-                margin: 0 auto;
-                max-width: 250px;
-            }
-
-            .your-house-clearly-preview {
-                width: 220px;
-                min-height: 360px;
-                padding: 28px 18px;
-            }
-
-            .your-house-clearly-preview img {
-                width: 96px;
-                height: 96px;
-            }
-            
-            .app-carousel {
-                text-align: center;
-                padding: 0;
-            }
-            
-            .phone-frame {
-                padding: 8px !important;
-                background: transparent !important;
-            }
-            
-            /* Mobile navigation fixes */
-            nav .container {
-                height: 60px;
-                padding: 0 10px;
-                gap: 8px;
-            }
-
-            .logo {
-                font-size: 1rem;
-            }
-
-            .nav-links {
-                flex: 1;
-                min-width: 0;
-                justify-content: flex-start;
-                gap: 6px;
-                font-size: 0.8rem;
-                flex-wrap: nowrap;
-                overflow-x: auto;
-                overscroll-behavior-inline: contain;
-                -webkit-overflow-scrolling: touch;
-                scrollbar-width: thin;
-            }
-            
-            .nav-links a {
-                padding: 8px 12px;
-                border-radius: 20px;
-                background: rgba(163, 62, 34, 0.08);
-                backdrop-filter: blur(10px);
-                white-space: nowrap;
-                flex-shrink: 0;
-            }
-            
-            /* Reduce padding on mobile */
-            .apps-section {
-                padding: 60px 10px;
-            }
-            
-            .section-header h2 { font-size: 2.2rem; }
-            .app-info h3 { font-size: 2rem; }
-            .app-info p { font-size: 1rem; padding: 0 10px; }
-        }
-        
-        /* Smooth scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
-        
-        @media (prefers-reduced-motion: reduce) {
-            html { scroll-behavior: auto; }
-
-            .carousel-slides {
-                animation: none !important;
-                transform: none !important;
-            }
-
-            .carousel-toggle { display: none; }
-
-            .hero-app,
-            .app-status,
-            .blog-cta,
-            .blog-feature-card {
-                transition: none;
-            }
-
-            .hero-app:hover,
-            .app-status:hover,
-            .blog-cta:hover,
-            .blog-feature-card:hover {
-                transform: none;
-            }
-        }
-    </style>
+  }
+  </script>
 </head>
-<body>
-    <!-- Navigation -->
-    <nav aria-label="Primary">
-        <div class="container">
-            <a href="/" class="logo">Tyche Ventures</a>
-            <div class="nav-links">
-                <a href="#apps">Apps</a>
-                <a href="#blog">Blog</a>
-                <a href="#printables">Printables</a>
-                <a href="mailto:support@tycheventuresllc.com">Contact</a>
-            </div>
-        </div>
+<body class="home-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="site-nav container" aria-label="Primary navigation">
+      <a class="home-brand" href="/">Tyche Ventures</a>
+      <ul class="site-nav__links">
+        <li><a href="#apps">Apps</a></li>
+        <li><a href="#approach">Approach</a></li>
+        <li><a href="/blog.html">Journal</a></li>
+        <li><a href="mailto:support@tycheventuresllc.com">Contact</a></li>
+      </ul>
     </nav>
+  </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Beautiful Apps for Families</h1>
-            <p>We build simple, privacy-first iOS apps that make life easier. From meal planning to home maintenance, we help busy families stay organized.</p>
-            
-            <div class="hero-apps">
-                <a href="/kids-meal-planner.html" class="hero-app">
-                    <img src="/images/apps/kmp-icon.png" alt="Kids Meal Planner" class="app-icon">
-                    <span class="hero-app__name">Kids Meal Planner</span>
-                    <div class="status" style="background: #2E6B3E; color: white;">Available Now</div>
-                </a>
-                <a href="/little-routines.html" class="hero-app">
-                    <img src="/images/apps/lr-icon.png" alt="Little Routines" class="app-icon">
-                    <span class="hero-app__name">Little Routines</span>
-                    <div class="status" style="background: #2E6B3E; color: white;">Available Now</div>
-                </a>
-                <a href="/cartkind.html" class="hero-app">
-                    <img src="/images/apps/cartkind-icon.png" alt="CartKind" class="app-icon">
-                    <span class="hero-app__name">CartKind</span>
-                    <div class="status" style="background: #2E6B3E; color: white;">Available Now</div>
-                </a>
-                <a href="/your-house-clearly/" class="hero-app">
-                    <img src="/images/apps/your-house-clearly-icon.png" alt="Your House, Clearly" class="app-icon" width="80" height="80">
-                    <span class="hero-app__name">Your House, Clearly</span>
-                    <div class="status">Coming Soon</div>
-                </a>
-            </div>
+  <main id="main">
+    <section class="home-hero">
+      <div class="home-hero__inner container">
+        <div>
+          <p class="eyebrow">Independent iPhone &amp; iPad apps</p>
+          <h1>Useful apps.<br>Clearer days.</h1>
+          <p class="home-hero__lede">Tyche Ventures makes focused tools for the everyday systems that are easy to lose track of: home records, family routines, weekly meals, and ingredient notes.</p>
+          <div class="home-hero__actions">
+            <a class="button button--light" href="#apps">Explore the apps</a>
+            <a class="button button--ghost" href="#approach">How we build</a>
+          </div>
         </div>
+        <div class="home-stack" aria-label="Tyche Ventures app collection">
+          <div class="home-stack__card"><img src="/images/apps/your-house-clearly-icon.png" width="54" height="54" alt=""><div><strong>Your House, Clearly</strong><span>Home records and upkeep</span></div></div>
+          <div class="home-stack__card"><img src="/images/apps/lr-icon.png" width="54" height="54" alt=""><div><strong>Little Routines</strong><span>Visual schedules and progress</span></div></div>
+          <div class="home-stack__card"><img src="/images/apps/kmp-icon.png" width="54" height="54" alt=""><div><strong>Kids Meal Planner</strong><span>Weekly meals, pantry, and lists</span></div></div>
+          <div class="home-stack__card"><img src="/images/apps/cartkind-icon.png" width="54" height="54" alt=""><div><strong>CartKind</strong><span>Your ingredient rules</span></div></div>
+        </div>
+      </div>
     </section>
 
-    <!-- Apps Section -->
-    <section class="apps-section" id="apps">
-        <div class="container">
-            <div class="section-header">
-                <h2>Our Apps</h2>
-                <p>Each app is carefully designed to solve practical problems for households and everyday life.</p>
-            </div>
-            
-            <div class="apps-grid">
-                <!-- Kids Meal Planner -->
-                <div class="app-showcase">
-                    <div class="app-info">
-                        <h3>Kids Meal Planner</h3>
-                        <div class="subtitle">Smart Family Meal Prep</div>
-                        <p>Plan weekly meals for your kids, share with daycare and nannies, and generate grocery lists automatically. Built with safety in mind for families managing food allergies.</p>
-                        
-                        <div class="app-features">
-                            <div class="feature">
-                                <div class="feature-icon">📅</div>
-                                <span>Weekly meal planning</span>
-                            </div>
-                            <div class="feature">
-                                <div class="feature-icon">👶</div>
-                                <span>Kid profiles &amp; preferences</span>
-                            </div>
-                            <div class="feature">
-                                <div class="feature-icon">👨‍👩‍👧</div>
-                                <span>Caregiver sharing</span>
-                            </div>
-                            <div class="feature">
-                                <div class="feature-icon">🛒</div>
-                                <span>Auto grocery lists</span>
-                            </div>
-                        </div>
-                        
-                        <a href="/kids-meal-planner.html" class="app-status">Learn More</a>
-                        <a href="https://apps.apple.com/app/kids-meal-planner/id6760732499" class="app-status" style="background: #2E6B3E; color: white; margin-left: 10px; text-decoration: none;">Download</a>
-                    </div>
-                    <div class="app-mockup">
-                        <div class="app-carousel">
-                            <div class="carousel-container">
-                                <div class="carousel-slides">
-                                    <div class="carousel-slide">
-                                        <img src="/images/apps/kmp-hero.png" alt="Kids Meal Planner main screen" class="screenshot">
-                                    </div>
-                                    <div class="carousel-slide">
-                                        <img src="/images/apps/kmp-schedule.png" alt="Weekly meal schedule" class="screenshot">
-                                    </div>
-                                    <div class="carousel-slide">
-                                        <img src="/images/apps/kmp-profiles.png" alt="Child profiles with allergies" class="screenshot">
-                                    </div>
-                                    <div class="carousel-slide">
-                                        <img src="/images/apps/kmp-pantry.png" alt="Pantry management" class="screenshot">
-                                    </div>
-                                    <div class="carousel-slide">
-                                        <img src="/images/apps/kmp-grocery.png" alt="Auto grocery lists" class="screenshot">
-                                    </div>
-                                </div>
-                            </div>
-                            <button type="button" class="carousel-toggle" data-app="Kids Meal Planner" aria-label="Pause Kids Meal Planner screenshot rotation">Pause screenshots</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Little Routines -->
-                <div class="app-showcase">
-                    <div class="app-info">
-                        <h3>Little Routines</h3>
-                        <div class="subtitle">Visual Schedule &amp; Habit Chart</div>
-                        <p>Help kids complete their daily routines with visual schedules they can actually follow. Perfect for morning, bedtime, and after-school routines.</p>
-                        
-                        <div class="app-features">
-                            <div class="feature">
-                                <div class="feature-icon">🌅</div>
-                                <span>Morning routines</span>
-                            </div>
-                            <div class="feature">
-                                <div class="feature-icon">⭐</div>
-                                <span>Reward system</span>
-                            </div>
-                            <div class="feature">
-                                <div class="feature-icon">📱</div>
-                                <span>Kid-friendly mode</span>
-                            </div>
-                            <div class="feature">
-                                <div class="feature-icon">⏰</div>
-                                <span>Built-in timers</span>
-                            </div>
-                        </div>
-                        
-                        <a href="/little-routines.html" class="app-status">Learn More</a>
-                        <a href="https://apps.apple.com/app/little-routines/id6761321011" class="app-status" style="background: #2E6B3E; color: white; margin-left: 10px; text-decoration: none;">Download</a>
-                    </div>
-                    <div class="app-mockup">
-                        <div class="app-carousel">
-                            <div class="carousel-container">
-                                <div class="carousel-slides">
-                                    <div class="carousel-slide">
-                                        <img src="/images/apps/lr-kidmode.png" alt="Kid Mode interface" class="screenshot">
-                                    </div>
-                                    <div class="carousel-slide">
-                                        <img src="/images/apps/lr-routines.png" alt="Routines management" class="screenshot">
-                                    </div>
-                                    <div class="carousel-slide">
-                                        <img src="/images/apps/lr-children.png" alt="Children profiles" class="screenshot">
-                                    </div>
-                                    <div class="carousel-slide">
-                                        <img src="/images/apps/lr-progress.png" alt="Progress tracking" class="screenshot">
-                                    </div>
-                                    <div class="carousel-slide">
-                                        <img src="/images/apps/lr-kidmode.png" alt="Kid Mode celebration" class="screenshot">
-                                    </div>
-                                </div>
-                            </div>
-                            <button type="button" class="carousel-toggle" data-app="Little Routines" aria-label="Pause Little Routines screenshot rotation">Pause screenshots</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- CartKind -->
-                <div class="app-showcase">
-                    <div class="app-info">
-                        <h3>CartKind</h3>
-                        <div class="subtitle">Smart Ingredient Scanner</div>
-                        <p>Scan product barcodes to check ingredients against your family's dietary restrictions and preferences. Know what's in your food before you buy it.</p>
-                        
-                        <div class="app-features">
-                            <div class="feature">
-                                <div class="feature-icon">📱</div>
-                                <span>Barcode scanning</span>
-                            </div>
-                            <div class="feature">
-                                <div class="feature-icon">🚫</div>
-                                <span>Custom restrictions</span>
-                            </div>
-                            <div class="feature">
-                                <div class="feature-icon">📊</div>
-                                <span>Scan history</span>
-                            </div>
-                            <div class="feature">
-                                <div class="feature-icon">🔒</div>
-                                <span>Privacy-first</span>
-                            </div>
-                        </div>
-                        
-                        <a href="/cartkind.html" class="app-status">Learn More</a>
-                        <a href="https://apps.apple.com/app/cartkind/id6761304996" class="app-status" style="background: #2E6B3E; color: white; margin-left: 10px; text-decoration: none;">Download</a>
-                    </div>
-                    <div class="app-mockup">
-                        <div class="app-carousel">
-                            <div class="carousel-container">
-                                <div class="carousel-slides">
-                                    <div class="carousel-slide">
-                                        <img src="/images/apps/cartkind-hero.png" alt="CartKind barcode scanner" class="screenshot">
-                                    </div>
-                                    <div class="carousel-slide">
-                                        <img src="/images/apps/cartkind-verdict.png" alt="CartKind clear verdict" class="screenshot">
-                                    </div>
-                                    <div class="carousel-slide">
-                                        <img src="/images/apps/cartkind-breakdown.png" alt="CartKind ingredient breakdown" class="screenshot">
-                                    </div>
-                                    <div class="carousel-slide">
-                                        <img src="/images/apps/cartkind-rules.png" alt="CartKind custom rules" class="screenshot">
-                                    </div>
-                                    <div class="carousel-slide">
-                                        <img src="/images/apps/cartkind-history.png" alt="CartKind scan history" class="screenshot">
-                                    </div>
-                                </div>
-                            </div>
-                            <button type="button" class="carousel-toggle" data-app="CartKind" aria-label="Pause CartKind screenshot rotation">Pause screenshots</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Your House, Clearly -->
-                <div class="app-showcase">
-                    <div class="app-info">
-                        <h3>Your House, Clearly</h3>
-                        <div class="subtitle">Maintenance &amp; Warranty Tracker</div>
-                        <p>Organize properties, appliances, warranties, maintenance reminders, documents, and possible CPSC recall matches in one local-first app. No account is required, and recall results link back to official CPSC information for verification.</p>
-
-                        <div class="app-features">
-                            <div class="feature">
-                                <div class="feature-icon">🛡️</div>
-                                <span>CPSC recall checks</span>
-                            </div>
-                            <div class="feature">
-                                <div class="feature-icon">📊</div>
-                                <span>Warranty dashboard</span>
-                            </div>
-                            <div class="feature">
-                                <div class="feature-icon">📄</div>
-                                <span>PDF maintenance reports</span>
-                            </div>
-                            <div class="feature">
-                                <div class="feature-icon">🔧</div>
-                                <span>Asset &amp; task records</span>
-                            </div>
-                        </div>
-
-                        <a href="/your-house-clearly/" class="app-status coming-soon">Learn More</a>
-                    </div>
-                    <div class="app-mockup">
-                        <div class="your-house-clearly-preview">
-                            <img src="/images/apps/your-house-clearly-icon.png" width="112" height="112" alt="Your House, Clearly app icon showing a house rising from an open book" loading="lazy">
-                            <span class="your-house-clearly-preview__label">Home care, records, and reminders</span>
-                            <strong>Maintenance, warranties, and assets in one place.</strong>
-                            <p>Explore the local-first home record and watch the final app preview.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <section class="home-section home-section--white" id="apps">
+      <div class="container">
+        <div class="home-heading">
+          <p class="eyebrow">The collection</p>
+          <h2>One job per app. No mystery about what it does.</h2>
+          <p>Each product page uses real app screens, clear plan boundaries, and plain-language privacy and safety notes.</p>
         </div>
+
+        <div class="app-grid">
+          <article class="app-card app-card--home">
+            <div>
+              <div class="app-card__lockup"><img src="/images/apps/your-house-clearly-icon.png" width="62" height="62" alt=""><span class="app-card__status">Submitted for App Store review</span></div>
+              <h3>Your House,<br>Clearly</h3>
+              <p class="app-card__tagline">Home care, records, and reminders—in one place.</p>
+              <p class="app-card__description">Keep maintenance schedules, appliance details, warranty dates, documents, and possible recall matches in one local-first home record.</p>
+              <div class="app-card__actions"><a class="button button--theme" href="/your-house-clearly/">Explore the app</a></div>
+            </div>
+            <div class="app-card__visual"><img src="/images/apps/your-house-clearly/screenshots-web/01-home.png" width="660" height="1434" loading="lazy" decoding="async" alt="Your House, Clearly home dashboard in a framed iPhone"></div>
+          </article>
+
+          <article class="app-card app-card--routines">
+            <div>
+              <div class="app-card__lockup"><img src="/images/apps/lr-icon.png" width="62" height="62" alt=""><span class="app-card__status">Available on the App Store</span></div>
+              <h3>Little<br>Routines</h3>
+              <p class="app-card__tagline">Calmer routines. Less reminding.</p>
+              <p class="app-card__description">Build visual schedules with one-task guidance, stars, rewards, timers, progress views, and separate profiles.</p>
+              <div class="app-card__actions"><a class="button button--theme" href="/little-routines.html">Explore the app</a><a class="button" href="https://apps.apple.com/us/app/little-routines/id6761321011">App Store</a></div>
+            </div>
+            <div class="app-card__visual"><img src="/images/apps/little-routines/screenshots/01-less-reminding.png" width="645" height="1398" loading="lazy" decoding="async" alt="Little Routines routine list in a framed iPhone"></div>
+          </article>
+
+          <article class="app-card app-card--meals">
+            <div>
+              <div class="app-card__lockup"><img src="/images/apps/kmp-icon.png" width="62" height="62" alt=""><span class="app-card__status">Available on the App Store</span></div>
+              <h3>Kids Meal<br>Planner</h3>
+              <p class="app-card__tagline">Plan the week. Shop with a clear list.</p>
+              <p class="app-card__description">Organize meals, pantry items, and groceries around one plan. It is an organizational tool—not an allergy, nutrition, or food-safety check.</p>
+              <div class="app-card__actions"><a class="button button--theme" href="/kids-meal-planner.html">Explore the app</a><a class="button" href="https://apps.apple.com/us/app/kids-meal-planner/id6760732499">App Store</a></div>
+            </div>
+            <div class="app-card__visual"><img src="/images/apps/kids-meal-planner/screenshots/01-schedule.png" width="660" height="1434" loading="lazy" decoding="async" alt="Kids Meal Planner weekly schedule in a framed iPhone"></div>
+          </article>
+
+          <article class="app-card app-card--cartkind">
+            <div>
+              <div class="app-card__lockup"><img src="/images/apps/cartkind-icon.png" width="62" height="62" alt=""><span class="app-card__status">Available on the App Store</span></div>
+              <h3>CartKind</h3>
+              <p class="app-card__tagline">Your rules for every barcode.</p>
+              <p class="app-card__description">Compare available ingredient data with rules you choose and review the matches behind each result. Always verify the physical label.</p>
+              <div class="app-card__actions"><a class="button button--theme" href="/cartkind.html">Explore the app</a><a class="button" href="https://apps.apple.com/us/app/cartkind/id6761304996">App Store</a></div>
+            </div>
+            <div class="app-card__visual"><img src="/images/apps/cartkind/screenshots/02-matched-result.png" width="660" height="1434" loading="lazy" decoding="async" alt="CartKind result with visible ingredient-rule matches in a framed iPhone"></div>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <!-- Blog Section -->
-    <section class="blog-section" id="blog">
-        <div class="container">
-            <div class="blog-content">
-                <h2>📝 The Tiny Cart Blog</h2>
-                <p>Honest product reviews, meal planning tips, and family-friendly guides to make parenting easier. No fluff, just practical advice from real parents.</p>
-                <a href="/blog.html" class="blog-cta">
-                    <span>Browse Articles</span>
-                    <span>→</span>
-                </a>
-                <div class="blog-feature-grid">
-                    <a href="/best-lunchboxes-for-toddlers.html" class="blog-feature-card">
-                        <span class="blog-feature-tag">Popular Guide</span>
-                        <h3>Best Lunchboxes for Toddlers (2026)</h3>
-                        <p>Leak-proof, toddler-friendly lunchboxes for daycare, preschool, and everyday packing.</p>
-                    </a>
-                    <a href="/best-baby-food-makers-blenders.html" class="blog-feature-card">
-                        <span class="blog-feature-tag">Baby Feeding</span>
-                        <h3>Best Baby Food Makers &amp; Blenders (2026)</h3>
-                        <p>Fresh homemade puree tools compared side by side for budget, cleanup, and batch prep.</p>
-                    </a>
-                    <a href="/how-to-meal-plan-for-kids.html" class="blog-feature-card">
-                        <span class="blog-feature-tag">Meal Planning</span>
-                        <h3>How to Meal Plan for Kids</h3>
-                        <p>A realistic week-by-week system for planning meals kids actually eat without burnout.</p>
-                    </a>
-                </div>
-            </div>
+    <section class="home-section home-section--soft" id="approach">
+      <div class="container">
+        <div class="home-heading">
+          <p class="eyebrow">How we build</p>
+          <h2>Clear interfaces, honest limits, and fewer accounts.</h2>
+          <p>Good software should make its boundaries as understandable as its features.</p>
         </div>
+        <div class="principle-grid">
+          <article class="principle-card"><span>01 · FOCUSED</span><h3>A defined job</h3><p>Each app is organized around a specific household workflow instead of a maze of unrelated features.</p></article>
+          <article class="principle-card"><span>02 · LOCAL-FIRST</span><h3>Less account friction</h3><p>Core planning and record data stays local whenever the product can reasonably work that way. Network features are disclosed where they occur.</p></article>
+          <article class="principle-card"><span>03 · PLAIN LANGUAGE</span><h3>No hidden certainty</h3><p>Recall matches, barcode data, templates, and planning notes are presented as aids—not guarantees, diagnoses, or substitutes for official sources.</p></article>
+        </div>
+      </div>
     </section>
 
-    <section class="printables-section" id="printables">
-        <div class="container">
-            <div class="blog-content">
-                <h2>🖨️ Tiny Cart Printables</h2>
-                <p>We now have a first batch of premium family printables live on Etsy, with product pages here on the site so Pinterest and blog traffic have a cleaner place to land first.</p>
-                <div class="blog-cta-row">
-                    <a href="/printables/" class="blog-cta">
-                        <span>Browse Printables</span>
-                        <span>→</span>
-                    </a>
-                </div>
-                <div class="blog-feature-grid">
-                    <a href="/printables/family-meal-planner.html" class="blog-feature-card">
-                        <span class="blog-feature-tag">Meal Planning</span>
-                        <h3>Family Meal and Lunch System Pack</h3>
-                        <p>Weekly meal planning, lunch mapping, grocery flow, prep, and repeatable food wins in one printable bundle.</p>
-                    </a>
-                    <a href="/printables/kids-routine-chart.html" class="blog-feature-card">
-                        <span class="blog-feature-tag">Routines</span>
-                        <h3>Kids Routine and Responsibility Chart Bundle</h3>
-                        <p>Morning, after-school, bedtime, and weekly responsibility pages for calmer family structure.</p>
-                    </a>
-                    <a href="/printables/lunchbox-notes.html" class="blog-feature-card">
-                        <span class="blog-feature-tag">Lunchbox Notes</span>
-                        <h3>Kids Lunchbox Notes and Joke Cards</h3>
-                        <p>Encouragement notes, jokes, and planning pages that make lunchbox connection easier to repeat.</p>
-                    </a>
-                </div>
-            </div>
+    <section class="home-section home-section--white">
+      <div class="container">
+        <div class="home-heading">
+          <p class="eyebrow">More from Tyche</p>
+          <h2>Practical guides and printable systems.</h2>
         </div>
+        <div class="journal-grid">
+          <a class="journal-card" href="/blog.html"><span>Journal</span><h3>Ideas for calmer routines, weekly planning, and organized homes.</h3><p>Read the latest practical guides.</p></a>
+          <a class="journal-card" href="/printables/"><span>Printables</span><h3>Simple pages for the systems that work better on paper.</h3><p>Browse the printable library.</p></a>
+        </div>
+      </div>
     </section>
+  </main>
 
-    <!-- Disclaimers -->
-    <aside aria-label="Important app disclaimers" style="padding: 40px 20px; background: #F8F9FA; text-align: center;">
-        <div class="container" style="max-width: 800px; margin: 0 auto;">
-            <p style="font-size: 0.9rem; color: #666; line-height: 1.6;">
-                <strong>Important:</strong> Our apps do not provide medical, nutritional, or professional home maintenance advice.
-                Always verify ingredients and consult healthcare professionals for allergy-related decisions.
-                Consult qualified professionals for all home maintenance, repair, and safety matters.
-            </p>
-        </div>
-    </aside>
-
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-links">
-                <a href="mailto:support@tycheventuresllc.com">Contact</a>
-                <a href="/privacy.html">Privacy</a>
-                <a href="/terms.html">Terms</a>
-                <a href="/blog.html">Blog</a>
-                <a href="/printables/">Printables</a>
-            </div>
-            <div class="footer-text">
-                © 2026 Tyche Ventures LLC. All rights reserved.
-            </div>
-        </div>
-    </footer>
-    <script>
-        document.querySelectorAll('.carousel-toggle').forEach((button) => {
-            button.addEventListener('click', () => {
-                const carousel = button.closest('.app-carousel');
-                const isPaused = carousel.classList.toggle('is-paused');
-                const appName = button.dataset.app;
-                button.textContent = isPaused ? 'Resume screenshots' : 'Pause screenshots';
-                button.setAttribute('aria-label', `${isPaused ? 'Resume' : 'Pause'} ${appName} screenshot rotation`);
-            });
-        });
-    </script>
+  <footer class="site-footer">
+    <div class="footer-grid container">
+      <div>
+        <div class="footer-brand">Tyche Ventures LLC</div>
+        <p class="footer-note">Independent iPhone and iPad apps designed with clear boundaries, local-first data choices, and practical household workflows.</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="#apps">Apps</a>
+        <a href="/blog.html">Journal</a>
+        <a href="/printables/">Printables</a>
+        <a href="/about.html">About</a>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="mailto:support@tycheventuresllc.com">Contact</a>
+      </nav>
+    </div>
+  </footer>
 </body>
 </html>

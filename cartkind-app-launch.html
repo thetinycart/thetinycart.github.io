@@ -1,203 +1,137 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>We Built an Ingredient Scanner for Families — Here's How CartKind Works | The Tiny Cart</title>
-  <meta name="description" content="A parent-first walkthrough of CartKind, a free barcode scanning app that checks ingredients against your family's dietary rules and gives you a clear pass, caution, or fail verdict.">
-  <meta name="keywords" content="ingredient scanner app, barcode scanner food, food allergy app, dietary restriction app, ingredient checker, family food safety app">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How CartKind Applies Your Ingredient Rules | Tyche Ventures</title>
+  <meta name="description" content="A clear walkthrough of CartKind: scan or enter a barcode, compare available ingredient data with rules you choose, review the matches, and verify the physical label.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="keywords" content="ingredient scanner app, barcode ingredient checker, grocery label app, custom ingredient rules">
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/png" href="/images/favicon.png">
-  <meta name="robots" content="max-image-preview:large">
+  <link rel="icon" href="/images/favicon.png">
   <link rel="canonical" href="https://tycheventuresllc.com/cartkind-app-launch.html">
-  <meta property="og:title" content="We Built an Ingredient Scanner for Families — Here's How CartKind Works | The Tiny Cart">
-  <meta property="og:description" content="Why we built CartKind, how barcode scanning helps families manage dietary needs, and what makes it different from other food apps.">
   <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Tyche Ventures LLC">
+  <meta property="og:title" content="How CartKind Applies Your Ingredient Rules">
+  <meta property="og:description" content="What CartKind checks, where product data comes from, and why the physical label still controls.">
   <meta property="og:url" content="https://tycheventuresllc.com/cartkind-app-launch.html">
-  <meta property="og:image" content="https://tycheventuresllc.com/images/apps/cartkind-hero.png">
+  <meta property="og:image" content="https://tycheventuresllc.com/images/apps/cartkind/screenshots-ipad/02-matched-result.png">
   <meta property="article:published_time" content="2026-04-03T09:00:00-07:00">
+  <meta property="article:modified_time" content="2026-08-21T15:45:00-07:00">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "headline": "We Built an Ingredient Scanner for Families — Here's How CartKind Works",
-    "description": "A parent-first walkthrough of CartKind, a free barcode scanning app that checks ingredients against your family's dietary rules and gives you a clear pass, caution, or fail verdict.",
-    "image": ["https://tycheventuresllc.com/images/apps/cartkind-hero.png"],
+    "headline": "How CartKind Applies Your Ingredient Rules",
+    "description": "A clear walkthrough of CartKind's ingredient-reference workflow and its important limits.",
+    "image": ["https://tycheventuresllc.com/images/apps/cartkind/screenshots-ipad/02-matched-result.png"],
     "datePublished": "2026-04-03T09:00:00-07:00",
-    "dateModified": "2026-04-03T09:00:00-07:00",
+    "dateModified": "2026-08-21T15:45:00-07:00",
     "mainEntityOfPage": "https://tycheventuresllc.com/cartkind-app-launch.html",
-    "author": {
-      "@type": "Organization",
-      "name": "The Tiny Cart"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Tyche Ventures LLC",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://tycheventuresllc.com/images/logo-small.png"
-      }
-    }
+    "author": {"@type": "Organization", "name": "Tyche Ventures LLC"},
+    "publisher": {"@type": "Organization", "name": "Tyche Ventures LLC", "logo": {"@type": "ImageObject", "url": "https://tycheventuresllc.com/images/logo-small.png"}}
   }
   </script>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1><a href="/"><img src="/images/logo-small.png" alt="The Tiny Cart">The Tiny Cart</a></h1>
-      <nav>
-        <a href="/">Home</a>
-        <a href="/blog.html">Blog</a>
+  <header class="journal-header">
+    <div class="container journal-header-inner">
+      <div class="journal-brand">
+        <a class="company-home" href="/" aria-label="Tyche Ventures home">Tyche Ventures</a>
+        <span class="brand-divider" aria-hidden="true"></span>
+        <a class="imprint-home" href="/blog.html"><img src="/images/logo-small.png" alt="">The Tiny Cart</a>
+      </div>
+      <nav aria-label="Journal navigation">
+        <a href="/blog.html">Journal</a>
         <a href="/printables/">Printables</a>
         <a href="/about.html">About</a>
+        <a href="/#apps">Apps</a>
       </nav>
     </div>
   </header>
 
   <main class="post-shell">
     <article>
-      <h1>We Built an Ingredient Scanner for Families — Here's How CartKind Works</h1>
-      <div class="meta">April 3, 2026 · 10 min read</div>
+      <h1>How CartKind Applies Your Ingredient Rules</h1>
+      <div class="meta">April 3, 2026 · Updated August 21, 2026 · 9 min read</div>
 
-      <div class="disclosure">
-        <strong>Affiliate Disclosure:</strong> This post contains Amazon affiliate links. We earn a small commission at no extra cost to you.
-      </div>
+      <div class="disclosure"><strong>Affiliate disclosure:</strong> This article may link to Amazon products. As an Amazon Associate, Tyche Ventures LLC earns from qualifying purchases at no added cost to you. CartKind 1.0.2 itself does not ship shopping or affiliate links.</div>
 
-      <img src="/images/apps/cartkind-hero.png" alt="CartKind app showing barcode scanner interface" style="width:100%;border-radius:12px;margin:1.5rem 0;max-width:400px;display:block;margin-left:auto;margin-right:auto;">
+      <img src="/images/apps/cartkind/screenshots/02-matched-result.png" width="660" height="1434" loading="eager" decoding="async" alt="CartKind result screen showing the ingredient-rule matches behind a Review result" style="width:min(100%,420px);border-radius:24px;margin:1.5rem auto;display:block;">
 
-      <p>If you've ever stood in a grocery aisle, squinting at a label in 6-point font, trying to figure out if something contains the one ingredient your kid can't have — we built this app for you.</p>
+      <p>Ingredient lists can be long, product data can be inconsistent, and different households pay attention to different things. We built <a href="/cartkind.html" style="color:var(--primary)"><strong>CartKind</strong></a> to make one narrow job easier: compare the ingredient text that is available with the rules you chose and keep the reasons visible.</p>
 
-      <p><a href="https://apps.apple.com/app/cartkind/id6761304996" style="color: var(--primary);"><strong>CartKind</strong></a> is a barcode scanning app that checks product ingredients against your family's dietary rules and gives you a clear verdict: pass, caution, or fail. No guesswork, no reading every label from scratch, no accidentally bringing home something you shouldn't have.</p>
+      <div class="disclosure"><strong>Important limitation:</strong> CartKind is an informational shopping reference—not medical, allergy, nutrition, or food-safety advice. It does not identify allergens or determine whether a product is safe. Catalog data can be incomplete, outdated, or wrong. Always read the physical label and consult a qualified professional for allergy or medical decisions.</div>
 
-      <p>This is our third app (after <a href="https://apps.apple.com/app/kids-meal-planner/id6760732499" style="color: var(--primary);">Kids Meal Planner</a> and <a href="https://apps.apple.com/app/little-routines/id6761321011" style="color: var(--primary);">Little Routines</a>), and like those, it came from a real problem our family kept running into.</p>
-
-      <h2>The Problem: Labels Are Designed for Compliance, Not Families</h2>
-
-      <p>Food labels exist because regulators require them. They're not designed to be useful to a tired parent shopping with two kids in the cart. The actual experience looks like this:</p>
-
+      <h2>Why CartKind Uses Your Rules Instead of a Universal Score</h2>
+      <p>A single number or generic grade hides the assumptions behind it. CartKind takes a different approach: you decide how each supported category should respond, and the result shows the matches that led there.</p>
+      <p>The app uses four result states:</p>
       <ul>
-        <li>Pick up a product that looks fine</li>
-        <li>Flip it over, find the ingredient list in impossibly small text</li>
-        <li>Scan through 30+ ingredients looking for the 3 you're avoiding</li>
-        <li>Recognize some chemical name that might be a different form of the thing you're avoiding</li>
-        <li>Put it back because you're not sure</li>
-        <li>Repeat 15 times per shopping trip</li>
+        <li><strong>Aligned:</strong> no active Warn me or Avoid rule matched the available ingredient text.</li>
+        <li><strong>Review:</strong> at least one active Warn me rule matched.</li>
+        <li><strong>Not aligned:</strong> at least one active Avoid rule matched.</li>
+        <li><strong>Unavailable:</strong> the app does not have enough ingredient information to evaluate.</li>
       </ul>
+      <p>Aligned is not a guarantee that a product is appropriate or safe. It only describes the comparison against the active rules and ingredient text available at that moment.</p>
 
-      <p>That's exhausting. And it gets worse when you're managing multiple dietary needs across multiple family members — one child avoids artificial dyes, another can't have certain additives, and you're trying to cut back on added sugars for everyone.</p>
+      <h2>The CartKind Workflow</h2>
 
-      <p>CartKind turns that entire process into a three-second scan.</p>
+      <h3>1) Scan a barcode—or enter information manually</h3>
+      <p>Use the camera, type a barcode, or enter an ingredient list when a catalog result is unavailable. Camera access is optional because both manual paths remain available.</p>
 
-      <h2>What We Built</h2>
+      <h3>2) Look up available product data</h3>
+      <p>Barcode lookup checks Open Food Facts first. Only when that catalog reports no match does CartKind send the barcode to a narrow Tyche Ventures relay that requests USDA FoodData Central results. The app shows the source used for a result when available.</p>
+      <p>Open Food Facts and USDA are third-party sources. Their names, ingredients, brands, categories, and images can be incomplete or inaccurate. CartKind does not maintain a complete independent product database.</p>
 
-      <p><a href="https://apps.apple.com/app/cartkind/id6761304996" style="color: var(--primary);"><strong>CartKind</strong></a> has three layers: <strong>scan</strong>, <strong>rules</strong>, and <strong>history</strong>. You set your family's rules once, then scan products to get instant verdicts.</p>
+      <h3>3) Apply the actions you chose</h3>
+      <p>Built-in rules can be set to <strong>Ignore</strong>, <strong>Warn me</strong>, or <strong>Avoid</strong>. Premium adds custom categories, ingredient triggers, and use of those custom rules in new evaluations.</p>
 
-      <h3>1) Instant Barcode Scanning</h3>
+      <h3>4) Keep the explanation with the result</h3>
+      <p>The result view keeps the available ingredient text, matched rules, explanation, and source together. Saved evaluations can be reopened from local History. Premium Insights summarizes patterns across the local records you keep.</p>
 
-      <p>Point your phone's camera at any barcode. CartKind looks up the product's ingredients and runs them against your rules in real time. You get one of three results:</p>
+      <h2>What Is Included Free and With Premium</h2>
+      <p><strong>Free features</strong> include barcode scanning and manual entry, manual ingredient-list entry, built-in category controls, result explanations and source links, and saved local history.</p>
+      <p><strong>Optional Premium</strong> adds custom categories, custom ingredient triggers, custom rules in new evaluations, and the Insights dashboard. Apple shows current monthly and yearly prices, renewal terms, and any introductory offer for which an Apple Account is eligible before purchase.</p>
 
+      <h2>Privacy: Local Records, Specific Network Requests</h2>
+      <p>No CartKind account is required. Rules, settings, and saved evaluations stay in the app on your device. Apple-managed backups can include local app data depending on device settings.</p>
+      <p>A barcode lookup necessarily sends the barcode and ordinary network metadata to the lookup service. Open Food Facts may retain IP and request logs under its privacy policy. After a catalog miss, the Tyche Ventures relay processes the barcode and ordinary request metadata and may retain limited operational or security logs for up to seven days. Apple processes subscriptions through StoreKit.</p>
+      <p>For the complete service, retention, and licensing details, read the <a href="/cartkind/privacy-policy.html">CartKind Privacy Policy</a>.</p>
+
+      <h2>Data Sources and Licensing</h2>
+      <p>Open Food Facts database content is available under the Open Database License (ODbL), individual database contents under the Database Contents License (DbCL), and product images under the license identified by Open Food Facts. USDA FoodData Central data is provided as U.S. government public-domain material under its published terms. Source links remain available from CartKind where applicable.</p>
+
+      <h2>Examples of What CartKind Can—and Cannot—Do</h2>
       <ul>
-        <li><strong>Pass</strong> — nothing flagged, safe to buy</li>
-        <li><strong>Caution</strong> — contains ingredients you've marked as "watch" items</li>
-        <li><strong>Fail</strong> — contains ingredients you've said are a hard no</li>
-      </ul>
-
-      <p>No ambiguity. No "maybe." Just a clear answer while you're standing in the aisle.</p>
-
-      <h3>2) Custom Ingredient Rules</h3>
-
-      <p>This is what makes CartKind different from apps that just show you a nutrition score. You define what matters to <em>your</em> family:</p>
-
-      <ul>
-        <li><strong>Fail rules:</strong> Ingredients that are absolute no-gos. Red 40, high-fructose corn syrup, sodium benzoate — whatever your family avoids.</li>
-        <li><strong>Caution rules:</strong> Ingredients you'd rather minimize but aren't deal-breakers. Added sugars, certain preservatives, artificial flavors.</li>
-        <li><strong>Ignore rules:</strong> Ingredients you've already researched and decided are fine. Removes noise from your scans.</li>
-      </ul>
-
-      <p>You're not locked into someone else's definition of "healthy" or "clean." You set the rules. The app enforces them.</p>
-
-      <p><strong>Example:</strong> You've read the research on artificial food dyes and decided your family avoids them. You add Red 40, Yellow 5, Yellow 6, Blue 1 as fail rules. Now every barcode you scan automatically catches those — even in products you wouldn't expect them to appear in (looking at you, certain brands of pickles and salad dressing).</p>
-
-      <h3>3) Scan History</h3>
-
-      <p>Every product you scan gets saved with its verdict. This builds over time into a personal database of products your family has already checked. Need to remember whether that granola bar passed or failed? Check your history instead of re-scanning at the store.</p>
-
-      <p>It's also useful for spotting patterns. If half your scanned products are failing on the same ingredient, that tells you something about your current grocery habits.</p>
-
-      <h3>4) Full Ingredient Breakdown</h3>
-
-      <p>For any scanned product, you can see the complete ingredient list with your flagged items highlighted. This is helpful when a product gets a "caution" verdict — you can see exactly which ingredient triggered it and make an informed decision.</p>
-
-      <p>No black-box scoring. Everything is transparent. You see exactly what the app sees and exactly why it's flagging something.</p>
-
-      <h2>Why "Your Rules" Matters More Than a Score</h2>
-
-      <p>Most food apps give you a score — a number out of 100, or a letter grade, or a traffic light. The problem is: whose definition of "good" are they using?</p>
-
-      <ul>
-        <li>A vegan family and a keto family have completely different "fail" ingredients</li>
-        <li>A family managing a child's sensitivity to dyes doesn't care about sodium levels</li>
-        <li>Parents avoiding added sugars might be fine with certain preservatives</li>
-      </ul>
-
-      <p>Universal scores are averages. Your family isn't average. CartKind doesn't pretend to know what's "good" for you — it just enforces the rules you've decided on. That's a fundamentally different approach, and we think it's the right one.</p>
-
-      <h2>Real Scenarios</h2>
-
-      <p>Here's how CartKind fits into actual grocery trips:</p>
-
-      <p><strong>The "is this really dye-free?" parent:</strong> Your child reacts to artificial food dyes. Marketers are clever — "natural flavors" and "made with real fruit" don't mean dye-free. You scan the barcode. CartKind finds Yellow 5 buried in the ingredient list. Fail. You put it back and move on in three seconds instead of three minutes of label-reading.</p>
-
-      <p><strong>The family trying to reduce additives:</strong> You're not on a strict elimination diet — you just want to cut back. Set your top-ten additives as caution rules. Over a month of scanning, you naturally gravitate toward cleaner options without making grocery shopping feel like homework.</p>
-
-      <p><strong>The shared-grocery household:</strong> Grandma does the shopping sometimes. Instead of giving her a printed list of "don't buy anything with these 15 ingredients," you set up CartKind on her phone with your family's rules. Same protection, no confusion.</p>
-
-      <h2>Privacy-First Design</h2>
-
-      <p>Your dietary preferences are personal information. What you eat, what your family avoids, what products you buy — that's nobody's business.</p>
-
-      <ul>
-        <li><strong>No accounts required</strong> — start scanning immediately</li>
-        <li><strong>All data stays on your device</strong> — rules, history, everything</li>
-        <li><strong>No tracking or analytics</strong> — we don't see what you scan</li>
-        <li><strong>No ads</strong> — ever</li>
-      </ul>
-
-      <p>This is the same privacy-first approach we use in all our apps. Your family's data belongs to your family. Period.</p>
-
-      <h2>What's Free</h2>
-
-      <p>CartKind is free to download and use. Barcode scanning, custom rules, scan history, and full ingredient breakdowns are all included. No paywall, no premium tier, no "scan 3 products then pay." Just a useful tool.</p>
-
-      <h2>Built by Parents Who Read Labels</h2>
-
-      <p>CartKind is our third family app, joining <a href="https://apps.apple.com/app/kids-meal-planner/id6760732499" style="color: var(--primary);">Kids Meal Planner</a> and <a href="https://apps.apple.com/app/little-routines/id6761321011" style="color: var(--primary);">Little Routines</a>. The idea actually came from a family member who was tired of the label-reading ritual at every grocery trip.</p>
-
-      <p>We're a small team building tools we use ourselves. No corporate sponsors, no food industry partnerships, no reason to steer you toward any particular product. Just honest ingredient information based on your own rules.</p>
-
-      <h2>Pair It With the Right Tools</h2>
-
-      <p>Scanning ingredients is one piece of the puzzle. Here are some things that complement a more intentional approach to family groceries:</p>
-
-      <ul>
-        <li><a href="https://www.amazon.com/s?k=reusable+grocery+bags+insulated&tag=thetinycart-20" style="color: var(--primary);">Insulated reusable grocery bags</a> — keep cold items safe when your scanning adds a few minutes to each trip</li>
-        <li><a href="https://www.amazon.com/s?k=glass+food+storage+containers+family&tag=thetinycart-20" style="color: var(--primary);">Glass food storage containers</a> — once you're buying cleaner ingredients, store them in cleaner containers too</li>
-        <li><a href="https://www.amazon.com/s?k=magnetic+grocery+list+pad+fridge&tag=thetinycart-20" style="color: var(--primary);">Magnetic fridge grocery pads</a> — pair with CartKind's history to build a running list of "approved" products</li>
-        <li><a href="https://www.amazon.com/s?k=kids+bento+lunchbox+bpa+free&tag=thetinycart-20" style="color: var(--primary);">BPA-free bento lunchboxes</a> — after scanning for better ingredients, pack them up for school in something you trust</li>
+        <li><strong>Can:</strong> show that an available ingredient string matched a rule you set to Warn me.</li>
+        <li><strong>Can:</strong> preserve the result and source that were recorded at the time of evaluation.</li>
+        <li><strong>Can:</strong> let you enter ingredient text manually when catalog data is missing.</li>
+        <li><strong>Cannot:</strong> confirm that a catalog entry matches the package in your hand.</li>
+        <li><strong>Cannot:</strong> identify undeclared ingredients, cross-contact, formulation changes, or every possible synonym.</li>
+        <li><strong>Cannot:</strong> decide whether a food is medically appropriate or safe for any person.</li>
       </ul>
 
       <h2>Download CartKind</h2>
-
-      <p>The app is live now on the App Store — free.</p>
-      <p><a href="https://apps.apple.com/app/cartkind/id6761304996" class="cta">Download CartKind on the App Store →</a></p>
-
-      <p>Also from our family: <a href="https://apps.apple.com/app/kids-meal-planner/id6760732499" style="color: var(--primary);">Kids Meal Planner</a> for weekly meal planning and <a href="https://apps.apple.com/app/little-routines/id6761321011" style="color: var(--primary);">Little Routines</a> for visual daily schedules. Three apps, three fewer things to stress about.</p>
+      <p>CartKind is available on the App Store for iPhone and iPad.</p>
+      <p><a href="https://apps.apple.com/us/app/cartkind/id6761304996" class="cta">View CartKind on the App Store →</a></p>
+      <p>See the current screenshots, upbeat app preview, plan details, and full safety boundary on the <a href="/cartkind.html">CartKind product page</a>.</p>
     </article>
   </main>
 
-  <footer>
-    <p>© 2026 The Tiny Cart · <a href="/about.html">About</a> · <a href="/privacy.html">Privacy</a></p>
-    <p style="margin-top: 8px;">As an Amazon Associate, we earn from qualifying purchases.</p>
+  <footer class="journal-footer">
+    <div class="footer-brand">
+      <a href="/">Tyche Ventures</a>
+      <span aria-hidden="true">·</span>
+      <a href="/blog.html">The Tiny Cart</a>
+    </div>
+    <div class="footer-links">
+      <a href="/blog.html">Journal</a>
+      <a href="/printables/">Printables</a>
+      <a href="/about.html">About</a>
+      <a href="/privacy.html">Privacy</a>
+    </div>
+    <p>&copy; 2026 Tyche Ventures LLC. The Tiny Cart is our journal and printables imprint.</p>
+    <p class="affiliate-note">As an Amazon Associate, Tyche Ventures LLC earns from qualifying purchases.</p>
   </footer>
 </body>
 </html>

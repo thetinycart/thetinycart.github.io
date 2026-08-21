@@ -1,628 +1,268 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kids Meal Planner — Smart Family Meal Prep | Tyche Ventures</title>
-    <meta name="description" content="Plan meals for your kids, share with daycare and nannies, and generate grocery lists automatically. Available now on the App Store.">
-    <meta property="og:title" content="Kids Meal Planner — Smart Family Meal Prep">
-    <meta property="og:description" content="Plan weekly meals for your kids, share with caregivers, track dietary needs, and auto-generate grocery lists.">
-    <!-- Cache bust: 2026-03-14-15:51 -->
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #FEFEFE;
-            color: #2A2A2A;
-            line-height: 1.6;
-        }
-        
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px);
-            z-index: 1000;
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-        }
-        
-        nav .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            height: 70px;
-        }
-        
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #4CAF50;
-            text-decoration: none;
-        }
-        
-        .nav-links {
-            display: flex;
-            gap: 32px;
-            align-items: center;
-        }
-        
-        .nav-links a {
-            color: #2A2A2A;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.2s ease;
-        }
-        
-        .nav-links a:hover {
-            color: #4CAF50;
-        }
-        
-        .back-link {
-            color: #666;
-            font-size: 0.9rem;
-        }
-        
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #E8F5E8 0%, #F0F9F0 50%, #F8FDF8 100%);
-            padding: 140px 20px 100px;
-        }
-        
-        .hero-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: center;
-        }
-        
-        .hero-content h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            color: #2A2A2A;
-            margin-bottom: 20px;
-            line-height: 1.1;
-        }
-        
-        .hero-content .subtitle {
-            font-size: 1.4rem;
-            color: #4CAF50;
-            font-weight: 600;
-            margin-bottom: 24px;
-        }
-        
-        .hero-content p {
-            font-size: 1.2rem;
-            color: #555;
-            line-height: 1.7;
-            margin-bottom: 40px;
-        }
-        
-        .status-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: linear-gradient(45deg, #4CAF50, #66BB6A);
-            color: white;
-            padding: 16px 32px;
-            border-radius: 50px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            font-size: 1.1rem;
-        }
-        
-        .status-badge:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(76, 175, 80, 0.3);
-        }
-        
-        .hero-image {
-            text-align: center;
-        }
-        
-        .app-screenshot {
-            width: 300px;
-            height: 650px;
-            border-radius: 25px;
-            object-fit: contain;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-            transform: rotate(-3deg);
-            transition: transform 0.3s ease;
-            margin: 0 auto;
-        }
-        
-        .app-screenshot:hover {
-            transform: rotate(0deg) scale(1.02);
-        }
-        
-        /* Features Section */
-        .features {
-            padding: 120px 20px;
-            background: #FFF;
-        }
-        
-        .features-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .section-header {
-            text-align: center;
-            margin-bottom: 80px;
-        }
-        
-        .section-header h2 {
-            font-size: 2.8rem;
-            font-weight: 700;
-            color: #2A2A2A;
-            margin-bottom: 16px;
-        }
-        
-        .section-header p {
-            font-size: 1.2rem;
-            color: #666;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        .features-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 100px;
-        }
-        
-        .feature-showcase {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: center;
-        }
-        
-        .feature-showcase:nth-child(even) {
-            direction: rtl;
-        }
-        
-        .feature-showcase:nth-child(even) > * {
-            direction: ltr;
-        }
-        
-        .feature-content h3 {
-            font-size: 2.2rem;
-            font-weight: 700;
-            color: #2A2A2A;
-            margin-bottom: 20px;
-        }
-        
-        .feature-content p {
-            font-size: 1.1rem;
-            color: #555;
-            line-height: 1.7;
-            margin-bottom: 30px;
-        }
-        
-        .feature-highlights {
-            display: grid;
-            gap: 16px;
-        }
-        
-        .highlight {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-size: 1rem;
-            color: #666;
-        }
-        
-        .highlight-icon {
-            width: 28px;
-            height: 28px;
-            background: linear-gradient(45deg, #4CAF50, #66BB6A);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: bold;
-            flex-shrink: 0;
-        }
-        
-        .feature-image {
-            text-align: center;
-        }
-        
-        .feature-screenshot {
-            width: 260px;
-            height: 563px;
-            border-radius: 20px;
-            object-fit: contain;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-            transition: transform 0.3s ease;
-            margin: 0 auto;
-        }
-
-        .pdf-document {
-            width: 320px;
-            height: 400px;
-            border-radius: 15px;
-            object-fit: contain;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-            margin: 0 auto;
-            background: #fff;
-            border: 1px solid rgba(0,0,0,0.1);
-        }
-
-        .pdf-document:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-        }
-
-
-        
-        .feature-screenshot:hover {
-            transform: translateY(-10px);
-        }
-        
-        /* CTA Section */
-        .cta-section {
-            padding: 100px 20px;
-            background: linear-gradient(135deg, #E8F5E8 0%, #F8FDF8 100%);
-            text-align: center;
-        }
-        
-        .cta-container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .cta-container h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #2A2A2A;
-            margin-bottom: 24px;
-        }
-        
-        .cta-container p {
-            font-size: 1.2rem;
-            color: #555;
-            margin-bottom: 40px;
-            line-height: 1.7;
-        }
-        
-        .notify-cta {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background: linear-gradient(45deg, #4CAF50, #66BB6A);
-            color: white;
-            padding: 20px 40px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-        
-        .notify-cta:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(76, 175, 80, 0.3);
-        }
-        
-        /* Footer */
-        footer {
-            background: #2A2A2A;
-            color: #FFF;
-            padding: 60px 20px 40px;
-            text-align: center;
-        }
-        
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 32px;
-            margin-bottom: 32px;
-            flex-wrap: wrap;
-        }
-        
-        .footer-links a {
-            color: rgba(255, 255, 255, 0.8);
-            text-decoration: none;
-            transition: color 0.2s ease;
-        }
-        
-        .footer-links a:hover {
-            color: #4CAF50;
-        }
-        
-        .footer-text {
-            color: rgba(255, 255, 255, 0.6);
-            font-size: 0.9rem;
-        }
-        
-        /* Mobile Responsiveness */
-        @media (max-width: 768px) {
-            .hero-container {
-                grid-template-columns: 1fr;
-                gap: 40px;
-                text-align: center;
-                padding: 0 10px;
-            }
-            
-            .hero-content h1 { font-size: 2.5rem; }
-            
-            .feature-showcase {
-                grid-template-columns: 1fr;
-                gap: 40px;
-                text-align: center;
-                padding: 0 10px;
-            }
-            
-            .feature-showcase:nth-child(even) {
-                direction: ltr;
-            }
-            
-            /* Remove tilt on mobile */
-            .app-screenshot {
-                width: 220px !important;
-                height: 470px !important;
-                transform: none !important;
-                margin: 0 auto !important;
-            }
-            
-            .feature-screenshot {
-                width: 200px !important;
-                height: 430px !important;
-                margin: 0 auto !important;
-            }
-            
-            .pdf-document {
-                width: 240px !important;
-                height: 300px !important;
-                margin: 0 auto !important;
-            }
-            
-            /* Mobile navigation */
-            nav .container {
-                padding: 0 15px;
-                height: 60px;
-            }
-            
-            .logo {
-                font-size: 1.2rem;
-            }
-            
-            .logo::after {
-                content: "";
-                display: none;
-            }
-            
-            .nav-links {
-                gap: 6px;
-                font-size: 0.8rem;
-                flex-wrap: nowrap;
-                overflow-x: auto;
-                scrollbar-width: none;
-                -ms-overflow-style: none;
-            }
-            
-            .nav-links::-webkit-scrollbar {
-                display: none;
-            }
-            
-            .nav-links a {
-                padding: 5px 8px;
-                border-radius: 12px;
-                background: rgba(76, 175, 80, 0.1);
-                white-space: nowrap;
-                flex-shrink: 0;
-                font-size: 0.75rem;
-            }
-            
-            .back-link {
-                background: rgba(0,0,0,0.05) !important;
-            }
-            
-            /* Hide contact on mobile - too crowded */
-            .nav-links a[href^="mailto"] {
-                display: none;
-            }
-            
-            /* Reduce spacing */
-            .hero {
-                padding: 100px 10px 60px;
-            }
-            
-            .features {
-                padding: 60px 10px;
-            }
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kids Meal Planner — Weekly Meals, Pantry &amp; Lists</title>
+  <meta name="description" content="Plan weekly meals for your kids, turn the plan into a grocery list, and keep pantry items and caregiver schedules together. No account required.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#17452f">
+  <meta name="apple-itunes-app" content="app-id=6760732499">
+  <link rel="canonical" href="https://tycheventuresllc.com/kids-meal-planner.html">
+  <link rel="icon" href="/images/favicon.png">
+  <link rel="stylesheet" href="/assets/app-showcase.css?v=20260821">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Tyche Ventures LLC">
+  <meta property="og:title" content="Kids Meal Planner — Plan the Week, Shop With a Clear List">
+  <meta property="og:description" content="Organize meals, pantry items, and shopping lists around one weekly plan.">
+  <meta property="og:url" content="https://tycheventuresllc.com/kids-meal-planner.html">
+  <meta property="og:image" content="https://tycheventuresllc.com/images/apps/kids-meal-planner/screenshots-ipad/01-schedule.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Kids Meal Planner",
+    "operatingSystem": "iOS 17 or later",
+    "applicationCategory": "FoodApplication",
+    "url": "https://tycheventuresllc.com/kids-meal-planner.html",
+    "downloadUrl": "https://apps.apple.com/us/app/kids-meal-planner/id6760732499",
+    "description": "A local-first weekly meal, pantry, and grocery-list planner for families.",
+    "author": {"@type": "Organization", "name": "Tyche Ventures LLC", "url": "https://tycheventuresllc.com/"}
+  }
+  </script>
 </head>
-<body>
-    <!-- Navigation -->
-    <nav>
-        <div class="container">
-            <a href="/" class="logo">Tyche Ventures</a>
-            <div class="nav-links">
-                <a href="/" class="back-link">← Back to Home</a>
-                <a href="/little-routines.html">Little Routines</a>
-                <a href="/cartkind.html">CartKind</a>
-                <a href="mailto:support@tycheventuresllc.com">Contact</a>
-            </div>
-        </div>
+<body class="theme-meals">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="site-nav container" aria-label="Primary navigation">
+      <div class="brand-group">
+        <a class="company-home" href="/">Tyche Ventures</a>
+        <span class="brand-divider" aria-hidden="true"></span>
+        <a class="app-home" href="/kids-meal-planner.html" aria-label="Kids Meal Planner home">
+          <img src="/images/apps/kmp-icon.png" width="34" height="34" alt="">
+          <span>Kids Meal Planner</span>
+        </a>
+      </div>
+      <ul class="site-nav__links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#preview">Preview</a></li>
+        <li><a href="#plans">Plans</a></li>
+        <li><a href="/kids-meal-planner/support.html">Support</a></li>
+      </ul>
     </nav>
+  </header>
 
-    <!-- Hero Section -->
+  <main id="main">
     <section class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1>Kids Meal Planner</h1>
-                <div class="subtitle">Smart Family Meal Prep</div>
-                <p>Plan weekly meals for your kids, share with daycare and nannies, and generate grocery lists automatically. Built with busy families in mind.</p>
-                <a href="https://apps.apple.com/app/kids-meal-planner/id6760732499" class="status-badge" style="background: #4CAF50; color: white;">
-                    <span>📱</span>
-                    <span>Download on the App Store</span>
-                </a>
-            </div>
-            <div class="hero-image">
-                <img src="/images/apps/kmp-hero.png" alt="Kids Meal Planner app main screen" class="app-screenshot">
-            </div>
+      <div class="hero__inner container">
+        <div>
+          <p class="eyebrow">Baby &amp; toddler meals + lists</p>
+          <h1>Kids Meal Planner</h1>
+          <p class="hero__tagline">Plan the week. Shop with a clear list.</p>
+          <p class="hero__summary">Keep weekly meals, pantry items, and groceries together so parents and caregivers can work from the same plan—without creating a Tyche account.</p>
+          <div class="hero__actions">
+            <a class="button button--light" href="https://apps.apple.com/us/app/kids-meal-planner/id6760732499">View on the App Store</a>
+            <a class="button button--ghost" href="#preview">Watch the app preview</a>
+          </div>
+          <ul class="hero__proof" aria-label="Key facts">
+            <li>One child profile free</li>
+            <li>Local planning data</li>
+            <li>Clear food-safety limits</li>
+          </ul>
         </div>
+        <div class="hero__visual" aria-hidden="true">
+          <img class="hero__icon" src="/images/apps/kmp-icon.png" width="104" height="104" alt="">
+          <div class="hero__screenshot">
+            <img src="/images/apps/kids-meal-planner/screenshots/01-schedule.png" width="660" height="1434" alt="">
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="features">
-        <div class="features-container">
-            <div class="section-header">
-                <h2>Everything You Need for Smart Meal Planning</h2>
-                <p>From personalized child profiles to beautiful PDF schedules for caregivers — we've thought of everything busy parents need.</p>
-            </div>
-            
-            <div class="features-grid">
-                <!-- Feature 1: Planning -->
-                <div class="feature-showcase">
-                    <div class="feature-content">
-                        <h3>Plan with Confidence</h3>
-                        <p>Create detailed profiles for each child with photos, dietary notes, and emergency contacts. Build weekly meal schedules with customizable periods and choose from 10 ready-made templates.</p>
-                        <div class="feature-highlights">
-                            <div class="highlight">
-                                <div class="highlight-icon">👶</div>
-                                <span>Individual child profiles with photos</span>
-                            </div>
-                            <div class="highlight">
-                                <div class="highlight-icon">📝</div>
-                                <span>Dietary note fields</span>
-                            </div>
-                            <div class="highlight">
-                                <div class="highlight-icon">📋</div>
-                                <span>10 meal templates (Nut-Free, Paleo, Vegetarian)</span>
-                            </div>
-                            <div class="highlight">
-                                <div class="highlight-icon">📅</div>
-                                <span>Copy meals between days and weeks</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="feature-image">
-                        <img src="/images/apps/kmp-profiles.png" alt="Child profiles with dietary information" class="feature-screenshot">
-                    </div>
-                </div>
+    <div class="quick-facts" aria-label="Kids Meal Planner at a glance">
+      <div class="quick-facts__grid container">
+        <div class="quick-fact"><strong>Weekly schedule</strong><span>Meals and snacks by day</span></div>
+        <div class="quick-fact"><strong>Pantry status</strong><span>What is in or out of stock</span></div>
+        <div class="quick-fact"><strong>Shopping lists</strong><span>Plan and pantry together</span></div>
+        <div class="quick-fact"><strong>Free + Premium</strong><span>Optional household tools</span></div>
+      </div>
+    </div>
 
-                <!-- Feature 2: Scheduling -->
-                <div class="feature-showcase">
-                    <div class="feature-content">
-                        <h3>Beautiful Weekly Schedules</h3>
-                        <p>Organize breakfast, lunch, dinner, and snacks with our intuitive weekly view. Generate beautiful, color-coded PDF schedules perfect for sharing with caregivers.</p>
-                        <div class="feature-highlights">
-                            <div class="highlight">
-                                <div class="highlight-icon">🗓️</div>
-                                <span>Clear weekly meal grid view</span>
-                            </div>
-                            <div class="highlight">
-                                <div class="highlight-icon">🎨</div>
-                                <span>Color-coded by child and meal type</span>
-                            </div>
-                            <div class="highlight">
-                                <div class="highlight-icon">📄</div>
-                                <span>Professional PDF exports</span>
-                            </div>
-                            <div class="highlight">
-                                <div class="highlight-icon">📱</div>
-                                <span>Share via text, email, or AirDrop</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="feature-image">
-                        <img src="/images/apps/kmp-schedule.png" alt="Weekly meal schedule interface" class="feature-screenshot">
-                    </div>
-                </div>
-
-                <!-- Feature 3: PDF Schedule -->
-                <div class="feature-showcase">
-                    <div class="feature-content">
-                        <h3>Professional PDF Schedules</h3>
-                        <p>Generate clean, printable weekly meal schedules with child photos, meal details, and caregiver instructions. Perfect for babysitters, daycare, or grandparents.</p>
-                        <div class="feature-highlights">
-                            <div class="highlight">
-                                <div class="highlight-icon">📄</div>
-                                <span>Clean, professional layout</span>
-                            </div>
-                            <div class="highlight">
-                                <div class="highlight-icon">👶</div>
-                                <span>Child photos and names</span>
-                            </div>
-                            <div class="highlight">
-                                <div class="highlight-icon">🍽️</div>
-                                <span>Complete meal details by day</span>
-                            </div>
-                            <div class="highlight">
-                                <div class="highlight-icon">📧</div>
-                                <span>Share via email, text, or print</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="feature-image">
-                        <img src="/images/apps/kmp-pdf-schedule.png" alt="PDF meal schedule example" class="pdf-document">
-                    </div>
-                </div>
-            </div>
+    <section class="section section--white" id="features">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">A practical weekly workflow</p>
+          <h2>From meal plan to pantry, without scattered notes.</h2>
+          <p>Start with the schedule, turn planned foods into a shopping list, and keep track of what is available at home.</p>
         </div>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <span class="feature-card__number">01</span>
+            <h3>Build the week</h3>
+            <p>Organize breakfast, lunch, dinner, and snacks by day. Reuse familiar foods and adjust the plan when the week changes.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-card__number">02</span>
+            <h3>Shop from one clear list</h3>
+            <p>Bring scheduled foods and out-of-stock pantry items into the shopping list, then check off purchases while you shop.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-card__number">03</span>
+            <h3>Share a reviewed schedule</h3>
+            <p>Premium can export a PDF through the iOS share sheet. Review its contents and recipient before sending family details outside the app.</p>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section" id="download">
-        <div class="cta-container">
-            <h2>Download Kids Meal Planner</h2>
-            <p>Available now on the App Store. Free to download with optional premium features.</p>
-            <a href="https://apps.apple.com/app/kids-meal-planner/id6760732499" class="notify-cta" style="background: #4CAF50;">
-                <span>📱</span>
-                <span>Download on the App Store</span>
-            </a>
+    <section class="section section--soft" id="screens">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Real app screens</p>
+          <h2>Five views, from plan to pantry.</h2>
+          <p>On wider screens the gallery uses matching iPad images; on phones it uses the framed iPhone set. Auto-scroll runs only while the gallery is visible.</p>
         </div>
+        <div class="gallery-toolbar">
+          <div>
+            <h3>Weekly planning walkthrough</h3>
+            <p>Swipe, use the buttons, or pause the visible gallery.</p>
+          </div>
+          <div class="gallery-actions" aria-label="Screenshot controls">
+            <button class="gallery-button" type="button" data-gallery-previous="meals" aria-label="Previous Kids Meal Planner screenshot">←</button>
+            <output class="gallery-position" data-gallery-position="meals" aria-live="polite">1 of 5</output>
+            <button class="gallery-button" type="button" data-gallery-next="meals" aria-label="Next Kids Meal Planner screenshot">→</button>
+            <button class="gallery-button gallery-button--wide" type="button" data-gallery-autoplay="meals" aria-pressed="true">Pause auto-scroll</button>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-track gallery-track--responsive" data-gallery="meals" data-auto-advance="true" role="region" aria-roledescription="carousel" aria-label="Kids Meal Planner screenshot gallery" tabindex="0">
+        <figure class="gallery-card">
+          <picture><source media="(min-width: 900px)" srcset="/images/apps/kids-meal-planner/screenshots-ipad/01-schedule.png" width="1376" height="1834"><img src="/images/apps/kids-meal-planner/screenshots/01-schedule.png" width="660" height="1434" alt="Kids Meal Planner weekly schedule with breakfast, lunch, dinner, and snacks" fetchpriority="high"></picture>
+          <figcaption>Plan the week at a glance.</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <picture><source media="(min-width: 900px)" srcset="/images/apps/kids-meal-planner/screenshots-ipad/02-shopping-list-weekly-replenish.png" width="1376" height="1834"><img src="/images/apps/kids-meal-planner/screenshots/02-shopping-list-weekly-replenish.png" width="660" height="1434" alt="Kids Meal Planner shopping list created from the weekly meal plan" loading="lazy" decoding="async"></picture>
+          <figcaption>Turn the plan into a clear list.</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <picture><source media="(min-width: 900px)" srcset="/images/apps/kids-meal-planner/screenshots-ipad/03-pantry.png" width="1376" height="1834"><img src="/images/apps/kids-meal-planner/screenshots/03-pantry.png" width="660" height="1434" alt="Kids Meal Planner pantry showing foods that are in stock or out of stock" loading="lazy" decoding="async"></picture>
+          <figcaption>Know what is in stock.</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <picture><source media="(min-width: 900px)" srcset="/images/apps/kids-meal-planner/screenshots-ipad/04-templates-safety-reminder.png" width="1376" height="1834"><img src="/images/apps/kids-meal-planner/screenshots/04-templates-safety-reminder.png" width="660" height="1434" alt="Kids Meal Planner Premium sample templates with a reminder to verify labels, portions, cross-contact, and caregiver rules" loading="lazy" decoding="async"></picture>
+          <figcaption>Premium: start with ideas—then verify.</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <picture><source media="(min-width: 900px)" srcset="/images/apps/kids-meal-planner/screenshots-ipad/05-child-profile-mia.png" width="1376" height="1834"><img src="/images/apps/kids-meal-planner/screenshots/05-child-profile-mia.png" width="660" height="1434" alt="Kids Meal Planner child profile with food preferences and planning notes" loading="lazy" decoding="async"></picture>
+          <figcaption>Keep planning notes in context.</figcaption>
+        </figure>
+      </div>
     </section>
 
-    <!-- Disclaimer -->
-    <section style="padding: 40px 20px; background: #F8F9FA; text-align: center;">
-        <div style="max-width: 800px; margin: 0 auto;">
-            <p style="font-size: 0.9rem; color: #666; line-height: 1.6;">
-                <strong>Important:</strong> Kids Meal Planner is a planning tool and does not provide medical or nutritional advice. Always verify ingredients and consult healthcare professionals for dietary decisions.
-                 
-                The app provides note fields to track dietary restrictions but does not validate food safety.
-            </p>
+    <section class="section section--dark" id="preview">
+      <div class="container video-layout">
+        <div class="video-copy">
+          <p class="eyebrow">22-second app preview</p>
+          <h2>See the weekly workflow move.</h2>
+          <p>The current preview follows the real app through scheduling, pantry status, shopping, templates, and profile context.</p>
+          <p class="video-note">It plays automatically without sound while visible. Use the controls for the upbeat soundtrack. Reduced-motion and Save-Data preferences are respected.</p>
         </div>
+        <div class="video-frame">
+          <video controls muted playsinline preload="metadata" data-play-when-visible poster="/images/apps/kids-meal-planner/screenshots/01-schedule.png" aria-label="Kids Meal Planner app preview">
+            <source src="/media/kids-meal-planner/kids-meal-planner-app-preview.m4v" type="video/mp4">
+            <track kind="captions" srclang="en" label="English" src="/media/kids-meal-planner/kids-meal-planner-app-preview.en-US.vtt" default>
+            Your browser does not support the Kids Meal Planner app preview.
+          </video>
+        </div>
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-links">
-                <a href="/">Home</a>
-                <a href="/little-routines.html">Little Routines</a>
-                <a href="/cartkind.html">CartKind</a>
-                <a href="/blog.html">Blog</a>
-                <a href="mailto:support@tycheventuresllc.com">Contact</a>
-                <a href="/kids-meal-planner/support.html">Support</a>
-                <a href="/kids-meal-planner/privacy-policy.html">Privacy</a>
-                <a href="/kids-meal-planner/terms-of-use.html">Terms</a>
-            </div>
-            <div class="footer-text">
-                © 2026 Tyche Ventures LLC. All rights reserved.
-            </div>
+    <section class="section section--white" id="plans">
+      <div class="container">
+        <div class="section-heading section-heading--center">
+          <p class="eyebrow">Simple starting point</p>
+          <h2>Use the core planner free. Upgrade for household-scale tools.</h2>
+          <p>StoreKit shows current prices, renewal terms, and any introductory offer for which your Apple Account is eligible before purchase.</p>
         </div>
-    </footer>
+        <div class="plan-grid">
+          <article class="plan-card">
+            <span class="plan-label">Free</span>
+            <h3>Core planning</h3>
+            <p>For a one-child weekly workflow.</p>
+            <ul>
+              <li>One child profile</li>
+              <li>Weekly meal scheduling</li>
+              <li>Pantry and shopping lists</li>
+              <li>Barcode lookup</li>
+            </ul>
+          </article>
+          <article class="plan-card plan-card--featured">
+            <span class="plan-label">Optional Premium</span>
+            <h3>More profiles and sharing</h3>
+            <p>Monthly and yearly subscriptions are available through Apple.</p>
+            <ul>
+              <li>Unlimited child profiles</li>
+              <li>Ten neutral sample planning templates</li>
+              <li>Copy a full week</li>
+              <li>PDF export, printing, and caregiver sharing</li>
+            </ul>
+          </article>
+        </div>
+        <aside class="safety-callout">
+          <h3>Templates are planning ideas—not safety classifications.</h3>
+          <p>Review every item for ingredients, package labels, cross-contact, portions, and caregiver rules. A template name does not certify that a plan is allergen-free, nutritionally complete, medically appropriate, or suitable for a particular child.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section section--soft" aria-labelledby="privacy-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Privacy and safety</p>
+          <h2 id="privacy-title">Clear boundaries for a family planning tool.</h2>
+          <p>Kids Meal Planner organizes information. It does not make food-safety or nutrition decisions for you.</p>
+        </div>
+        <div class="trust-grid">
+          <article class="trust-card"><h3>Local planning data</h3><p>Profiles, meal plans, pantry items, and shopping-list content are stored in the app. Apple-managed backups and files you export can create additional copies.</p></article>
+          <article class="trust-card"><h3>Barcode lookup connects</h3><p>A scanned code and standard network metadata go to Open Food Facts. It may retain IP and request logs under its policies, and returned product data may be incomplete or inaccurate.</p></article>
+          <article class="trust-card"><h3>Third-party actions are explicit</h3><p>Apple processes subscriptions. Optional Amazon affiliate links open outside the app. PDFs leave the app only when you choose to save or share them.</p></article>
+          <article class="trust-card"><h3>Package labels control</h3><p>Planning notes, templates, and barcode results are not verified for allergens, nutrition, or food safety. <a href="/kids-meal-planner/privacy-policy.html">Read the privacy policy</a>.</p></article>
+        </div>
+        <aside class="safety-callout">
+          <h3>Important: Kids Meal Planner does not identify allergies or determine food safety.</h3>
+          <p>Always check ingredients and package labels, account for cross-contact and individual needs, and consult a qualified healthcare professional for medical or dietary decisions.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container">
+        <h2>Make the week easier to see.</h2>
+        <p>Start with one child profile, weekly scheduling, pantry tools, shopping lists, and barcode lookup.</p>
+        <a class="button button--light" href="https://apps.apple.com/us/app/kids-meal-planner/id6760732499">View Kids Meal Planner on the App Store</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid container">
+      <div>
+        <div class="footer-brand">Kids Meal Planner by Tyche Ventures LLC</div>
+        <p class="footer-note">Amazon links may be affiliate links; as an Amazon Associate, Tyche Ventures LLC earns from qualifying purchases. The app is a planning tool and does not provide medical, nutrition, allergy, or food-safety advice.</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="/">Tyche Home</a>
+        <a href="/#apps">All Apps</a>
+        <a href="/kids-meal-planner/support.html">Support</a>
+        <a href="/kids-meal-planner/privacy-policy.html">Privacy</a>
+        <a href="/kids-meal-planner/terms-of-use.html">Terms</a>
+        <a href="mailto:support@tycheventuresllc.com">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="/assets/app-showcase.js?v=20260821b" defer></script>
 </body>
 </html>

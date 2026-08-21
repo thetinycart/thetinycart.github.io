@@ -142,11 +142,11 @@
   {
     "release_date": "2026-04-04",
     "path": "/cartkind-app-launch.html",
-    "title": "We Built CartKind for Smarter Ingredient Scanning",
+    "title": "How CartKind Applies Your Ingredient Rules",
     "pin_title": "CartKind Ingredient Scanner",
-    "description": "A parent-first walkthrough of CartKind: barcode scanning, custom dietary rules, clear pass/caution/fail verdicts, and complete privacy.",
-    "source_image": "/images/apps/cartkind-hero.png",
-    "image": "/images/pins/cartkind-app-launch.png",
+    "description": "A clear walkthrough of CartKind: barcode and manual entry, rules you choose, visible match reasons, local history, specific network disclosures, and the physical-label limitation.",
+    "source_image": "/images/apps/cartkind/screenshots-ipad/02-matched-result.png",
+    "image": "/images/apps/cartkind/screenshots-ipad/02-matched-result.png",
     "board_hint": "Ingredient Scanner App"
   },
   {
@@ -155,8 +155,8 @@
     "title": "How to Build a School Snack System for Ingredient-Conscious Families",
     "pin_title": "School Snack System",
     "description": "A practical school snack setup for families who want easier lunch packing, clearer ingredient checks, and less pantry chaos on busy mornings.",
-    "source_image": "/images/pins/source/how-to-build-a-school-snack-system-for-ingredient-conscious-families.png",
-    "image": "/images/pins/how-to-build-a-school-snack-system-for-ingredient-conscious-families.png",
+    "source_image": "/images/apps/cartkind/screenshots-ipad/02-matched-result.png",
+    "image": "/images/apps/cartkind/screenshots-ipad/02-matched-result.png",
     "board_hint": "School Snack Systems"
   },
   {

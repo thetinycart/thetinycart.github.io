@@ -117,6 +117,30 @@ summary:focus-visible,
   gap: 1.5rem;
 }
 
+.site-brand-group {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.72rem;
+  white-space: nowrap;
+}
+
+.site-company-home {
+  color: var(--navy-950);
+  font-size: 0.87rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.site-company-home:hover { color: var(--blue-700); }
+
+.site-brand-divider {
+  width: 1px;
+  height: 24px;
+  flex: 0 0 auto;
+  background: var(--line);
+}
+
 .site-brand {
   display: inline-flex;
   align-items: center;
@@ -1370,6 +1394,20 @@ summary:focus-visible,
   .site-brand__mark {
     width: 31px;
     height: 31px;
+  }
+
+  .site-company-home {
+    font-size: 0.78rem;
+  }
+
+  .site-brand-divider {
+    display: none;
+  }
+
+  .site-brand span {
+    max-width: 142px;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .site-nav__links {

@@ -3,92 +3,201 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy — CartKind</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-            background: #faf9f6;
-            color: #2d2d2d;
-            line-height: 1.7;
-        }
-        .container { max-width: 760px; margin: 0 auto; padding: 40px 20px 56px; }
-        h1 { font-size: 1.9rem; margin-bottom: 4px; }
-        .date { color: #888; margin-bottom: 28px; font-size: 0.92rem; }
-        h2 { font-size: 1.12rem; margin: 24px 0 8px; }
-        p, li { color: #444; font-size: 0.96rem; margin-bottom: 12px; }
-        ul { padding-left: 20px; }
-        a { color: #6b8f71; }
-        footer { margin-top: 40px; font-size: 0.86rem; color: #888; }
-    </style>
+    <meta name="description" content="How CartKind stores local app data and handles barcode lookup, camera access, Cloudflare relay logs, USDA fallback data, StoreKit, and deletion.">
+    <meta name="theme-color" content="#1f3f2c">
+    <title>CartKind Privacy Policy | Tyche Ventures</title>
+    <link rel="canonical" href="https://tycheventuresllc.com/cartkind/privacy-policy.html">
+    <link rel="icon" href="/images/apps/cartkind-icon.png">
+    <link rel="stylesheet" href="/assets/app-showcase.css?v=20260821-1">
+    <link rel="stylesheet" href="/assets/legal.css?v=20260821-1">
 </head>
-<body>
-    <div class="container">
-        <h1>Privacy Policy</h1>
-        <p class="date">Last updated: August 21, 2026</p>
+<body class="theme-cartkind">
+    <a class="skip-link" href="#main-content">Skip to privacy policy</a>
 
-        <h2>Overview</h2>
-        <p>Tyche Ventures LLC built CartKind as a free app with optional Premium features. CartKind is local-first and does not require an account. This policy explains what stays on your device and the limited information sent when you use product lookup, purchases, or external source links.</p>
+    <header class="site-header">
+        <nav class="site-nav container" aria-label="Primary navigation">
+            <div class="brand-group">
+                <a class="company-home" href="/">Tyche Ventures</a>
+                <span class="brand-divider" aria-hidden="true"></span>
+                <a class="app-home" href="/cartkind.html">
+                    <img src="/images/apps/cartkind-icon.png" alt="">
+                    <span>CartKind</span>
+                </a>
+            </div>
+            <ul class="site-nav__links">
+                <li><a href="/cartkind.html">App</a></li>
+                <li><a href="/cartkind/privacy-policy.html" aria-current="page">Privacy</a></li>
+                <li><a href="/cartkind/terms-of-use.html">Terms</a></li>
+                <li><a href="/cartkind/support.html">Support</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <h2>Age and children's privacy</h2>
-        <p>CartKind is intended as a shopping-reference tool for parents and guardians and is not directed to children under 13. It does not ask users to create an account or provide a name or email address. A parent or guardian should decide whether the app is appropriate for a child to use with supervision.</p>
+    <main id="main-content">
+        <section class="legal-hero" aria-labelledby="privacy-title">
+            <div class="container">
+                <p class="eyebrow">CartKind · Privacy</p>
+                <h1 id="privacy-title">Local first, with lookup details in the open.</h1>
+                <p>CartKind does not require an account. This policy explains what stays on your device and the limited information sent when you use product lookup, StoreKit, external links, or support.</p>
+                <ul class="legal-meta" aria-label="Policy details">
+                    <li>Last updated August 21, 2026</li>
+                    <li>Applies to CartKind 1.0.2</li>
+                    <li>Tyche Ventures LLC</li>
+                </ul>
+            </div>
+        </section>
 
-        <h2>Information stored on your device</h2>
-        <p>Your rules, custom triggers, custom categories, saved scan history, product records, and app preferences are stored in CartKind's local app container. Tyche Ventures LLC does not operate a CartKind account system or automatically upload those local records to a server-side user database.</p>
-        <p>You can delete individual history items in the app and remove custom rules through the available controls. Deleting CartKind normally removes its local app container. Copies included in Apple-managed device backups may remain until those backups are deleted or expire under Apple's practices.</p>
+        <section class="legal-main">
+            <div class="container legal-layout">
+                <article class="legal-article">
+                    <div class="legal-summary-grid" aria-label="Privacy summary">
+                        <section class="legal-summary">
+                            <h2>Local records</h2>
+                            <p>Your rules, settings, product records, and saved history stay in CartKind's local app container by default.</p>
+                        </section>
+                        <section class="legal-summary">
+                            <h2>No CartKind account</h2>
+                            <p>Tyche Ventures does not operate a CartKind account system or user-profile database.</p>
+                        </section>
+                        <section class="legal-summary">
+                            <h2>Limited lookup data</h2>
+                            <p>Barcode lookup sends a barcode and ordinary request metadata to the sources described below.</p>
+                        </section>
+                        <section class="legal-summary">
+                            <h2>No ad tracking SDKs</h2>
+                            <p>CartKind does not include analytics, behavioral-advertising, or cross-app tracking SDKs.</p>
+                        </section>
+                    </div>
 
-        <h2>Product lookup and network data</h2>
-        <p>When you scan or manually enter a barcode, CartKind sends the barcode over HTTPS to Open Food Facts directly from your device. Open Food Facts also receives ordinary request metadata, such as your IP address, request time, and CartKind's identifying User-Agent. CartKind does not send camera images, your saved rules, or your scan history with this request. Open Food Facts describes its own retention and use of IP and log data—including security, technical analysis, usage statistics, and product-popularity measurement—in its <a href="https://world.openfoodfacts.org/privacy" target="_blank" rel="noreferrer">privacy policy</a>.</p>
-        <p>Only when Open Food Facts returns no matching product, CartKind may send the barcode to the Tyche Ventures USDA relay at <code>usda-api.tycheventuresllc.com</code>. The relay runs on Cloudflare Workers and forwards the barcode search to USDA FoodData Central. The relay and Cloudflare can process the barcode together with ordinary technical request metadata, such as an IP address, timestamp, request URL, and headers. The relay does not receive your camera image, saved rules, custom triggers, custom categories, or full scan history, and its code does not intentionally forward your device IP address to USDA.</p>
-        <p>If Cloudflare Workers logging is enabled, invocation logs may include the request URL containing the barcode and related technical metadata. Cloudflare currently documents approximately three days of retention for Workers Free logs and up to seven days for Workers Paid logs. Because plan and logging configuration can change, Tyche Ventures LLC conservatively treats these proxy logs as potentially retained for up to seven days. They are not used to create a CartKind account, build an advertising profile, or track you across apps or websites. See <a href="https://developers.cloudflare.com/workers/observability/logs/workers-logs/" target="_blank" rel="noreferrer">Cloudflare Workers logging</a> and <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noreferrer">Cloudflare's Privacy Policy</a>.</p>
+                    <div class="legal-notice" role="note" aria-labelledby="privacy-safety-title">
+                        <h2 id="privacy-safety-title">Product results are not allergy or medical guidance</h2>
+                        <p>CartKind is an informational shopping reference. Aligned, Review, and Not aligned compare available ingredient text with rules you configured; they do not determine that a product is medically safe. Product data can be incomplete, outdated, or inaccurate. Always read the physical package label and consult a qualified professional about allergies, intolerances, or medical dietary needs.</p>
+                    </div>
 
-        <h2>Camera access</h2>
-        <p>CartKind requests camera access only when you choose barcode scanning. Camera frames are processed on-device in real time by Apple's barcode metadata scanner. CartKind stores the decoded barcode, not camera images; frames are not stored, recorded, or transmitted.</p>
+                    <h2 id="overview">1. Overview</h2>
+                    <p>Tyche Ventures LLC (“Tyche Ventures,” “we,” “our,” or “us”) built CartKind as a free app with optional Premium features. This Privacy Policy describes CartKind's local records, barcode lookup flow, camera use, StoreKit communications, external links, support communications, retention, and deletion.</p>
 
-        <h2>Third-party services</h2>
-        <ul>
-            <li><strong>Open Food Facts:</strong> Receives direct barcode lookups and ordinary request metadata as described above. See the <a href="https://world.openfoodfacts.org/privacy" target="_blank" rel="noreferrer">Open Food Facts privacy policy</a>.</li>
-            <li><strong>Cloudflare Workers and USDA FoodData Central:</strong> The Tyche Ventures relay is used only after an Open Food Facts catalog miss. Cloudflare hosts the relay, and USDA supplies the fallback product record. See <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noreferrer">Cloudflare's Privacy Policy</a> and <a href="https://www.usda.gov/privacy-policy" target="_blank" rel="noreferrer">USDA privacy information</a>.</li>
-            <li><strong>Apple App Store / StoreKit:</strong> Purchases and subscription status are handled by Apple. Tyche Ventures LLC does not receive or store your payment-card details or Apple ID credentials.</li>
-            <li><strong>External source links:</strong> Only when you choose a source-reference link, CartKind opens that destination in your browser. The destination's privacy policy and terms apply.</li>
-        </ul>
+                    <h2 id="children">2. Age and children's privacy</h2>
+                    <p>CartKind is intended as a shopping-reference tool for adults, including parents and guardians, and is not directed to children under 13. It does not ask users to create an account or provide a name or email address. A parent or guardian should decide whether supervised use by a child is appropriate.</p>
 
-        <h2>Data sources and licenses</h2>
-        <p>Product information identified as Open Food Facts data is &copy; Open Food Facts contributors. The Open Food Facts database is available under the <a href="https://opendatacommons.org/licenses/odbl/1-0/" target="_blank" rel="noreferrer">Open Database License 1.0 (ODbL)</a>, and individual database contents are available under the <a href="https://opendatacommons.org/licenses/dbcl/1-0/" target="_blank" rel="noreferrer">Database Contents License 1.0 (DbCL)</a>. CartKind 1.0.2 does not request or display Open Food Facts product images. If images are displayed in a future version, they may be available under <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noreferrer">CC BY-SA</a> and may also contain third-party marks or packaging artwork. See Open Food Facts' <a href="https://world.openfoodfacts.org/terms-of-use" target="_blank" rel="noreferrer">terms of use and reuse</a>.</p>
-        <p>USDA FoodData Central data is public-domain data published under <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noreferrer">CC0 1.0 Universal</a>. Source: U.S. Department of Agriculture, Agricultural Research Service, <a href="https://fdc.nal.usda.gov/api-guide/" target="_blank" rel="noreferrer">FoodData Central</a>.</p>
+                    <h2 id="local-data">3. Information stored on your device</h2>
+                    <p>Your rules, custom ingredient triggers, custom categories, saved scan history, product records, and app preferences are stored in CartKind's local app container. Tyche Ventures does not automatically upload those local records to a server-side user database.</p>
+                    <p>You can delete individual history items and remove custom rules through available in-app controls. Deleting CartKind normally removes its local app container from that device. Apple-managed device or computer backups may contain copies until you delete them or they expire under Apple's practices. CartKind does not operate its own cloud-sync or backup service.</p>
 
-        <h2>Data storage and security</h2>
-        <p>CartKind uses Apple's local-storage frameworks for app records. Local data benefits from the device's passcode, biometric security, and built-in protections. No storage or transmission method is risk-free. Network requests are encrypted in transit with HTTPS, while recipients and infrastructure providers process them under their own security and privacy practices.</p>
+                    <h2 id="lookup">4. Product lookup and network data</h2>
+                    <h3>Open Food Facts is queried first</h3>
+                    <p>When you scan or manually enter a barcode, CartKind sends the barcode over HTTPS directly from your device to Open Food Facts. Open Food Facts also receives ordinary request metadata, such as your IP address, request time, and CartKind's identifying User-Agent. CartKind does not send camera images, saved rules, custom triggers, custom categories, or scan history with that request.</p>
+                    <p>Open Food Facts describes its retention and use of IP and log data—including security, technical analysis, usage statistics, and product-popularity measurement—in its <a href="https://world.openfoodfacts.org/privacy" target="_blank" rel="noreferrer">privacy policy</a>.</p>
 
-        <h2>Analytics, tracking, and advertising</h2>
-        <p>CartKind does not include third-party analytics, advertising, or cross-app tracking SDKs. Tyche Ventures LLC does not sell personal data or use lookup requests to build advertising profiles. Operational network providers may generate the technical logs described above, and Open Food Facts states that it can use request logs for technical analysis, usage statistics, and product-popularity measurement.</p>
+                    <h3>USDA is a fallback after a catalog miss</h3>
+                    <p>Only after Open Food Facts reports no matching product may CartKind send the barcode to the Tyche Ventures USDA relay at <code>usda-api.tycheventuresllc.com</code>. The relay runs on Cloudflare Workers and forwards the barcode search to USDA FoodData Central.</p>
+                    <p>The relay and Cloudflare can process the barcode together with ordinary technical request metadata, such as an IP address, timestamp, request URL, and headers. The relay does not receive your camera image, saved rules, custom triggers, custom categories, or full scan history. Its code does not intentionally forward your device IP address to USDA.</p>
 
-        <h2>What can leave the device</h2>
-        <p>The following information may leave the device during normal use:</p>
-        <ul>
-            <li>A scanned or manually entered barcode plus ordinary request metadata sent to Open Food Facts.</li>
-            <li>After an Open Food Facts catalog miss, the barcode and request metadata sent to the Tyche Ventures/Cloudflare relay, which then sends the barcode query to USDA.</li>
-            <li>Browser requests you initiate by tapping external source links.</li>
-            <li>StoreKit purchase and subscription communications with Apple.</li>
-            <li>Apple-managed backup data, depending on your device settings.</li>
-        </ul>
+                    <h3>Limited relay logs</h3>
+                    <p>If Cloudflare Workers logging is enabled, invocation logs may include the request URL containing the barcode and related technical metadata. Cloudflare currently documents shorter retention for some Workers plans and up to seven days for others. Because the plan and logging configuration can change, Tyche Ventures conservatively treats these limited proxy logs as potentially retained for <strong>up to seven days</strong>. They are not used to create a CartKind account, build an advertising profile, or track you across apps or websites. See <a href="https://developers.cloudflare.com/workers/observability/logs/workers-logs/" target="_blank" rel="noreferrer">Cloudflare Workers logging</a> and <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noreferrer">Cloudflare's Privacy Policy</a>.</p>
 
-        <h2>Retention and deletion</h2>
-        <p>Local records remain until you delete them in CartKind or remove the app, subject to Apple-managed backups. Tyche Ventures LLC does not maintain a separate CartKind user-profile database. Proxy invocation logs, if enabled, may remain for up to seven days as described above. Open Food Facts, Cloudflare, USDA, Apple, and any external site apply their own retention practices.</p>
+                    <h2 id="camera">5. Camera access</h2>
+                    <p>CartKind requests camera access only when you choose barcode scanning. Apple's barcode metadata scanner processes camera frames on the device in real time. CartKind stores the decoded barcode, not camera images; camera frames are not stored, recorded, or transmitted. You can change camera permission in iOS Settings.</p>
 
-        <h2>Health and allergy disclaimer</h2>
-        <p>CartKind is an informational shopping reference tool only. Product data can be incomplete, outdated, or inaccurate. Always read the physical product label and consult a qualified professional for allergy, intolerance, or medical dietary concerns.</p>
+                    <h2 id="services">6. Recipients and outside services</h2>
+                    <div class="legal-table-wrap">
+                        <table class="legal-table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Service</th>
+                                    <th scope="col">When used</th>
+                                    <th scope="col">Information involved</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Open Food Facts</td>
+                                    <td>Every barcode lookup</td>
+                                    <td>Barcode and ordinary request metadata, sent directly from your device</td>
+                                </tr>
+                                <tr>
+                                    <td>Tyche/Cloudflare relay and USDA FoodData Central</td>
+                                    <td>Only after an Open Food Facts catalog miss</td>
+                                    <td>Barcode and relay request metadata; limited invocation logs may remain for up to seven days</td>
+                                </tr>
+                                <tr>
+                                    <td>Apple App Store / StoreKit</td>
+                                    <td>Purchase, restore, and subscription-status activity</td>
+                                    <td>Transaction and entitlement information needed to determine Premium access; Apple handles payment details</td>
+                                </tr>
+                                <tr>
+                                    <td>External source websites</td>
+                                    <td>Only when you choose a source link</td>
+                                    <td>Ordinary browser and network information under the destination's policies</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>Tyche Ventures does not receive your full payment-card details or Apple ID password. Apple handles App Store information under <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noreferrer">Apple's Privacy Policy</a>.</p>
 
-        <h2>Changes</h2>
-        <p>We may update this policy from time to time. When we do, the revised version will appear on this page with an updated date.</p>
+                    <h2 id="licenses">7. Product data and licenses</h2>
+                    <p>Product information identified as Open Food Facts data is &copy; Open Food Facts contributors. The Open Food Facts database is available under the <a href="https://opendatacommons.org/licenses/odbl/1-0/" target="_blank" rel="noreferrer">Open Database License 1.0 (ODbL)</a>, and individual database contents are available under the <a href="https://opendatacommons.org/licenses/dbcl/1-0/" target="_blank" rel="noreferrer">Database Contents License 1.0 (DbCL)</a>. See Open Food Facts' <a href="https://world.openfoodfacts.org/terms-of-use" target="_blank" rel="noreferrer">terms of use and reuse</a>.</p>
+                    <p>CartKind 1.0.2 does not request or display Open Food Facts product images. Open Food Facts image licensing and third-party packaging rights may apply if a future version adds them.</p>
+                    <p>USDA FoodData Central data is public-domain data published under <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noreferrer">CC0 1.0 Universal</a>. Source: U.S. Department of Agriculture, Agricultural Research Service, <a href="https://fdc.nal.usda.gov/api-guide/" target="_blank" rel="noreferrer">FoodData Central</a>.</p>
 
-        <h2>Contact</h2>
-        <p>If you have questions about this policy, contact <a href="mailto:support@tycheventuresllc.com">support@tycheventuresllc.com</a>.</p>
+                    <h2 id="tracking">8. Analytics, tracking, and sale of data</h2>
+                    <p>CartKind does not include third-party analytics, advertising, or cross-app tracking SDKs. Tyche Ventures does not sell personal data or use lookup requests to build advertising profiles. Operational network providers may generate the technical logs described above, and Open Food Facts states that it can use request logs for technical analysis, usage statistics, and product-popularity measurement.</p>
 
-        <footer>
-            <p>&copy; 2026 Tyche Ventures LLC. All rights reserved.</p>
-            <p><a href="index.html">&larr; Back to CartKind</a></p>
-        </footer>
-    </div>
+                    <h2 id="support-data">9. Information you choose to send us</h2>
+                    <p>If you email support, we receive the email address, message, and attachments you choose to send. Do not include medical information or other sensitive details unless necessary to resolve an issue. We use support communications to respond and troubleshoot and retain them only as reasonably needed for those purposes and legal obligations.</p>
+
+                    <h2 id="security">10. Security</h2>
+                    <p>CartKind uses Apple's local-storage frameworks for app records. Local data benefits from the security settings and protections on your device. Network requests use HTTPS in transit, while recipients and infrastructure providers process information under their own security and privacy practices. No storage or transmission method can be guaranteed completely secure.</p>
+
+                    <h2 id="retention">11. Retention, deletion, and your choices</h2>
+                    <ul>
+                        <li><strong>Local records:</strong> Remain until you delete them in CartKind or remove the app, subject to copies in Apple-managed backups.</li>
+                        <li><strong>Relay logs:</strong> If enabled, limited invocation logs may remain for up to seven days as described above.</li>
+                        <li><strong>Outside services:</strong> Open Food Facts, Cloudflare, USDA, Apple, and source websites apply their own retention practices.</li>
+                        <li><strong>Support communications:</strong> Remain only as reasonably needed to respond, troubleshoot, and meet legal obligations.</li>
+                    </ul>
+                    <p>Because Tyche Ventures does not operate a CartKind account or backend for local app records, we generally cannot access, recover, correct, or delete those records for you. Use CartKind and device controls to manage local data and Apple settings to manage backups and subscriptions.</p>
+
+                    <h2 id="changes">12. Changes to this policy</h2>
+                    <p>We may update this policy if app behavior, third-party services, or legal requirements change. The revised version will appear on this page with an updated date, and we will provide additional notice when appropriate.</p>
+
+                    <h2 id="contact">13. Contact</h2>
+                    <p>For questions about this policy or information Tyche Ventures may hold because you contacted us, email <a href="mailto:support@tycheventuresllc.com">support@tycheventuresllc.com</a>.</p>
+                </article>
+
+                <aside class="legal-toc" aria-label="Privacy policy sections">
+                    <strong>On this page</strong>
+                    <nav aria-label="Page sections">
+                        <a href="#overview">Overview</a>
+                        <a href="#local-data">Local data</a>
+                        <a href="#lookup">Product lookup</a>
+                        <a href="#camera">Camera</a>
+                        <a href="#services">Outside services</a>
+                        <a href="#licenses">Data licenses</a>
+                        <a href="#tracking">Tracking</a>
+                        <a href="#retention">Retention &amp; deletion</a>
+                        <a href="#contact">Contact</a>
+                    </nav>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <div class="footer-brand">CartKind by Tyche Ventures</div>
+                <p class="footer-note">Local-first records with limited, disclosed network requests for product lookup and App Store services.</p>
+            </div>
+            <nav class="footer-links" aria-label="Footer navigation">
+                <a href="/">Tyche Home</a>
+                <a href="/cartkind.html">CartKind</a>
+                <a href="/cartkind/support.html">Support</a>
+                <a href="/cartkind/privacy-policy.html" aria-current="page">Privacy</a>
+                <a href="/cartkind/terms-of-use.html">Terms</a>
+                <a href="mailto:support@tycheventuresllc.com">Contact</a>
+            </nav>
+        </div>
+    </footer>
 </body>
 </html>

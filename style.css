@@ -65,6 +65,12 @@ a {
   color: inherit;
 }
 
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid rgba(183, 102, 75, 0.55);
+  outline-offset: 4px;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -90,27 +96,61 @@ header .container {
   gap: 18px;
 }
 
-header h1 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.8rem;
-  line-height: 1;
-  letter-spacing: -0.03em;
-}
-
-header h1 a {
-  text-decoration: none;
+.journal-brand {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
+  min-width: 0;
 }
 
-header h1 a img {
-  width: 40px;
-  height: 40px;
-  border-radius: 12px;
-  padding: 3px;
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(240, 216, 210, 0.9));
+.company-home,
+.imprint-home {
+  text-decoration: none;
+}
+
+.company-home {
+  color: var(--ink);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  line-height: 1.25;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.company-home:hover {
+  color: var(--terracotta-strong);
+}
+
+.brand-divider {
+  width: 1px;
+  height: 30px;
+  flex: 0 0 auto;
+  background: var(--line-strong);
+}
+
+.imprint-home {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  min-width: 0;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.55rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.imprint-home img {
+  width: 36px;
+  height: 36px;
+  flex: 0 0 auto;
+  margin: 0;
   border: 1px solid rgba(65, 50, 36, 0.08);
+  border-radius: 11px;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(240, 216, 210, 0.9));
+  padding: 3px;
 }
 
 header nav {
@@ -135,6 +175,11 @@ header nav a:hover {
   background: rgba(255, 255, 255, 0.9);
   color: var(--ink);
   transform: translateY(-1px);
+}
+
+header nav a[aria-current='page'] {
+  background: rgba(255, 255, 255, 0.86);
+  color: var(--ink);
 }
 
 .container {
@@ -1107,8 +1152,29 @@ footer a:hover {
 footer .footer-links {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 20px;
   margin-bottom: 10px;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.footer-brand span {
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.affiliate-note {
+  margin-top: 8px;
 }
 
 @media (max-width: 960px) {
@@ -1142,10 +1208,42 @@ footer .footer-links {
   header .container {
     flex-direction: column;
     align-items: flex-start;
+    padding-top: 14px;
+    padding-bottom: 14px;
   }
 
   header nav {
+    width: 100%;
     flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  header nav a {
+    padding: 8px 10px;
+    font-size: 0.76rem;
+  }
+
+  .journal-brand {
+    gap: 9px;
+  }
+
+  .company-home {
+    font-size: 0.69rem;
+    letter-spacing: 0.08em;
+  }
+
+  .brand-divider {
+    height: 25px;
+  }
+
+  .imprint-home {
+    gap: 7px;
+    font-size: 1.32rem;
+  }
+
+  .imprint-home img {
+    width: 31px;
+    height: 31px;
   }
 
   main {

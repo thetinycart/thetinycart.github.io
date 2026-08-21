@@ -3,81 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Support — CartKind</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-            background: #faf9f6;
-            color: #2d2d2d;
-            line-height: 1.7;
-        }
-        .container { max-width: 760px; margin: 0 auto; padding: 40px 20px 56px; }
-        h1 { font-size: 1.9rem; margin-bottom: 6px; }
-        .subtitle { color: #777; margin-bottom: 28px; }
-        h2 { font-size: 1.1rem; margin: 24px 0 8px; }
-        p, li { color: #444; font-size: 0.96rem; margin-bottom: 12px; }
-        ul { padding-left: 20px; }
-        a { color: #6b8f71; }
-        .email-box {
-            background: #fff;
-            border: 1.5px solid #6b8f71;
-            border-radius: 12px;
-            padding: 20px;
-            text-align: center;
-            margin: 24px 0 28px;
-        }
-        .email-box a { font-size: 1.08rem; font-weight: 700; text-decoration: none; }
-        footer { margin-top: 40px; font-size: 0.86rem; color: #888; }
-    </style>
+    <meta name="description" content="Get help with CartKind barcode lookup, ingredient rules, result labels, Premium, privacy, and subscription management.">
+    <meta name="theme-color" content="#1f3f2c">
+    <title>CartKind Support | Tyche Ventures</title>
+    <link rel="canonical" href="https://tycheventuresllc.com/cartkind/support.html">
+    <link rel="icon" href="/images/apps/cartkind-icon.png">
+    <link rel="stylesheet" href="/assets/app-showcase.css?v=20260821-1">
+    <link rel="stylesheet" href="/assets/legal.css?v=20260821-1">
 </head>
-<body>
-    <div class="container">
-        <h1>Support</h1>
-        <p class="subtitle">We're here to help. Reach out anytime.</p>
+<body class="theme-cartkind">
+    <a class="skip-link" href="#main-content">Skip to support</a>
 
-        <div class="email-box">
-            <p>Email us at</p>
-            <a href="mailto:support@tycheventuresllc.com">support@tycheventuresllc.com</a>
+    <header class="site-header">
+        <nav class="site-nav container" aria-label="Primary navigation">
+            <div class="brand-group">
+                <a class="company-home" href="/">Tyche Ventures</a>
+                <span class="brand-divider" aria-hidden="true"></span>
+                <a class="app-home" href="/cartkind.html">
+                    <img src="/images/apps/cartkind-icon.png" alt="">
+                    <span>CartKind</span>
+                </a>
+            </div>
+            <ul class="site-nav__links">
+                <li><a href="/cartkind.html">App</a></li>
+                <li><a href="/cartkind/privacy-policy.html">Privacy</a></li>
+                <li><a href="/cartkind/terms-of-use.html">Terms</a></li>
+                <li><a href="/cartkind/support.html" aria-current="page">Support</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="legal-hero" aria-labelledby="support-title">
+            <div class="container">
+                <p class="eyebrow">CartKind · Support</p>
+                <h1 id="support-title">Clear answers for every scan.</h1>
+                <p>Find help with barcode lookup, personal ingredient rules, result labels, Premium, privacy, and subscription management.</p>
+                <ul class="legal-meta" aria-label="Support details">
+                    <li>Guidance for CartKind 1.0.2</li>
+                    <li>No account required</li>
+                    <li>Email support available</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="legal-main">
+            <div class="container legal-layout">
+                <article class="legal-article">
+                    <div class="support-intro">
+                        <h2>How can we help?</h2>
+                        <p>For a problem not covered below, email Tyche Ventures. Please include your device model, iOS version, CartKind version, and the steps that led to the issue. Avoid sending medical information or other sensitive details.</p>
+                    </div>
+
+                    <div class="support-grid">
+                        <section class="support-card" aria-labelledby="email-support-title">
+                            <h2 id="email-support-title">Email support</h2>
+                            <p>Send a question or describe an issue and we will help troubleshoot.</p>
+                            <a class="support-email" href="mailto:support@tycheventuresllc.com">support@tycheventuresllc.com</a>
+                        </section>
+                        <section class="support-card" aria-labelledby="privacy-support-title">
+                            <h2 id="privacy-support-title">Privacy details</h2>
+                            <p>See exactly what stays on your device and what a product lookup sends.</p>
+                            <a href="/cartkind/privacy-policy.html">Read the Privacy Policy</a>
+                        </section>
+                    </div>
+
+                    <div class="legal-notice" role="note" aria-labelledby="safety-title">
+                        <h2 id="safety-title">Always verify the physical label</h2>
+                        <p>CartKind is an informational shopping reference, not medical advice or an allergy-safety tool. Aligned, Review, and Not aligned compare available ingredient text with your rules; they do not establish that a product is safe. Product databases can be incomplete, outdated, or inaccurate. Read the package label every time and consult a qualified professional about allergies, intolerances, or medical dietary needs.</p>
+                    </div>
+
+                    <h2 id="results">How does CartKind work?</h2>
+                    <p>Scan or manually enter a barcode and CartKind looks up available product ingredients, compares them with your personal rules, and shows <strong>Aligned</strong>, <strong>Review</strong>, or <strong>Not aligned</strong>. These labels reflect only the rules you configured and the ingredient text returned by the source.</p>
+
+                    <h2 id="lookup">Where does the product data come from?</h2>
+                    <p>CartKind queries <strong>Open Food Facts directly first</strong>. Only after Open Food Facts reports no matching product may CartKind send the barcode to a Tyche Ventures relay hosted on Cloudflare Workers, which queries USDA FoodData Central. A result identifies its source when available.</p>
+                    <p>If neither source returns usable ingredients, you can enter ingredients manually. Source data and manual entries still require verification against the physical package label.</p>
+
+                    <h2 id="scanning">What if the barcode will not scan?</h2>
+                    <p>Make sure CartKind has camera permission in iOS Settings, hold the barcode inside the scanner guide, and try brighter, even lighting. You can also enter the barcode manually. Camera frames are processed on the device for barcode recognition; CartKind does not store, record, or transmit them.</p>
+
+                    <h2 id="rules">Can I customize which ingredients to flag?</h2>
+                    <p>Yes. In the Rules tab, you can set ingredient categories to <strong>Ignore</strong>, <strong>Warn me</strong>, or <strong>Avoid</strong>. Premium adds custom ingredient triggers and custom categories. Rules are personal preferences, not diagnoses or medical safety standards.</p>
+
+                    <h2 id="premium">What does Premium include?</h2>
+                    <ul>
+                        <li>Weekly Insights with verdict and category trends, common rule matches, repeat-product patterns, and drill-down lists</li>
+                        <li>Custom ingredient triggers</li>
+                        <li>Custom ingredient categories</li>
+                        <li>Custom rules applied to new evaluations while Premium access is active</li>
+                    </ul>
+                    <p>Saved scan history remains available in the free app.</p>
+
+                    <h2 id="subscription">How do I manage, restore, or cancel a subscription?</h2>
+                    <p>Apple processes CartKind subscriptions through StoreKit. Use the restore-purchases option in CartKind when needed. To manage or cancel a subscription, open iOS Settings, choose your Apple ID, select Subscriptions, and choose CartKind. Apple handles billing, renewal, cancellation, and payment information.</p>
+
+                    <h2 id="privacy">Is my data private?</h2>
+                    <p>Rules, custom settings, saved history, product records, and preferences are stored in CartKind's local app container. CartKind does not require an account and does not include analytics, advertising, or cross-app tracking SDKs. Apple-managed backups may include local data, depending on your settings.</p>
+                    <p>A barcode lookup does leave the device. It goes directly to Open Food Facts first. After an Open Food Facts catalog miss, it may go to the Tyche Ventures/Cloudflare USDA relay. The relay can process ordinary request metadata and, if Workers logging is enabled, limited invocation logs may be retained for up to seven days. The <a href="/cartkind/privacy-policy.html">Privacy Policy</a> explains the flow, recipients, retention, and deletion choices.</p>
+
+                    <h2 id="source-links">Why does a result open an external source link?</h2>
+                    <p>When available, CartKind can open the product's Open Food Facts or USDA FoodData Central record in your browser. This happens only when you choose the link. The destination's privacy policy and terms apply.</p>
+
+                    <h2 id="corrections">A product looks incorrect. What should I do?</h2>
+                    <p>First, rely on the physical package label—not the database result. If the source is Open Food Facts, you can review or contribute corrections at <a href="https://world.openfoodfacts.org" target="_blank" rel="noreferrer">openfoodfacts.org</a>. If the source is USDA FoodData Central, use the source link to review the USDA record. CartKind may show updated data on a later lookup.</p>
+                </article>
+
+                <aside class="legal-toc" aria-label="Support topics">
+                    <strong>On this page</strong>
+                    <nav aria-label="Page sections">
+                        <a href="#results">Results</a>
+                        <a href="#lookup">Product lookup</a>
+                        <a href="#scanning">Barcode scanning</a>
+                        <a href="#rules">Ingredient rules</a>
+                        <a href="#premium">Premium</a>
+                        <a href="#subscription">Subscriptions</a>
+                        <a href="#privacy">Privacy</a>
+                        <a href="#corrections">Corrections</a>
+                    </nav>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <div class="footer-brand">CartKind by Tyche Ventures</div>
+                <p class="footer-note">An informational shopping reference. Always verify the physical product label; CartKind does not provide medical advice or determine allergy safety.</p>
+            </div>
+            <nav class="footer-links" aria-label="Footer navigation">
+                <a href="/">Tyche Home</a>
+                <a href="/cartkind.html">CartKind</a>
+                <a href="/cartkind/support.html" aria-current="page">Support</a>
+                <a href="/cartkind/privacy-policy.html">Privacy</a>
+                <a href="/cartkind/terms-of-use.html">Terms</a>
+                <a href="mailto:support@tycheventuresllc.com">Contact</a>
+            </nav>
         </div>
-
-        <h2>How does CartKind work?</h2>
-        <p>Scan or manually enter a barcode and CartKind looks up the product's ingredients, checks them against your personal rules, and shows Aligned, Review, or Not aligned. These labels describe your configured preferences—not whether a product is medically safe.</p>
-
-        <h2>What if I can't scan the barcode?</h2>
-        <p>You can enter a barcode manually. If lookup still cannot produce a usable result, CartKind also supports manual ingredient entry.</p>
-
-        <h2>Where does the ingredient data come from?</h2>
-        <p>CartKind queries Open Food Facts directly first. Only when Open Food Facts reports no matching product can CartKind use a Tyche Ventures relay hosted on Cloudflare Workers to query USDA FoodData Central. Product data can be incomplete, outdated, or inaccurate, so always verify the physical label. See the <a href="privacy-policy.html">Privacy Policy</a> for network and retention details.</p>
-
-        <h2>Can I customize which ingredients to flag?</h2>
-        <p>Yes. In the Rules tab, you can set ingredient categories to Ignore, Warn me, or Avoid. Premium adds custom ingredient triggers and custom categories.</p>
-
-        <h2>What does Premium include?</h2>
-        <ul>
-            <li>Weekly Insights with verdict and category trends, common rule matches, repeat product patterns, and drill-down lists</li>
-            <li>Custom ingredient triggers</li>
-            <li>Custom ingredient categories</li>
-            <li>Custom rules applied to new evaluations while Premium access is active</li>
-        </ul>
-        <p>Saved scan history remains available in the free app.</p>
-
-        <h2>How do I manage or cancel my subscription?</h2>
-        <p>Go to your device's Settings &rarr; Apple ID &rarr; Subscriptions &rarr; CartKind. Apple handles billing, plan changes, and cancellation.</p>
-
-        <h2>Is my data private?</h2>
-        <p>Rules, custom settings, and saved history are stored locally. CartKind does not require an account or include analytics, advertising, or tracking SDKs. Barcode lookup still sends the barcode and ordinary request metadata to Open Food Facts and, after a catalog miss, may use the Tyche Ventures/Cloudflare USDA relay. See the <a href="privacy-policy.html">Privacy Policy</a> for the exact flow, possible short-lived logs, and deletion details.</p>
-
-        <h2>Why does a result open an external source link?</h2>
-        <p>When available, CartKind can open the product's Open Food Facts or USDA FoodData Central source page in your browser. The destination's privacy policy and terms apply.</p>
-
-        <h2>A product scanned incorrectly. What should I do?</h2>
-        <p>Product data comes from third-party sources and may occasionally be incomplete or outdated. Always verify the physical label. If the product came from Open Food Facts, you can contribute corrections at <a href="https://world.openfoodfacts.org" target="_blank" rel="noreferrer">openfoodfacts.org</a>, and CartKind can pick up updated data on a later scan. If the result came from USDA FoodData Central, use the source link to review the USDA record.</p>
-
-        <footer>
-            <p>&copy; 2026 Tyche Ventures LLC. All rights reserved.</p>
-            <p><a href="index.html">&larr; Back to CartKind</a></p>
-        </footer>
-    </div>
+    </footer>
 </body>
 </html>

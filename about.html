@@ -9,14 +9,18 @@
   <link rel="icon" type="image/png" href="/images/favicon.png">
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1><a href="/"><img src="/images/logo-small.png" alt="The Tiny Cart">The Tiny Cart</a></h1>
-      <nav>
-        <a href="/">Home</a>
-        <a href="/blog.html">Blog</a>
+  <header class="journal-header">
+    <div class="container journal-header-inner">
+      <div class="journal-brand">
+        <a class="company-home" href="/" aria-label="Tyche Ventures home">Tyche Ventures</a>
+        <span class="brand-divider" aria-hidden="true"></span>
+        <a class="imprint-home" href="/blog.html"><img src="/images/logo-small.png" alt="">The Tiny Cart</a>
+      </div>
+      <nav aria-label="Journal navigation">
+        <a href="/blog.html">Journal</a>
         <a href="/printables/">Printables</a>
         <a href="/about.html">About</a>
+        <a href="/#apps">Apps</a>
       </nav>
     </div>
   </header>
@@ -67,15 +71,20 @@
     </section>
   </main>
 
-  <footer>
+  <footer class="journal-footer">
+    <div class="footer-brand">
+      <a href="/">Tyche Ventures</a>
+      <span aria-hidden="true">·</span>
+      <a href="/blog.html">The Tiny Cart</a>
+    </div>
     <div class="footer-links">
-      <a href="/blog.html">Blog</a>
+      <a href="/blog.html">Journal</a>
       <a href="/printables/">Printables</a>
       <a href="/about.html">About</a>
       <a href="/privacy.html">Privacy</a>
     </div>
-    <p>&copy; 2026 The Tiny Cart</p>
-    <p>As an Amazon Associate, we earn from qualifying purchases.</p>
+    <p>&copy; 2026 Tyche Ventures LLC. The Tiny Cart is our journal and printables imprint.</p>
+    <p class="affiliate-note">As an Amazon Associate, Tyche Ventures LLC earns from qualifying purchases.</p>
   </footer>
 </body>
 </html>
