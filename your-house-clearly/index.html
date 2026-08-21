@@ -11,7 +11,7 @@
   <link rel="icon" type="image/png" href="/images/favicon.png">
   <link rel="apple-touch-icon" href="/images/apps/your-house-clearly-icon.png">
   <link rel="preload" as="image" href="/images/apps/your-house-clearly-icon.png" fetchpriority="high">
-  <link rel="stylesheet" href="/your-house-clearly/your-house-clearly.css">
+  <link rel="stylesheet" href="/your-house-clearly/your-house-clearly.css?v=20260820-3">
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Tyche Ventures LLC">
@@ -167,7 +167,16 @@
           <p class="section-lede">Explore the home overview, recurring maintenance, warranty dates, active tasks, document sources, a completed CPSC check, maintenance history, and asset records.</p>
         </div>
 
-        <div class="media-gallery" role="region" aria-label="Your House, Clearly iPhone screenshot gallery" tabindex="0">
+        <div class="gallery-toolbar gallery-toolbar--dark">
+          <p class="gallery-toolbar__hint" id="iphone-gallery-hint">Swipe the gallery or use the buttons to see all eight screens.</p>
+          <div class="gallery-toolbar__actions" aria-label="iPhone gallery controls">
+            <button class="gallery-button" type="button" data-gallery-previous="iphone" aria-controls="iphone-gallery">Previous</button>
+            <output class="gallery-position" data-gallery-position="iphone" aria-live="polite">1 of 8</output>
+            <button class="gallery-button" type="button" data-gallery-next="iphone" aria-controls="iphone-gallery">Next</button>
+          </div>
+        </div>
+        <div class="gallery-viewport gallery-viewport--dark" data-gallery-viewport="iphone">
+          <div class="media-gallery" id="iphone-gallery" data-gallery="iphone" role="region" aria-roledescription="carousel" aria-label="Your House, Clearly iPhone screenshot gallery" aria-describedby="iphone-gallery-hint" tabindex="0">
           <figure class="media-slot" id="preview-home" data-media-slot="01-home">
             <img class="media-slot__image" src="/images/apps/your-house-clearly/screenshots/01-home.png" width="1320" height="2868" alt="Your House, Clearly Home screen showing Cedar House in Napa, California, with home-record summary counts" loading="lazy" decoding="async">
             <figcaption>See the property and the records that need attention.</figcaption>
@@ -200,6 +209,7 @@
             <img class="media-slot__image" src="/images/apps/your-house-clearly/screenshots/08-assets.png" width="1320" height="2868" alt="Your House, Clearly Assets screen listing five fictional home appliances and systems" loading="lazy" decoding="async">
             <figcaption>Keep appliance and home-system details with their history and files.</figcaption>
           </figure>
+          </div>
         </div>
       </div>
     </section>
@@ -212,7 +222,17 @@
           <p class="section-lede">On iPad, the same local-first records use the larger canvas for clear overviews, comfortable lists, and focused detail screens.</p>
         </div>
 
-        <div class="ipad-gallery" role="region" aria-label="Your House, Clearly iPad screenshot gallery" tabindex="0">
+        <div class="gallery-toolbar">
+          <p class="gallery-toolbar__hint" id="ipad-gallery-hint">The gallery advances while it is in view. Swipe or use the buttons at any time.</p>
+          <div class="gallery-toolbar__actions" aria-label="iPad gallery controls">
+            <button class="gallery-button" type="button" data-gallery-previous="ipad" aria-controls="ipad-gallery">Previous</button>
+            <output class="gallery-position" data-gallery-position="ipad" aria-live="off">1 of 8</output>
+            <button class="gallery-button" type="button" data-gallery-next="ipad" aria-controls="ipad-gallery">Next</button>
+            <button class="gallery-button gallery-button--toggle" type="button" data-gallery-autoplay="ipad" aria-controls="ipad-gallery" aria-pressed="true" hidden>Pause auto-scroll</button>
+          </div>
+        </div>
+        <div class="gallery-viewport" data-gallery-viewport="ipad">
+          <div class="ipad-gallery" id="ipad-gallery" data-gallery="ipad" data-auto-advance="true" role="region" aria-roledescription="carousel" aria-label="Your House, Clearly iPad screenshot gallery" aria-describedby="ipad-gallery-hint" tabindex="0">
           <figure class="ipad-shot" data-media-slot="ipad-01-home">
             <img class="ipad-shot__image" src="/images/apps/your-house-clearly/screenshots-ipad/01-home.png" width="2048" height="2732" alt="Your House, Clearly iPad Home screen showing Cedar House in Napa, California, with home-record summary counts" loading="lazy" decoding="async">
             <figcaption>Your home, clearly organized.</figcaption>
@@ -245,17 +265,21 @@
             <img class="ipad-shot__image" src="/images/apps/your-house-clearly/screenshots-ipad/08-assets.png" width="2048" height="2732" alt="Your House, Clearly iPad Assets screen listing five fictional appliances and home systems" loading="lazy" decoding="async">
             <figcaption>Keep asset details together.</figcaption>
           </figure>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="section section--mist" id="tour" data-tour-status="ready" aria-labelledby="tour-title">
       <div class="container tour-grid">
-        <video class="tour-player" id="tour-video-slot" width="886" height="1920" controls preload="metadata" playsinline poster="/images/apps/your-house-clearly/tour/your-house-clearly-app-preview-poster.jpg" aria-describedby="tour-description">
-          <source src="/media/your-house-clearly/your-house-clearly-app-preview.mp4" type="video/mp4">
-          <track src="/media/your-house-clearly/your-house-clearly-app-preview-en.vtt" kind="captions" srclang="en" label="English">
-          Your browser does not support the app-tour video.
-        </video>
+        <div class="tour-media">
+          <video class="tour-player" id="tour-video-slot" width="886" height="1920" controls preload="metadata" playsinline muted data-play-when-visible poster="/images/apps/your-house-clearly/tour/your-house-clearly-app-preview-poster.jpg" aria-describedby="tour-description tour-playback-note">
+            <source src="/media/your-house-clearly/your-house-clearly-app-preview.m4v" type="video/mp4">
+            <track src="/media/your-house-clearly/your-house-clearly-app-preview-en.vtt" kind="captions" srclang="en" label="English">
+            Your browser does not support the app-tour video.
+          </video>
+          <p class="tour-playback-note" id="tour-playback-note">Plays automatically without sound when in view. Use the video controls for audio.</p>
+        </div>
         <div class="tour-copy">
           <p class="eyebrow">A short guided look</p>
           <h2 id="tour-title">Six parts of the home record in 22 seconds.</h2>
@@ -352,5 +376,6 @@
       </nav>
     </div>
   </footer>
+  <script src="/your-house-clearly/your-house-clearly.js?v=20260820-3" defer></script>
 </body>
 </html>
