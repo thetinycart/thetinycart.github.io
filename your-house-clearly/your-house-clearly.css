@@ -655,6 +655,50 @@ summary:focus-visible,
   line-height: 1.45;
 }
 
+.ipad-preview {
+  border-block: 1px solid var(--line);
+}
+
+.ipad-gallery {
+  display: grid;
+  grid-auto-columns: minmax(430px, 560px);
+  grid-auto-flow: column;
+  gap: 1.25rem;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  padding: 0.3rem 0.2rem 1.5rem;
+  scroll-snap-type: inline mandatory;
+  scrollbar-color: #728c9d #dfe8ec;
+}
+
+.ipad-shot {
+  margin: 0;
+  border: 1px solid #d3dee4;
+  border-radius: var(--radius-md);
+  background: var(--white);
+  padding: 0.65rem;
+  scroll-snap-align: start;
+  box-shadow: var(--shadow-sm);
+}
+
+.ipad-shot__image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2048 / 2732;
+  border: 1px solid #e1e8ec;
+  background: #e8eef1;
+  object-fit: contain;
+}
+
+.ipad-shot figcaption {
+  margin: 0;
+  color: var(--ink);
+  padding: 0.85rem 0.4rem 0.35rem;
+  font-size: 0.9rem;
+  font-weight: 680;
+  line-height: 1.4;
+}
+
 .tour-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
@@ -1244,6 +1288,10 @@ summary:focus-visible,
 
   .media-gallery {
     grid-auto-columns: minmax(210px, 82vw);
+  }
+
+  .ipad-gallery {
+    grid-auto-columns: min(88vw, 430px);
   }
 
   .steps {

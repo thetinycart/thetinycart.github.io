@@ -1,12 +1,41 @@
 {
   "schemaVersion": 2,
   "status": "build6-local-media-ready-publication-held",
-  "reconciledAt": "2026-08-21T03:23:16Z",
+  "reconciledAt": "2026-08-21T04:37:45Z",
   "landingPage": "/your-house-clearly/",
   "publicLaunchStatus": "coming-soon",
   "websitePublished": false,
-  "appStoreMediaUploaded": false,
-  "rightsStatus": "owner-and-counsel-launch-review-pending",
+  "appStoreMediaUploaded": true,
+  "appStoreMediaState": {
+    "iphone69": "ordered screenshots 01-08 persisted after reload",
+    "iphonePreview": "exactly one accepted MP4 persisted after reload; no MOV or duplicate; processed playback advances",
+    "ipad13": "ordered screenshots 01-08 persisted after reload; no preview",
+    "addedForReview": false,
+    "submittedForReview": false
+  },
+  "rightsStatus": "owner-approved-public-use-counsel-review-not-claimed",
+  "rightsApproval": {
+    "status": "owner-approved",
+    "recordedAt": "2026-08-20",
+    "approvedAssets": [
+      "AI-generated Cedar House home imagery",
+      "Your House, Clearly app icon"
+    ],
+    "approvedScope": [
+      "public website use",
+      "App Store media use"
+    ],
+    "counselReview": "not separately claimed"
+  },
+  "websiteMediaScope": {
+    "iphoneScreenshotCount": 8,
+    "ipadScreenshotCount": 8,
+    "totalScreenshotCount": 16,
+    "iphoneGalleryReady": true,
+    "ipadGalleryReady": true,
+    "ipadIntegrationPending": false,
+    "previewPresent": true
+  },
   "source": {
     "app": "Your House, Clearly",
     "version": "1.0",
@@ -16,10 +45,12 @@
     "sourceAggregateSha256": "d8372c8bd2b30b254de675366e21a488a404f84dbcde80a79afad8a31f2a6736",
     "releaseCandidate": "App Store/Your House, Clearly/Release Candidates/YourHouseClearly-1.0-6-20260821T003021Z",
     "mediaManifest": "App Store/Your House, Clearly/Media/Evidence/manifest.json",
-    "mediaTechnicalStatus": "PASS; upload and publication held"
+    "mediaTechnicalStatus": "PASS; App Store media persisted; website publication held"
   },
   "gallery": {
     "status": "ready-local",
+    "platform": "iPhone",
+    "count": 8,
     "root": "/images/apps/your-house-clearly/screenshots/",
     "sourceDevice": "iPhone 17 Pro Max simulator, iOS 26.5",
     "dimensions": "1320x2868",
@@ -105,6 +136,107 @@
         "bytes": 717892,
         "width": 1320,
         "height": 2868
+      }
+    ]
+  },
+  "ipadGallery": {
+    "status": "ready-local",
+    "platform": "iPad",
+    "count": 8,
+    "root": "/images/apps/your-house-clearly/screenshots-ipad/",
+    "sourceDevice": "iPad Pro (12.9-inch) (6th generation) simulator, iOS 17.0.1",
+    "provenanceNote": "Native 12.9-inch capture at 2048x2732 accepted in the current App Store Connect iPad 13-inch well; not a native 13-inch-device capture.",
+    "dimensions": "2048x2732",
+    "treatment": "local frameless staged PNG; complete native UI preserved",
+    "stagedOrderedAggregateSha256": "8ee02ec44659141f4fab371dee83c228f5809d800928782ad2dc6fbaea380d60",
+    "items": [
+      {
+        "index": 1,
+        "label": "Home",
+        "caption": "Your home, clearly organized",
+        "path": "/images/apps/your-house-clearly/screenshots-ipad/01-home.png",
+        "sourcePath": "Media/Staged/iPad-13/01-home.png",
+        "sha256": "682f51c5e73d0f80685e9b5ac396850199b7e07aa4db9e040f13176037a5f458",
+        "bytes": 1578386,
+        "width": 2048,
+        "height": 2732
+      },
+      {
+        "index": 2,
+        "label": "Central HVAC templates",
+        "caption": "Plan upkeep with built-in templates",
+        "path": "/images/apps/your-house-clearly/screenshots-ipad/02-central-hvac-templates.png",
+        "sourcePath": "Media/Staged/iPad-13/02-central-hvac-templates.png",
+        "sha256": "0dba6181b75e591ca11bd0acd6dea8f02d49af0caa4caf92ba2174db6124dcbe",
+        "bytes": 918554,
+        "width": 2048,
+        "height": 2732
+      },
+      {
+        "index": 3,
+        "label": "Warranty dashboard",
+        "caption": "See warranty dates at a glance",
+        "path": "/images/apps/your-house-clearly/screenshots-ipad/03-warranty-dashboard.png",
+        "sourcePath": "Media/Staged/iPad-13/03-warranty-dashboard.png",
+        "sha256": "a11017310101b301f08351060368248f58c6dad023335088c3d90fa568852807",
+        "bytes": 848683,
+        "width": 2048,
+        "height": 2732
+      },
+      {
+        "index": 4,
+        "label": "Active tasks",
+        "caption": "Know what is due next",
+        "path": "/images/apps/your-house-clearly/screenshots-ipad/04-active-tasks.png",
+        "sourcePath": "Media/Staged/iPad-13/04-active-tasks.png",
+        "sha256": "2e5a4ccadf847d12e089c411056d2f19156978b006f533855348a8ad42305a8a",
+        "bytes": 743587,
+        "width": 2048,
+        "height": 2732
+      },
+      {
+        "index": 5,
+        "label": "Receipt import sources",
+        "caption": "Scan receipts, manuals, and more",
+        "path": "/images/apps/your-house-clearly/screenshots-ipad/05-receipt-import-sources.png",
+        "sourcePath": "Media/Staged/iPad-13/05-receipt-import-sources.png",
+        "sha256": "eb029427bdc893d0047bf9dafccbec8ff0956cf24dc05efa7f50a86bac0955e0",
+        "bytes": 874930,
+        "width": 2048,
+        "height": 2732
+      },
+      {
+        "index": 6,
+        "label": "CPSC recall check",
+        "caption": "Check against CPSC recall data",
+        "path": "/images/apps/your-house-clearly/screenshots-ipad/06-cpsc-recall-check.png",
+        "sourcePath": "Media/Staged/iPad-13/06-cpsc-recall-check.png",
+        "sha256": "42efd3110db7a102460327f9dd18d282eebd7d8fe58d1098399f38e23e8ecffd",
+        "bytes": 786331,
+        "width": 2048,
+        "height": 2732
+      },
+      {
+        "index": 7,
+        "label": "Maintenance history",
+        "caption": "Build a useful maintenance history",
+        "path": "/images/apps/your-house-clearly/screenshots-ipad/07-maintenance-history.png",
+        "sourcePath": "Media/Staged/iPad-13/07-maintenance-history.png",
+        "sha256": "fd65a2aa0b36c5cae253cf630ced3816de31762a389f1295e90c6325e9346d22",
+        "bytes": 729564,
+        "width": 2048,
+        "height": 2732
+      },
+      {
+        "index": 8,
+        "label": "Assets",
+        "caption": "Keep asset details together",
+        "path": "/images/apps/your-house-clearly/screenshots-ipad/08-assets.png",
+        "sourcePath": "Media/Staged/iPad-13/08-assets.png",
+        "sha256": "db18834e20be745a764619bd41f5ac209b5f375d904e49ca176b1cdb8969068f",
+        "bytes": 713106,
+        "width": 2048,
+        "height": 2732
       }
     ]
   },
