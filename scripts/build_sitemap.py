@@ -17,12 +17,29 @@ ROBOTS_PATH = ROOT / "robots.txt"
 
 def iter_site_files() -> list[Path]:
     top_level = sorted(
-        page for page in ROOT.glob("*.html") if page.name != "homerecall.html"
+        page
+        for page in ROOT.glob("*.html")
+        if page.name
+        not in {
+            "homerecall.html",
+            "dwelllore.html",
+            "placeworthy.html",
+            "your-house-clearly.html",
+        }
     )
     nested_pages = []
-    for content_dir in ["printables", "cartkind", "dwelllore", "kids-meal-planner", "little-routines"]:
+    for content_dir in [
+        "printables",
+        "cartkind",
+        "your-house-clearly",
+        "kids-meal-planner",
+        "little-routines",
+    ]:
         for page in sorted((ROOT / content_dir).glob("*.html")):
-            if content_dir != "printables" and page.name == "index.html":
+            if (
+                content_dir not in {"printables", "your-house-clearly"}
+                and page.name == "index.html"
+            ):
                 continue
             nested_pages.append(page)
     return top_level + nested_pages
