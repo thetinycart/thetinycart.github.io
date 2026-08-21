@@ -3,22 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Little Routines — Visual Schedule &amp; Habit Chart | Tyche Ventures</title>
-    <meta name="description" content="Help kids complete their daily routines with visual schedules they love using. Morning, bedtime, and after-school routines with star rewards. Available now on the App Store.">
+    <title>Little Routines — Visual Schedule &amp; Star Rewards | Tyche Ventures</title>
+    <meta name="description" content="Create calmer mornings, bedtimes, and transitions with visual routines, one-task-at-a-time guidance, timers, progress tracking, and star rewards.">
     <link rel="canonical" href="https://tycheventuresllc.com/little-routines.html">
     <meta name="apple-itunes-app" content="app-id=6761321011">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Little Routines — Visual Schedule &amp; Habit Chart">
-    <meta property="og:description" content="The visual routine planner kids actually love using. Morning, bedtime, and after-school routines with rewards.">
+    <meta property="og:title" content="Little Routines — Visual Schedule &amp; Star Rewards">
+    <meta property="og:description" content="A caregiver-friendly visual routine planner for calmer mornings, bedtimes, chores, and transitions.">
     <meta property="og:url" content="https://tycheventuresllc.com/little-routines.html">
     <meta property="og:image" content="https://tycheventuresllc.com/images/apps/lr-icon.png">
     <meta property="og:image:alt" content="Little Routines app icon">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Little Routines — Visual Schedule &amp; Habit Chart">
-    <meta name="twitter:description" content="The visual routine planner kids actually love using. Morning, bedtime, and after-school routines with rewards.">
+    <meta name="twitter:title" content="Little Routines — Visual Schedule &amp; Star Rewards">
+    <meta name="twitter:description" content="A caregiver-friendly visual routine planner for calmer mornings, bedtimes, chores, and transitions.">
     <meta name="twitter:image" content="https://tycheventuresllc.com/images/apps/lr-icon.png">
     <meta name="twitter:image:alt" content="Little Routines app icon">
-    <!-- Cache bust: 2026-03-14-15:51 -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Little Routines",
+      "operatingSystem": "iOS",
+      "applicationCategory": "EducationalApplication",
+      "description": "A caregiver-friendly visual schedule with one-task-at-a-time guidance, timers, progress tracking, and star rewards.",
+      "url": "https://tycheventuresllc.com/little-routines.html",
+      "downloadUrl": "https://apps.apple.com/app/little-routines/id6761321011",
+      "image": "https://tycheventuresllc.com/images/apps/lr-icon.png",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Tyche Ventures LLC",
+        "url": "https://tycheventuresllc.com/"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+    <!-- Cache bust: 2026-08-21 -->
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
@@ -54,7 +77,7 @@
         .logo {
             font-size: 1.5rem;
             font-weight: 700;
-            color: #FFB74D;
+            color: #9B5500;
             text-decoration: none;
         }
         
@@ -72,7 +95,7 @@
         }
         
         .nav-links a:hover {
-            color: #FFB74D;
+            color: #9B5500;
         }
         
         .back-link {
@@ -105,7 +128,7 @@
         
         .hero-content .subtitle {
             font-size: 1.4rem;
-            color: #FFB74D;
+            color: #9B5500;
             font-weight: 600;
             margin-bottom: 24px;
         }
@@ -121,7 +144,7 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: linear-gradient(45deg, #FFB74D, #FFC107);
+            background: #1D6F3A;
             color: white;
             padding: 16px 32px;
             border-radius: 50px;
@@ -133,7 +156,7 @@
         
         .status-badge:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(255, 183, 77, 0.3);
+            box-shadow: 0 10px 30px rgba(29, 111, 58, 0.28);
         }
         
         .hero-image {
@@ -236,7 +259,7 @@
         .highlight-icon {
             width: 28px;
             height: 28px;
-            background: linear-gradient(45deg, #FFB74D, #FFC107);
+            background: #1D6F3A;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -306,7 +329,7 @@
         
         .notify-cta:hover {
             transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(255, 183, 77, 0.3);
+            box-shadow: 0 15px 40px rgba(29, 111, 58, 0.28);
         }
         
         /* Footer */
@@ -337,7 +360,7 @@
         }
         
         .footer-links a:hover {
-            color: #FFB74D;
+            color: #FFD180;
         }
         
         .footer-text {
@@ -383,8 +406,12 @@
             
             /* Mobile navigation */
             nav .container {
-                padding: 0 15px;
-                height: 60px;
+                padding: 8px 15px;
+                height: auto;
+                min-height: 60px;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 4px;
             }
             
             .logo {
@@ -392,16 +419,12 @@
             }
             
             .nav-links {
+                width: 100%;
                 gap: 6px;
                 font-size: 0.8rem;
-                flex-wrap: nowrap;
-                overflow-x: auto;
-                scrollbar-width: none;
-                -ms-overflow-style: none;
-            }
-            
-            .nav-links::-webkit-scrollbar {
-                display: none;
+                flex-wrap: wrap;
+                justify-content: center;
+                overflow: visible;
             }
             
             .nav-links a {
@@ -424,7 +447,7 @@
             
             /* Reduce spacing */
             .hero {
-                padding: 100px 10px 60px;
+                padding: 150px 10px 60px;
             }
             
             .features {
@@ -439,7 +462,7 @@
         <div class="container">
             <a href="/" class="logo">Tyche Ventures</a>
             <div class="nav-links">
-                <a href="/" class="back-link">← Back to Home</a>
+                <a href="/" class="back-link" aria-label="Back to Tyche Ventures home">Home</a>
                 <a href="/kids-meal-planner.html">Kids Meal Planner</a>
                 <a href="/cartkind.html">CartKind</a>
                 <a href="mailto:support@tycheventuresllc.com">Contact</a>
@@ -452,9 +475,9 @@
         <div class="hero-container">
             <div class="hero-content">
                 <h1>Little Routines</h1>
-                <div class="subtitle">Visual Schedule &amp; Habit Chart</div>
-                <p>Help kids complete their daily routines with visual schedules they actually love using. Perfect for morning, bedtime, and after-school routines with built-in rewards.</p>
-                <a href="https://apps.apple.com/app/little-routines/id6761321011" class="status-badge" style="background: #4CAF50; color: white;">
+                <div class="subtitle">Visual Schedule &amp; Star Rewards</div>
+                <p>Create calmer mornings, bedtimes, chores, and transitions with visual checklists, one-task-at-a-time guidance, timers, and customizable rewards.</p>
+                <a href="https://apps.apple.com/app/little-routines/id6761321011" class="status-badge">
                     <span>📱</span>
                     <span>Download on the App Store</span>
                 </a>
@@ -469,28 +492,28 @@
     <section class="features">
         <div class="features-container">
             <div class="section-header">
-                <h2>Routines Kids Actually Complete</h2>
-                <p>From morning routines to bedtime, we make it fun and visual so kids stay motivated and parents stay sane.</p>
+                <h2>Calmer Routines. Less Reminding.</h2>
+                <p>Give each family member a clear, visual path through mornings, bedtimes, after-school transitions, chores, and more.</p>
             </div>
             
             <div class="features-grid">
-                <!-- Feature 1: Kid Mode -->
+                <!-- Feature 1: Guided routine mode -->
                 <div class="feature-showcase">
                     <div class="feature-content">
-                        <h3>Kid Mode They'll Love</h3>
-                        <p>Big, colorful checkmarks and star rewards that keep kids motivated. Touch-friendly interface designed specifically for little hands, with celebration sounds and animations.</p>
+                        <h3>One Clear Task at a Time</h3>
+                        <p>The guided routine view gives a child one large, clear task at a time while a parent or caregiver stays in control. Large tap targets, star rewards, haptic feedback, and cheerful animations make progress visible.</p>
                         <div class="feature-highlights">
                             <div class="highlight">
                                 <div class="highlight-icon">👆</div>
-                                <span>Big buttons perfect for little fingers</span>
+                                <span>Large, easy-to-tap controls</span>
                             </div>
                             <div class="highlight">
                                 <div class="highlight-icon">⭐</div>
                                 <span>Star rewards for completed tasks</span>
                             </div>
                             <div class="highlight">
-                                <div class="highlight-icon">🎵</div>
-                                <span>Fun sounds and celebrations</span>
+                                <div class="highlight-icon">✨</div>
+                                <span>Haptic feedback and celebrations</span>
                             </div>
                             <div class="highlight">
                                 <div class="highlight-icon">🎨</div>
@@ -499,7 +522,7 @@
                         </div>
                     </div>
                     <div class="feature-image">
-                        <img src="/images/apps/lr-kidmode.png" alt="Kid-friendly interface with large buttons" class="feature-screenshot">
+                        <img src="/images/apps/lr-kidmode.png" alt="One-task-at-a-time guided routine interface with large controls" class="feature-screenshot">
                     </div>
                 </div>
 
@@ -539,8 +562,9 @@
     <section class="cta-section" id="download">
         <div class="cta-container">
             <h2>Download Little Routines</h2>
-            <p>Available now on the App Store. Free to download with optional premium features.</p>
-            <a href="https://apps.apple.com/app/little-routines/id6761321011" class="notify-cta" style="background: #4CAF50;">
+            <p>Free includes up to 2 profiles, 2 routines per profile, 6 templates, guided Kid Mode, stars and rewards, and progress tracking. Premium adds unlimited profiles and routines, all 34 templates, and full starter packs.</p>
+            <p><strong>Private by design:</strong> no ads, no tracking, and routine data stays on your device.</p>
+            <a href="https://apps.apple.com/app/little-routines/id6761321011" class="notify-cta">
                 <span>📱</span>
                 <span>Download on the App Store</span>
             </a>
