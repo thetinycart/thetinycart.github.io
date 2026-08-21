@@ -1,10 +1,27 @@
 {
   "schemaVersion": 2,
-  "status": "build6-local-media-ready-publication-held",
-  "reconciledAt": "2026-08-21T04:37:45Z",
+  "status": "build6-website-media-published-app-store-submission-held",
+  "reconciledAt": "2026-08-21T04:49:41Z",
   "landingPage": "/your-house-clearly/",
   "publicLaunchStatus": "coming-soon",
-  "websitePublished": false,
+  "websitePublished": true,
+  "websitePublication": {
+    "status": "verified-live",
+    "publishedAt": "2026-08-21T04:48:08Z",
+    "url": "https://tycheventuresllc.com/your-house-clearly/",
+    "pullRequest": "https://github.com/thetinycart/thetinycart.github.io/pull/2",
+    "mergeCommit": "a0e0095680df1cc3e05cd7bec1230b279fe51208",
+    "pagesRun": "https://github.com/thetinycart/thetinycart.github.io/actions/runs/32448171335",
+    "verification": {
+      "https": true,
+      "landingSupportPrivacyTermsHttpStatus": 200,
+      "iphoneAndIpadAssetsHttpStatus": 200,
+      "previewVideoHttpStatus": 200,
+      "previewVideoSha256": "5e4a1137aa8d8d7aca80bc5279777a40587a50edc023a84cea87cc9a03bb38d1",
+      "ipad01Sha256": "682f51c5e73d0f80685e9b5ac396850199b7e07aa4db9e040f13176037a5f458",
+      "browserRender": "PASS"
+    }
+  },
   "appStoreMediaUploaded": true,
   "appStoreMediaState": {
     "iphone69": "ordered screenshots 01-08 persisted after reload",
@@ -45,10 +62,10 @@
     "sourceAggregateSha256": "d8372c8bd2b30b254de675366e21a488a404f84dbcde80a79afad8a31f2a6736",
     "releaseCandidate": "App Store/Your House, Clearly/Release Candidates/YourHouseClearly-1.0-6-20260821T003021Z",
     "mediaManifest": "App Store/Your House, Clearly/Media/Evidence/manifest.json",
-    "mediaTechnicalStatus": "PASS; App Store media persisted; website publication held"
+    "mediaTechnicalStatus": "PASS; App Store media persisted; website deployed and verified"
   },
   "gallery": {
-    "status": "ready-local",
+    "status": "published-verified",
     "platform": "iPhone",
     "count": 8,
     "root": "/images/apps/your-house-clearly/screenshots/",
@@ -140,7 +157,7 @@
     ]
   },
   "ipadGallery": {
-    "status": "ready-local",
+    "status": "published-verified",
     "platform": "iPad",
     "count": 8,
     "root": "/images/apps/your-house-clearly/screenshots-ipad/",
@@ -241,7 +258,7 @@
     ]
   },
   "tour": {
-    "status": "ready-local",
+    "status": "published-verified",
     "sourceDevice": "iPhone 17 Pro Max simulator, iOS 26.5",
     "durationSeconds": 22.5,
     "width": 886,
