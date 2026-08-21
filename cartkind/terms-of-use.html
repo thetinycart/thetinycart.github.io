@@ -25,16 +25,19 @@
 <body>
     <div class="container">
         <h1>Terms of Use</h1>
-        <p class="date">Last updated: March 22, 2026</p>
+        <p class="date">Last updated: August 21, 2026</p>
 
         <h2>Acceptance</h2>
         <p>By downloading or using CartKind, you agree to these Terms of Use. If you are under the age of legal majority in your jurisdiction, use of the app should be reviewed and approved by a parent or guardian.</p>
 
         <h2>Description of service</h2>
-        <p>CartKind is an informational shopping reference app. It scans product barcodes, checks ingredients against user-defined rules, and presents a pass, caution, or fail result. CartKind is not a medical device and does not provide medical, allergy, nutritional, or dietary advice.</p>
+        <p>CartKind is an informational shopping reference app. It scans or accepts product barcodes, compares available ingredient text with user-defined rules, and presents an Aligned, Review, or Not aligned result based on the rules you configured. These labels are preference comparisons, not safety determinations. CartKind is not a medical device and does not identify whether a food is safe for an allergy, intolerance, or medical condition.</p>
 
         <h2>Third-party product data</h2>
-        <p>CartKind uses Open Food Facts as the primary lookup source and may fall back to USDA FoodData Central when Open Food Facts does not return a usable match. Product data from third-party sources can be incomplete, outdated, or inaccurate. You are responsible for verifying ingredients by reading the physical product label before making food decisions.</p>
+        <p>CartKind queries Open Food Facts directly as its primary source. Only after Open Food Facts reports no matching product may CartKind use a Tyche Ventures relay hosted on Cloudflare Workers to query USDA FoodData Central. A result is identified by its source; CartKind does not guarantee that either catalog is complete, current, or accurate. You are responsible for reading and verifying the physical product label before making food decisions.</p>
+
+        <h2>Data attribution and licenses</h2>
+        <p>Open Food Facts data is &copy; Open Food Facts contributors. Its database is available under ODbL 1.0 and individual contents under DbCL 1.0; product images, where displayed, are available under CC BY-SA and may contain third-party marks or artwork. USDA FoodData Central data is public domain and published under CC0 1.0 Universal. See the linked source and license notices in CartKind's <a href="privacy-policy.html">Privacy Policy</a>.</p>
 
         <h2>Subscriptions</h2>
         <p>CartKind offers optional premium subscriptions through Apple's App Store.</p>
@@ -45,8 +48,10 @@
         </ul>
 
         <h2>Optional external links</h2>
-        <p>The app may offer optional source-reference links and optional shopping links. Those destinations open outside the app in your browser and are governed by the third party's own terms and privacy practices.</p>
-        <p>Some shopping links may be affiliate links, which means CartKind may earn a commission if you choose to make a purchase, at no extra cost to you.</p>
+        <p>CartKind may offer source-reference links that open outside the app. Those destinations are governed by the third party's terms and privacy practices. Tyche Ventures LLC does not control their content or availability.</p>
+
+        <h2>Privacy and local data</h2>
+        <p>CartKind does not require an account. App records are generally stored locally, but barcode lookup necessarily sends a barcode and ordinary request metadata to the services described in the <a href="privacy-policy.html">Privacy Policy</a>. After an Open Food Facts catalog miss, the Tyche Ventures/Cloudflare USDA relay may temporarily log invocation details. The Privacy Policy describes recipients, possible retention, and deletion choices.</p>
 
         <h2>User responsibilities</h2>
         <ul>

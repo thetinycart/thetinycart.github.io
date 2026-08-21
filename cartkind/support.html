@@ -42,23 +42,23 @@
         </div>
 
         <h2>How does CartKind work?</h2>
-        <p>Scan a barcode and CartKind looks up the product's ingredients, checks them against your personal rules, and shows a clear pass, caution, or fail result.</p>
+        <p>Scan or manually enter a barcode and CartKind looks up the product's ingredients, checks them against your personal rules, and shows Aligned, Review, or Not aligned. These labels describe your configured preferences—not whether a product is medically safe.</p>
 
         <h2>What if I can't scan the barcode?</h2>
         <p>You can enter a barcode manually. If lookup still cannot produce a usable result, CartKind also supports manual ingredient entry.</p>
 
         <h2>Where does the ingredient data come from?</h2>
-        <p>CartKind checks Open Food Facts first and can fall back to USDA FoodData Central when needed. These are helpful reference sources, but product data can still be incomplete or outdated, so always verify by reading the physical label.</p>
+        <p>CartKind queries Open Food Facts directly first. Only when Open Food Facts reports no matching product can CartKind use a Tyche Ventures relay hosted on Cloudflare Workers to query USDA FoodData Central. Product data can be incomplete, outdated, or inaccurate, so always verify the physical label. See the <a href="privacy-policy.html">Privacy Policy</a> for network and retention details.</p>
 
         <h2>Can I customize which ingredients to flag?</h2>
         <p>Yes. In the Rules tab, you can set ingredient categories to Ignore, Warn me, or Avoid. Premium adds custom ingredient triggers and custom categories.</p>
 
         <h2>What does Premium include?</h2>
         <ul>
-            <li>Insights with trends, repeat offenders, and clean staples</li>
+            <li>Weekly Insights with verdict and category trends, common rule matches, repeat product patterns, and drill-down lists</li>
             <li>Custom ingredient triggers</li>
             <li>Custom ingredient categories</li>
-            <li>Custom rules applied during new evaluations</li>
+            <li>Custom rules applied to new evaluations while Premium access is active</li>
         </ul>
         <p>Saved scan history remains available in the free app.</p>
 
@@ -66,13 +66,13 @@
         <p>Go to your device's Settings &rarr; Apple ID &rarr; Subscriptions &rarr; CartKind. Apple handles billing, plan changes, and cancellation.</p>
 
         <h2>Is my data private?</h2>
-        <p>Yes. Rules and saved scan history are stored locally on your device. We do not use analytics or ad-tracking SDKs, and CartKind does not run its own cloud backend or server-side user storage. Apple-managed device backups may still apply depending on the user's settings. See the <a href="privacy-policy.html">Privacy Policy</a> for full details.</p>
+        <p>Rules, custom settings, and saved history are stored locally. CartKind does not require an account or include analytics, advertising, or tracking SDKs. Barcode lookup still sends the barcode and ordinary request metadata to Open Food Facts and, after a catalog miss, may use the Tyche Ventures/Cloudflare USDA relay. See the <a href="privacy-policy.html">Privacy Policy</a> for the exact flow, possible short-lived logs, and deletion details.</p>
 
-        <h2>Why do some results open external links?</h2>
-        <p>CartKind can open source-reference links and optional shopping links in your browser. Some shopping links may be affiliate links, which means CartKind may earn a commission at no extra cost to you.</p>
+        <h2>Why does a result open an external source link?</h2>
+        <p>When available, CartKind can open the product's Open Food Facts or USDA FoodData Central source page in your browser. The destination's privacy policy and terms apply.</p>
 
         <h2>A product scanned incorrectly. What should I do?</h2>
-        <p>Product data comes from third-party sources and may occasionally be incomplete or outdated. Always verify the physical label. If the product came from Open Food Facts, you can contribute corrections at <a href="https://world.openfoodfacts.org" target="_blank" rel="noreferrer">openfoodfacts.org</a>, and CartKind can pick up updated data on a later scan.</p>
+        <p>Product data comes from third-party sources and may occasionally be incomplete or outdated. Always verify the physical label. If the product came from Open Food Facts, you can contribute corrections at <a href="https://world.openfoodfacts.org" target="_blank" rel="noreferrer">openfoodfacts.org</a>, and CartKind can pick up updated data on a later scan. If the result came from USDA FoodData Central, use the source link to review the USDA record.</p>
 
         <footer>
             <p>&copy; 2026 Tyche Ventures LLC. All rights reserved.</p>
