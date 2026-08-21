@@ -1,0 +1,167 @@
+{
+  "schemaVersion": 2,
+  "status": "build6-local-media-ready-publication-held",
+  "reconciledAt": "2026-08-21T03:23:16Z",
+  "landingPage": "/your-house-clearly/",
+  "publicLaunchStatus": "coming-soon",
+  "websitePublished": false,
+  "appStoreMediaUploaded": false,
+  "rightsStatus": "owner-and-counsel-launch-review-pending",
+  "source": {
+    "app": "Your House, Clearly",
+    "version": "1.0",
+    "build": "6",
+    "bundleId": "com.tycheventures.yourhouseclearly",
+    "sourceFileCount": 86,
+    "sourceAggregateSha256": "d8372c8bd2b30b254de675366e21a488a404f84dbcde80a79afad8a31f2a6736",
+    "releaseCandidate": "App Store/Your House, Clearly/Release Candidates/YourHouseClearly-1.0-6-20260821T003021Z",
+    "mediaManifest": "App Store/Your House, Clearly/Media/Evidence/manifest.json",
+    "mediaTechnicalStatus": "PASS; upload and publication held"
+  },
+  "gallery": {
+    "status": "ready-local",
+    "root": "/images/apps/your-house-clearly/screenshots/",
+    "sourceDevice": "iPhone 17 Pro Max simulator, iOS 26.5",
+    "dimensions": "1320x2868",
+    "treatment": "local frameless staged PNG; complete native UI preserved",
+    "stagedOrderedAggregateSha256": "25347fda6c0d6aea50d4c857cd0b6d4d74c0d9b525401ba26710b6694e162b83",
+    "items": [
+      {
+        "index": 1,
+        "label": "Home",
+        "path": "/images/apps/your-house-clearly/screenshots/01-home.png",
+        "sourcePath": "Media/Staged/iPhone-6.9/01-home.png",
+        "sha256": "6ea2adb622849d4df71c182d65dbe3edd05d674b3586f800164421364c7a2580",
+        "bytes": 1538502,
+        "width": 1320,
+        "height": 2868
+      },
+      {
+        "index": 2,
+        "label": "Central HVAC templates",
+        "path": "/images/apps/your-house-clearly/screenshots/02-central-hvac-templates.png",
+        "sourcePath": "Media/Staged/iPhone-6.9/02-central-hvac-templates.png",
+        "sha256": "b627fa8f33cb54dc9f1e6705de00741cec1558fe32775d04446b98433910f910",
+        "bytes": 728307,
+        "width": 1320,
+        "height": 2868
+      },
+      {
+        "index": 3,
+        "label": "Warranty dashboard",
+        "path": "/images/apps/your-house-clearly/screenshots/03-warranty-dashboard.png",
+        "sourcePath": "Media/Staged/iPhone-6.9/03-warranty-dashboard.png",
+        "sha256": "ec912e9f7091797af9463d17a8fc5c4a11b1e7ab333ca1fc00dc3c6594f59437",
+        "bytes": 961025,
+        "width": 1320,
+        "height": 2868
+      },
+      {
+        "index": 4,
+        "label": "Active tasks",
+        "path": "/images/apps/your-house-clearly/screenshots/04-active-tasks.png",
+        "sourcePath": "Media/Staged/iPhone-6.9/04-active-tasks.png",
+        "sha256": "ea2fa81a836c21af4679aab73afd17cbbf69248eaeefaca0985f96026e3e7f46",
+        "bytes": 833983,
+        "width": 1320,
+        "height": 2868
+      },
+      {
+        "index": 5,
+        "label": "Receipt import sources",
+        "path": "/images/apps/your-house-clearly/screenshots/05-receipt-import-sources.png",
+        "sourcePath": "Media/Staged/iPhone-6.9/05-receipt-import-sources.png",
+        "sha256": "0800f5ee8267b331811bd08470df1b0623ebd2c500f485cd3dda1f107adb9442",
+        "bytes": 652943,
+        "width": 1320,
+        "height": 2868
+      },
+      {
+        "index": 6,
+        "label": "CPSC recall check",
+        "path": "/images/apps/your-house-clearly/screenshots/06-cpsc-recall-check.png",
+        "sourcePath": "Media/Staged/iPhone-6.9/06-cpsc-recall-check.png",
+        "sha256": "f0e96964e87f747a5ea656b41dd7fa78f087e1c3517c0386426d2666d9547cd0",
+        "bytes": 854957,
+        "width": 1320,
+        "height": 2868
+      },
+      {
+        "index": 7,
+        "label": "Maintenance history",
+        "path": "/images/apps/your-house-clearly/screenshots/07-maintenance-history.png",
+        "sourcePath": "Media/Staged/iPhone-6.9/07-maintenance-history.png",
+        "sha256": "04f41046988e9d35bcc697620bf93a73531528da5530aa88f585d40ef0da26f5",
+        "bytes": 740301,
+        "width": 1320,
+        "height": 2868
+      },
+      {
+        "index": 8,
+        "label": "Assets",
+        "path": "/images/apps/your-house-clearly/screenshots/08-assets.png",
+        "sourcePath": "Media/Staged/iPhone-6.9/08-assets.png",
+        "sha256": "7d052ccc43665c69ef1c28679d535bf19757f415b5636a98ae698143868ea2cb",
+        "bytes": 717892,
+        "width": 1320,
+        "height": 2868
+      }
+    ]
+  },
+  "tour": {
+    "status": "ready-local",
+    "sourceDevice": "iPhone 17 Pro Max simulator, iOS 26.5",
+    "durationSeconds": 22.5,
+    "width": 886,
+    "height": 1920,
+    "scenes": [
+      "Home with Cedar House exterior",
+      "Central HVAC task templates",
+      "Warranty dashboard",
+      "Receipt import sources",
+      "Completed CPSC check with zero possible matches",
+      "Maintenance history"
+    ],
+    "video": {
+      "path": "/media/your-house-clearly/your-house-clearly-app-preview.mp4",
+      "sourcePath": "Media/Staged/Website/your-house-clearly-app-preview.mp4",
+      "type": "video/mp4",
+      "sha256": "5e4a1137aa8d8d7aca80bc5279777a40587a50edc023a84cea87cc9a03bb38d1",
+      "bytes": 32997385,
+      "video": "H.264 avc1, 30 fps, 11,474,293 bps",
+      "audio": "original instrumental; AAC stereo, 48,000 Hz, 253,502.12 bps"
+    },
+    "poster": {
+      "path": "/images/apps/your-house-clearly/tour/your-house-clearly-app-preview-poster.jpg",
+      "sourcePath": "Media/Staged/Website/your-house-clearly-app-preview-poster.jpg",
+      "sha256": "538ed5cfebba105036f6fe425b36eec082864b8f194495bdc5e5ad49eac520c9",
+      "bytes": 218513,
+      "width": 886,
+      "height": 1920
+    },
+    "captions": [
+      {
+        "path": "/media/your-house-clearly/your-house-clearly-app-preview-en.vtt",
+        "sourcePath": "Media/Staged/Website/your-house-clearly-app-preview-en.vtt",
+        "srclang": "en",
+        "label": "English",
+        "sha256": "02265ce58c1ee33d9b212ce832c38936800f4ae6a22b70bd2f75a45c83c90ce9",
+        "bytes": 336,
+        "cueCount": 6
+      },
+      {
+        "path": "/media/your-house-clearly/your-house-clearly-app-preview.en-US.vtt",
+        "sourcePath": "Media/Staged/Website/your-house-clearly-app-preview.en-US.vtt",
+        "srclang": "en-US",
+        "label": "English (U.S.) alias",
+        "sha256": "02265ce58c1ee33d9b212ce832c38936800f4ae6a22b70bd2f75a45c83c90ce9",
+        "bytes": 336,
+        "cueCount": 6
+      }
+    ],
+    "omissions": {
+      "webm": "intentionally omitted; no approved native writable encoder was available",
+      "webp": "intentionally omitted; no approved native writable encoder was available"
+    }
+  }
+}
