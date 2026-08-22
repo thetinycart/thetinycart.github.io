@@ -67,7 +67,7 @@ body.home-page {
 
 .home-stack {
   position: relative;
-  min-height: 440px;
+  min-height: 500px;
 }
 
 .home-stack__card {
@@ -86,9 +86,10 @@ body.home-page {
 }
 
 .home-stack__card:nth-child(1) { top: 0; left: 0; }
-.home-stack__card:nth-child(2) { top: 104px; right: 0; }
-.home-stack__card:nth-child(3) { top: 208px; left: 2%; }
-.home-stack__card:nth-child(4) { top: 312px; right: 2%; }
+.home-stack__card:nth-child(2) { top: 98px; right: 0; }
+.home-stack__card:nth-child(3) { top: 196px; left: 2%; }
+.home-stack__card:nth-child(4) { top: 294px; right: 2%; }
+.home-stack__card:nth-child(5) { top: 392px; left: 4%; }
 .home-stack__card img { width: 54px; height: 54px; flex: 0 0 auto; border-radius: 14px; }
 .home-stack__card strong { display: block; color: #fff; line-height: 1.15; }
 .home-stack__card span { display: block; margin-top: 3px; color: rgba(255, 255, 255, 0.64); font-size: 0.76rem; }
@@ -121,6 +122,11 @@ body.home-page {
 .app-card--routines { background: linear-gradient(145deg, #fff7ed, #ffe5d7); }
 .app-card--meals { background: linear-gradient(145deg, #f4fbf3, #dcefe1); }
 .app-card--cartkind { background: linear-gradient(145deg, #f2f5ef, #dce7da); }
+.app-card--setharbor {
+  grid-column: 1 / -1;
+  min-height: 520px;
+  background: linear-gradient(145deg, #e8f2ef, #cddfda);
+}
 
 .app-card__lockup { display: flex; align-items: center; gap: 12px; }
 .app-card__lockup img { width: 62px; height: 62px; border-radius: 16px; box-shadow: 0 10px 28px rgba(18, 23, 19, 0.16); }
@@ -135,6 +141,8 @@ body.home-page {
 .app-card--home .button--theme { background: #fff; color: #10283a; }
 .app-card__visual { align-self: end; min-width: 0; }
 .app-card__visual img { width: 100%; height: auto; border-radius: 22px 22px 0 0; box-shadow: 0 26px 70px rgba(18, 23, 19, 0.2); }
+.app-card--setharbor .app-card__visual { width: min(100%, 330px); justify-self: center; align-self: center; }
+.app-card--setharbor .app-card__visual img { border-radius: 25%; }
 
 .principle-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
 .principle-card { min-height: 250px; padding: 32px; border: 1px solid var(--line); border-radius: 24px; background: #fff; }
@@ -158,9 +166,10 @@ body.home-page {
 
 @media (max-width: 760px) {
   .home-hero__inner { min-height: auto; grid-template-columns: 1fr; }
-  .home-stack { width: min(100%, 390px); min-height: 420px; margin-inline: auto; }
+  .home-stack { width: min(100%, 390px); min-height: 490px; margin-inline: auto; }
   .app-grid, .principle-grid, .journal-grid { grid-template-columns: 1fr; }
   .app-card { min-height: auto; }
+  .app-card--setharbor { grid-column: auto; }
   .app-card__visual { width: min(72%, 300px); }
 }
 

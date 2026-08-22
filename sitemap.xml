@@ -236,7 +236,7 @@
   </url>
   <url>
     <loc>https://tycheventuresllc.com/</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-08-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -278,7 +278,7 @@
   </url>
   <url>
     <loc>https://tycheventuresllc.com/privacy.html</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-08-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -411,6 +411,30 @@
   <url>
     <loc>https://tycheventuresllc.com/little-routines/terms-of-use.html</loc>
     <lastmod>2026-08-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://tycheventuresllc.com/setharbor/</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tycheventuresllc.com/setharbor/privacy-policy.html</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://tycheventuresllc.com/setharbor/support.html</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://tycheventuresllc.com/setharbor/terms-of-use.html</loc>
+    <lastmod>2026-08-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
