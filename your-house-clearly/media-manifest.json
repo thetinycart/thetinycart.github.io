@@ -1,9 +1,11 @@
 {
   "schemaVersion": 2,
-  "status": "build6-device-framed-website-media-published-submitted-for-review",
+  "status": "build6-device-framed-website-media-published-app-store-live",
   "reconciledAt": "2026-08-21T22:39:00Z",
   "landingPage": "/your-house-clearly/",
-  "publicLaunchStatus": "submitted-awaiting-apple-review",
+  "publicLaunchStatus": "available-on-app-store",
+  "appStoreUrl": "https://apps.apple.com/us/app/your-house-clearly/id6803577317",
+  "publicLaunchVerifiedAt": "2026-09-08",
   "websitePublished": true,
   "websitePublication": {
     "status": "verified-live-device-framed-responsive",
