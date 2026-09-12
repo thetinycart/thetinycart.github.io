@@ -126,6 +126,12 @@ body.home-page {
 .app-card--routines { background: linear-gradient(145deg, #fff7ed, #ffe5d7); }
 .app-card--meals { background: linear-gradient(145deg, #f4fbf3, #dcefe1); }
 .app-card--cartkind { background: linear-gradient(145deg, #f2f5ef, #dce7da); }
+.app-card--tallykeeps {
+  --theme-dark: #4338a0;
+  background: linear-gradient(145deg, #f4f3ff, #e1dff7);
+}
+.app-card--tallykeeps .app-card__visual { width: min(100%, 270px); justify-self: center; align-self: center; }
+.app-card--tallykeeps .app-card__visual img { border-radius: 24%; }
 .app-card--paint {
   grid-column: 1 / -1;
   min-height: 520px;

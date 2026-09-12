@@ -35,10 +35,11 @@ def iter_site_files() -> list[Path]:
         "kids-meal-planner",
         "little-routines",
         "bingokeeps",
+        "tallykeeps",
     ]:
         for page in sorted((ROOT / content_dir).glob("*.html")):
             if (
-                content_dir not in {"printables", "your-house-clearly", "bingokeeps"}
+                content_dir not in {"printables", "your-house-clearly", "bingokeeps", "tallykeeps"}
                 and page.name == "index.html"
             ):
                 continue
