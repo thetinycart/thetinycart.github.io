@@ -2,3 +2,4 @@
 .hero .app-preview{width:100%;max-width:320px;margin-inline:auto}
 .app-preview video{display:block;width:100%;height:auto;border-radius:24px;border:1px solid var(--line);background:#17383a}
 .app-preview video:focus-visible{outline:3px solid #b07614;outline-offset:5px}
+.hero-actions{display:flex;align-items:center;gap:1rem;flex-wrap:wrap}.hero-actions>a{min-height:44px;display:inline-flex;align-items:center}.hero-actions .button{text-align:center}

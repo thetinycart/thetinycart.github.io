@@ -36,10 +36,15 @@ def iter_site_files() -> list[Path]:
         "little-routines",
         "bingokeeps",
         "tallykeeps",
+        "paint-session",
+        "setharbor",
     ]:
         for page in sorted((ROOT / content_dir).glob("*.html")):
+            if page.name in {"privacy.html", "terms.html"}:
+                continue
             if (
-                content_dir not in {"printables", "your-house-clearly", "bingokeeps", "tallykeeps"}
+                content_dir
+                not in {"printables", "your-house-clearly", "setharbor", "bingokeeps", "tallykeeps", "paint-session"}
                 and page.name == "index.html"
             ):
                 continue
@@ -59,6 +64,8 @@ def to_url_path(path: Path) -> str:
 def priority_for(path: str) -> str:
     if path == "/":
         return "1.0"
+    if path == "/setharbor/":
+        return "0.8"
     if path == "/blog.html":
         return "0.9"
     if path == "/printables/":
@@ -79,6 +86,8 @@ def priority_for(path: str) -> str:
 def changefreq_for(path: str) -> str:
     if path == "/" or path == "/blog.html":
         return "weekly"
+    if path == "/setharbor/":
+        return "monthly"
     if path == "/printables/":
         return "weekly"
     if path.startswith("/printables/"):

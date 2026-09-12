@@ -184,6 +184,12 @@ button, a { -webkit-tap-highlight-color: transparent; }
 }
 
 .site-nav__links a:hover { color: var(--theme); }
+.site-nav__links a[aria-current="page"] {
+  color: var(--theme-dark);
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 2px;
+}
 
 .hero {
   position: relative;
@@ -457,6 +463,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   font-weight: 780;
 }
 .gallery-button--wide { padding-inline: 16px; }
+.gallery-button:disabled { cursor: default; opacity: 0.48; }
 .section--dark .gallery-button { border-color: rgba(255, 255, 255, 0.22); background: rgba(255, 255, 255, 0.08); color: #fff; }
 .gallery-position { min-width: 64px; text-align: center; font-size: 0.82rem; font-weight: 760; }
 
@@ -475,7 +482,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 }
 .gallery-track::-webkit-scrollbar { display: none; }
 .gallery-track--ipad { grid-auto-columns: clamp(620px, 72vw, 920px); }
-.gallery-track--responsive { grid-auto-columns: clamp(300px, 72vw, 900px); }
+.gallery-track--responsive { grid-auto-columns: clamp(252px, 30vw, 344px); }
 
 .gallery-card { min-width: 0; margin: 0; scroll-snap-align: center; }
 .gallery-card img {
@@ -522,10 +529,11 @@ button, a { -webkit-tap-highlight-color: transparent; }
 }
 .video-frame video {
   width: 100%;
+  height: auto;
   aspect-ratio: 500 / 1080;
   border-radius: 25px;
   background: #000;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .plan-grid, .trust-grid {
@@ -589,15 +597,47 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .trust-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
+@media (min-width: 761px) {
+  .gallery-track--responsive { grid-auto-columns: clamp(560px, 72vw, 820px); }
+}
+
 @media (max-width: 760px) {
-  :root { --header-height: 64px; }
+  :root { --header-height: 104px; }
   .container { width: min(var(--content), calc(100% - 28px)); }
+  .site-nav {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    align-content: center;
+    gap: 0;
+    padding-block: 4px;
+  }
+  .site-nav > .home-brand,
+  .site-nav > .company-home {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+  .site-nav > .brand-group { min-height: 44px; }
   .company-home { font-size: 0.76rem; }
   .brand-divider { display: none; }
   .app-home span { max-width: 128px; overflow: hidden; text-overflow: ellipsis; }
-  .site-nav__links li:not(:last-child) { display: none; }
-  .site-nav__links { gap: 0; }
-  .site-nav__links a { padding: 10px 0; }
+  .site-nav__links {
+    min-width: 0;
+    width: 100%;
+    justify-content: space-between;
+    gap: 2px;
+  }
+  .site-nav__links li { min-width: 0; }
+  .site-nav__links a {
+    min-width: 44px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline: clamp(5px, 2vw, 10px);
+    font-size: clamp(0.72rem, 3.2vw, 0.84rem);
+    white-space: nowrap;
+  }
   .hero__inner { grid-template-columns: 1fr; padding-block: 74px 82px; }
   .hero__visual { width: min(100%, 330px); margin-top: 32px; }
   .brand-stage { min-height: 360px; }
@@ -612,18 +652,18 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .feature-grid, .plan-grid, .trust-grid, .video-layout { grid-template-columns: 1fr; }
   .feature-card:last-child:nth-child(odd) { grid-column: auto; }
   .gallery-toolbar { align-items: start; flex-direction: column; }
-  .gallery-actions { width: 100%; }
-  .gallery-button--wide { margin-left: auto; }
+  .gallery-actions { width: 100%; flex-wrap: wrap; }
+  .gallery-button--wide { flex: 1 1 100%; }
   .gallery-track { grid-auto-columns: min(78vw, 320px); padding-inline: 14px; scroll-padding-inline: 14px; }
   .gallery-track--ipad { grid-auto-columns: min(91vw, 720px); }
-  .gallery-track--responsive { grid-auto-columns: min(88vw, 700px); }
+  .gallery-track--responsive { grid-auto-columns: min(84vw, 344px); }
   .video-copy { text-align: center; }
   .footer-grid { grid-template-columns: 1fr; }
   .footer-links { justify-content: flex-start; }
 }
 
 @media (max-width: 430px) {
-  .company-home { display: inline; }
+  .brand-group > .company-home { display: inline; }
   .app-home span { display: none; }
   .hero h1 { font-size: clamp(3.05rem, 16vw, 4.6rem); }
   .hero__actions .button { width: 100%; }

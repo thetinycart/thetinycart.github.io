@@ -9,12 +9,16 @@ body.home-page {
 }
 
 .home-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   color: var(--ink);
   font-size: 1rem;
   font-weight: 850;
   letter-spacing: -0.025em;
   text-decoration: none;
 }
+.home-brand img { width: 40px; height: 40px; border-radius: 10px; flex: 0 0 auto; }
 
 .home-hero {
   position: relative;
@@ -137,7 +141,7 @@ body.home-page {
   min-height: 520px;
   background: linear-gradient(145deg, #edf5f4, #d6e8e5);
 }
-.app-card--setharbor {
+.app-card--bingokeeps {
   grid-column: 1 / -1;
   min-height: 520px;
   background: linear-gradient(145deg, #e8f2ef, #cddfda);
@@ -159,8 +163,8 @@ body.home-page {
 .app-card__visual { align-self: end; min-width: 0; }
 .app-card__visual img { width: 100%; height: auto; border-radius: 22px 22px 0 0; box-shadow: 0 26px 70px rgba(18, 23, 19, 0.2); }
 .app-card--paint .app-card__visual { width: min(100%, 300px); justify-self: center; }
-.app-card--setharbor .app-card__visual { width: min(100%, 330px); justify-self: center; align-self: center; }
-.app-card--setharbor .app-card__visual img { border-radius: 25%; }
+.app-card--bingokeeps .app-card__visual { width: min(100%, 330px); justify-self: center; align-self: center; }
+.app-card--bingokeeps .app-card__visual img { border-radius: 25%; }
 
 .principle-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
 .principle-card { min-height: 250px; padding: 32px; border: 1px solid var(--line); border-radius: 24px; background: #fff; }
@@ -187,7 +191,7 @@ body.home-page {
   .home-stack { width: min(100%, 430px); margin-inline: auto; }
   .app-grid, .principle-grid, .journal-grid { grid-template-columns: 1fr; }
   .app-card { min-height: auto; }
-  .app-card--setharbor, .app-card--paint { grid-column: auto; }
+  .app-card--bingokeeps, .app-card--paint { grid-column: auto; }
   .app-card__visual { width: min(72%, 300px); }
 }
 
